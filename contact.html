@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consultation & Contact | Parthvi Ayurvedic</title>
+    <meta name="description" content="Reach out to Parthvi Ayurvedic for personalized Dosha consultations, order inquiries, and customer care.">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="navbar" id="navbar">
+    <div class="nav-container">
+        <a href="index.html" class="brand">
+            <img src="assets/logo.png" alt="Parthvi Ayurvedic Emblem">
+            <div class="brand-text">
+                <span class="brand-name">PARTHVI</span>
+                <span class="brand-tagline">PURE AYURVEDA</span>
+            </div>
+        </a>
+
+        <nav class="desktop-nav">
+            <a href="index.html">Home</a>
+            <a href="products.html">Products</a>
+            <a href="about.html">Our Story</a>
+            <a href="contact.html" class="active">Consultation</a>
+        </nav>
+
+        <div class="nav-actions">
+            <button class="cart-button" id="cartBtn">
+                <span>Bag</span>
+                <b id="cartCount">0</b>
+            </button>
+            <button class="menu-btn" id="menuBtn">☰</button>
+        </div>
+    </div>
+</header>
+
+<main style="padding-top: 130px; min-height: 80vh;">
+    <section class="section">
+        <div class="section-heading">
+            <span class="eyebrow dark">PERSONAL CARE & CONSULTATION</span>
+            <h2>Get in <em>Touch.</em></h2>
+            <p>Our Ayurvedic wellness advisors are available to guide your product selection based on your unique body type.</p>
+        </div>
+
+        <div style="max-width: 800px; margin: 0 auto; background: var(--sand-card); padding: 40px; border-radius: var(--radius-md); border: 1px solid var(--paper-tint);">
+            <form onsubmit="event.preventDefault(); alert('Thank you! Our Ayurvedic consultant will contact you shortly.');">
+                <div style="margin-bottom: 20px;">
+                    <label style="display: block; font-weight: 600; margin-bottom: 8px; font-size: 0.9rem;">Your Full Name</label>
+                    <input type="text" placeholder="e.g. Ananya Sharma" required style="width: 100%; padding: 14px; border: 1px solid var(--paper-tint); border-radius: 8px; background: var(--ivory-bg);">
+                </div>
+
+                <div style="margin-bottom: 20px;">
+                    <label style="display: block; font-weight: 600; margin-bottom: 8px; font-size: 0.9rem;">Mobile Number / WhatsApp</label>
+                    <input type="tel" placeholder="+91 98765 43210" required style="width: 100%; padding: 14px; border: 1px solid var(--paper-tint); border-radius: 8px; background: var(--ivory-bg);">
+                </div>
+
+                <div style="margin-bottom: 20px;">
+                    <label style="display: block; font-weight: 600; margin-bottom: 8px; font-size: 0.9rem;">Primary Skin / Hair / Wellness Concern</label>
+                    <textarea rows="4" placeholder="Describe your concern or query..." required style="width: 100%; padding: 14px; border: 1px solid var(--paper-tint); border-radius: 8px; background: var(--ivory-bg);"></textarea>
+                </div>
+
+                <button type="submit" class="primary-btn" style="width: 100%; justify-content: center;">
+                    Request Free Consultation →
+                </button>
+            </form>
+        </div>
+    </section>
+</main>
+
+<footer class="footer">
+    <div class="footer-bottom" style="text-align: center; justify-content: center;">
+        <span>© 2026 Parthvi Ayurvedic. All rights reserved.</span>
+    </div>
+</footer>
+
+<div class="cart-overlay" id="cartOverlay">
+    <div class="cart-panel">
+        <div class="cart-header">
+            <div>
+                <span class="eyebrow dark">YOUR SELECTION</span>
+                <h2 style="font-size: 1.5rem; color: var(--forest-deep);">Shopping Bag</h2>
+            </div>
+            <button id="closeCart" class="close-btn">×</button>
+        </div>
+        <div id="cartItems" class="cart-items">
+            <div class="empty-cart">
+                <span>🌿</span>
+                <p>Your bag is empty.</p>
+            </div>
+        </div>
+        <div class="cart-footer">
+            <div class="cart-total">
+                <span>Total Amount</span>
+                <strong id="cartTotal">₹0</strong>
+            </div>
+            <button class="checkout-btn" onclick="openCheckout()">Proceed to Checkout →</button>
+        </div>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

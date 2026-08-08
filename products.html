@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Ayurvedic Medicine | Parthvi Ayurvedic</title>
+    <meta name="description" content="Discover Parthvi Ayurvedic Slimming & Immunity Booster medicine. Pure organic formulation for natural weight management and health resilience.">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="navbar" id="navbar">
+    <div class="nav-container">
+        <a href="index.html" class="brand">
+            <img src="assets/logo.png" alt="Parthvi Ayurvedic Emblem">
+            <div class="brand-text">
+                <span class="brand-name">PARTHVI</span>
+                <span class="brand-tagline">PURE AYURVEDA</span>
+            </div>
+        </a>
+
+        <nav class="desktop-nav">
+            <a href="index.html">Home</a>
+            <a href="products.html" class="active">Our Medicine</a>
+            <a href="about.html">Our Story</a>
+            <a href="contact.html">Consultation</a>
+        </nav>
+
+        <div class="nav-actions">
+            <button class="icon-btn" id="searchBtn" aria-label="Search">⌕</button>
+            <button class="cart-button" id="cartBtn">
+                <span>Bag</span>
+                <b id="cartCount">0</b>
+            </button>
+            <button class="menu-btn" id="menuBtn">☰</button>
+        </div>
+    </div>
+</header>
+
+<main style="padding-top: 130px; min-height: 80vh;">
+    <section class="section">
+        <div class="section-heading">
+            <span class="eyebrow dark">PARTHVI FLAGSHIP MEDICINE</span>
+            <h2>Ayurvedic <em>Formulation.</em></h2>
+            <p>Our specialized dual-action medicine for natural weight loss and immune system enhancement.</p>
+        </div>
+
+        <div style="max-width: 900px; margin: 0 auto;">
+            <article class="product-card" style="display: flex; flex-direction: row; flex-wrap: wrap;">
+                <div class="product-image" style="flex: 1 1 300px; padding-top: 0; height: 350px;">
+                    <span class="product-tag">WEIGHT LOSS & IMMUNITY</span>
+                    <img src="assets/products/product-1.jpg" alt="Parthvi Ayurvedic Slimming & Immunity Booster" style="height: 100%; object-fit: cover;">
+                </div>
+                <div class="product-info" style="flex: 1 1 350px;">
+                    <div>
+                        <span class="product-category">100% HERBAL FORMULATION</span>
+                        <h3>Parthvi Ayurvedic Slimming & Immunity Booster</h3>
+                        <p>Infused with Garcinia, Guggulu, Giloy, and Triphala to naturally accelerate metabolism, burn obstinate fat, and fortify immune resilience.</p>
+                    </div>
+                    <div class="product-bottom" style="margin-top: 20px;">
+                        <span class="product-price">₹2200</span>
+                        <button class="primary-btn" onclick="addToCart('Parthvi Ayurvedic Slimming & Immunity Booster', 2200, 'assets/products/product-1.jpg')">
+                            Add to Bag +
+                        </button>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </section>
+</main>
+
+<footer class="footer">
+    <div class="footer-bottom" style="text-align: center; justify-content: center;">
+        <span>© 2026 Parthvi Ayurvedic. All rights reserved.</span>
+    </div>
+</footer>
+
+<div class="cart-overlay" id="cartOverlay">
+    <div class="cart-panel">
+        <div class="cart-header">
+            <div>
+                <span class="eyebrow dark">YOUR SELECTION</span>
+                <h2 style="font-size: 1.5rem; color: var(--forest-deep);">Shopping Bag</h2>
+            </div>
+            <button id="closeCart" class="close-btn">×</button>
+        </div>
+        <div id="cartItems" class="cart-items">
+            <div class="empty-cart">
+                <span>🌿</span>
+                <p>Your bag is empty.</p>
+            </div>
+        </div>
+        <div class="cart-footer">
+            <div class="cart-total">
+                <span>Total Amount</span>
+                <strong id="cartTotal">₹2200</strong>
+            </div>
+            <button class="checkout-btn" onclick="openCheckout()">Proceed to Checkout →</button>
+        </div>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

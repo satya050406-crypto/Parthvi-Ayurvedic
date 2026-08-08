@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weight Loss & Immunity Booster Medicine | Parthvi Ayurvedic</title>
+    <meta name="description" content="Detailed information on Parthvi Ayurvedic Slimming & Immunity Booster medicine - dosage, benefits, and ingredients.">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="navbar" id="navbar">
+    <div class="nav-container">
+        <a href="index.html" class="brand">
+            <img src="assets/logo.png" alt="Parthvi Ayurvedic Emblem">
+            <div class="brand-text">
+                <span class="brand-name">PARTHVI</span>
+                <span class="brand-tagline">PURE AYURVEDA</span>
+            </div>
+        </a>
+
+        <nav class="desktop-nav">
+            <a href="index.html">Home</a>
+            <a href="products.html">Our Medicine</a>
+            <a href="about.html">Our Story</a>
+            <a href="contact.html">Consultation</a>
+        </nav>
+
+        <div class="nav-actions">
+            <button class="cart-button" id="cartBtn">
+                <span>Bag</span>
+                <b id="cartCount">0</b>
+            </button>
+        </div>
+    </div>
+</header>
+
+<main style="padding-top: 130px; min-height: 80vh;">
+    <section class="section">
+        <div style="max-width: 1000px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px; background: var(--sand-card); padding: 40px; border-radius: var(--radius-md); border: 1px solid var(--paper-tint);">
+            <div style="border-radius: 12px; overflow: hidden;">
+                <img src="assets/products/product-1.jpg" alt="Parthvi Ayurvedic Slimming & Immunity Booster" style="width: 100%; height: auto; object-fit: cover;">
+            </div>
+            <div style="display: flex; flex-direction: column; justify-content: center;">
+                <span class="eyebrow dark">WEIGHT LOSS & IMMUNITY FORMULA</span>
+                <h2 style="font-size: 2rem; color: var(--forest-deep); margin-bottom: 12px;">Parthvi Ayurvedic Slimming & Immunity Booster</h2>
+                <p style="color: var(--text-muted); margin-bottom: 20px; line-height: 1.6;">Pure Ayurvedic formulation enriched with Garcinia (Vrikshamla), Guggulu, Giloy, and Triphala. Curbs excessive appetite, burns obstinate fat naturally, and strengthens immune defense.</p>
+                <div style="font-family: var(--font-serif); font-size: 1.8rem; font-weight: 700; color: var(--forest-deep); margin-bottom: 24px;">₹2200</div>
+                <button onclick="addToCart('Parthvi Ayurvedic Slimming & Immunity Booster', 2200, 'assets/products/product-1.jpg')" class="primary-btn" style="justify-content: center;">
+                    Add Medicine to Bag +
+                </button>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer class="footer">
+    <div class="footer-bottom" style="text-align: center; justify-content: center;">
+        <span>© 2026 Parthvi Ayurvedic. All rights reserved.</span>
+    </div>
+</footer>
+
+<div class="cart-overlay" id="cartOverlay">
+    <div class="cart-panel">
+        <div class="cart-header">
+            <div>
+                <span class="eyebrow dark">YOUR SELECTION</span>
+                <h2 style="font-size: 1.5rem; color: var(--forest-deep);">Shopping Bag</h2>
+            </div>
+            <button id="closeCart" class="close-btn">×</button>
+        </div>
+        <div id="cartItems" class="cart-items">
+            <div class="empty-cart">
+                <span>🌿</span>
+                <p>Your bag is empty.</p>
+            </div>
+        </div>
+        <div class="cart-footer">
+            <div class="cart-total">
+                <span>Total Amount</span>
+                <strong id="cartTotal">₹2200</strong>
+            </div>
+            <button class="checkout-btn" onclick="openCheckout()">Proceed to Checkout →</button>
+        </div>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
