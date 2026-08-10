@@ -376,18 +376,15 @@
         <div class="auth-emblem">🌿</div>
         <span class="eyebrow gold">STORE OWNER PORTAL</span>
         <h2 style="font-size: 1.6rem; color: var(--forest-deep); margin: 6px 0 10px;">Parthvi Admin Login</h2>
-        <p style="color: var(--text-secondary); font-size: 0.88rem;">Enter your 4-digit security PIN to access customer data and order dispatches.</p>
+        <p style="color: var(--text-secondary); font-size: 0.88rem;">Enter your admin security password to access customer data and order dispatches.</p>
         
         <form id="adminLoginForm" onsubmit="event.preventDefault(); handleAdminLogin();">
-            <input type="password" id="adminPin" class="pin-input" placeholder="••••" maxlength="8" autofocus required>
-            <div id="loginError" style="display: none; color: #D32F2F; font-size: 0.84rem; font-weight: 600; margin-bottom: 12px;">Incorrect PIN. (Default PIN: 1234)</div>
+            <input type="password" id="adminPin" class="pin-input" placeholder="Enter Admin Password" maxlength="32" autofocus required style="letter-spacing: normal; font-size: 1rem;">
+            <div id="loginError" style="display: none; color: #D32F2F; font-size: 0.84rem; font-weight: 600; margin-bottom: 12px;">Incorrect Password. Please try again.</div>
             <button type="submit" class="primary-btn" style="width: 100%; justify-content: center; padding: 14px;">
                 Unlock Customer Database →
             </button>
         </form>
-        <small style="display: block; margin-top: 18px; color: var(--text-muted); font-size: 0.78rem;">
-            Default Master Access PIN: <strong>1234</strong>
-        </small>
     </div>
 </div>
 
@@ -620,7 +617,7 @@
 </div>
 
 <script>
-const ADMIN_PIN = "1234";
+const ADMIN_PASSWORD = "satya@05";
 let orders = [];
 let currentFilter = "ALL";
 let searchQuery = "";
@@ -638,8 +635,8 @@ function checkSession() {
 }
 
 function handleAdminLogin() {
-    const pin = document.getElementById("adminPin").value.trim();
-    if (pin === ADMIN_PIN) {
+    const enteredPassword = document.getElementById("adminPin").value.trim();
+    if (enteredPassword === ADMIN_PASSWORD) {
         sessionStorage.setItem("parthvi_admin_auth", "true");
         showDashboard();
     } else {

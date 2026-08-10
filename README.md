@@ -16,7 +16,7 @@ A state-of-the-art, high-converting e-commerce web application for **Parthvi Ayu
 - **Responsive & Accessible**: Seamlessly optimized across desktop, tablet, and mobile displays.
 
 - **Admin Customer Data & Dispatch Portal (`admin.html`)**:
-  - Protected with a 4-digit Master Security PIN (Default: `1234`).
+  - Protected with Master Security Password authentication.
   - Live revenue analytics and order counter (Pending, Dispatched, Delivered).
   - Search customer database by name, phone, city, state, or order ID.
   - 1-Click WhatsApp customer order update and direct phone calling.
