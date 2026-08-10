@@ -3,16 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Consultation & Contact | Parthvi Ayurvedic</title>
-    <meta name="description" content="Reach out to Parthvi Ayurvedic for personalized Dosha consultations, order inquiries, and customer care.">
+    <title>Doctor Consultation & Contact | Parthvi Ayurvedic</title>
+    <meta name="description" content="Connect with certified Ayurvedic physicians at Parthvi Ayurvedic for personalized Dosha consultations, weight loss advice, and customer support.">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
+<div class="top-bar">
+    <div class="top-bar-inner">
+        <span>🌿 100% Ayush Certified Organic Formulations</span>
+        <span>🚚 Free Express Dispatch Across India</span>
+        <span>💬 Instant WhatsApp Doctor Consultation</span>
+        <span class="top-bar-badge">100% PURE HERBS</span>
+    </div>
+</div>
+
 <header class="navbar" id="navbar">
     <div class="nav-container">
-        <a href="index.html" class="brand">
-            <img src="assets/logo.png" alt="Parthvi Ayurvedic Emblem">
+        <a href="index.html" class="brand" aria-label="Parthvi Ayurvedic Home">
+            <div class="brand-emblem">🌿</div>
             <div class="brand-text">
                 <span class="brand-name">PARTHVI</span>
                 <span class="brand-tagline">PURE AYURVEDA</span>
@@ -21,9 +30,11 @@
 
         <nav class="desktop-nav">
             <a href="index.html">Home</a>
-            <a href="products.html">Products</a>
+            <a href="index.html#flagship">Slim Rasayana</a>
+            <a href="index.html#benefits">Herbal Alchemy</a>
+            <a href="index.html#ritual">Daily Ritual</a>
             <a href="about.html">Our Story</a>
-            <a href="contact.html" class="active">Consultation</a>
+            <a href="contact.html" class="active">Doctor Consultation</a>
         </nav>
 
         <div class="nav-actions">
@@ -31,74 +42,97 @@
                 <span>Bag</span>
                 <b id="cartCount">0</b>
             </button>
-            <button class="menu-btn" id="menuBtn">☰</button>
         </div>
     </div>
 </header>
 
-<main style="padding-top: 130px; min-height: 80vh;">
-    <section class="section">
-        <div class="section-heading">
-            <span class="eyebrow dark">PERSONAL CARE & CONSULTATION</span>
-            <h2>Get in <em>Touch.</em></h2>
-            <p>Our Ayurvedic wellness advisors are available to guide your product selection based on your unique body type.</p>
+<main style="padding: 60px 0 90px;">
+    <div class="container">
+        <div class="section-header">
+            <span class="eyebrow">PERSONAL CARE & CONSULTATION</span>
+            <h2>Talk to Our <em>Ayurvedic Doctors.</em></h2>
+            <p>Receive personalized guidance on your body's Prakriti, customized dosage rituals, and dietary recommendations directly via WhatsApp or direct call.</p>
         </div>
 
-        <div style="max-width: 800px; margin: 0 auto; background: var(--sand-card); padding: 40px; border-radius: var(--radius-md); border: 1px solid var(--paper-tint);">
-            <form onsubmit="event.preventDefault(); alert('Thank you! Our Ayurvedic consultant will contact you shortly.');">
-                <div style="margin-bottom: 20px;">
-                    <label style="display: block; font-weight: 600; margin-bottom: 8px; font-size: 0.9rem;">Your Full Name</label>
-                    <input type="text" placeholder="e.g. Ananya Sharma" required style="width: 100%; padding: 14px; border: 1px solid var(--paper-tint); border-radius: 8px; background: var(--ivory-bg);">
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px; max-width: 1000px; margin: 0 auto;">
+            <!-- Direct Channels Card -->
+            <div style="background: var(--bg-pure); padding: 40px; border-radius: var(--radius-lg); border: 1px solid var(--border-card); box-shadow: var(--shadow-sm); display: flex; flex-direction: column; justify-content: space-between;">
+                <div>
+                    <span class="eyebrow">INSTANT WHATSAPP HOTLINE</span>
+                    <h3 style="font-size: 1.6rem; color: var(--forest-deep); margin-bottom: 12px;">Direct Physician Support</h3>
+                    <p style="color: var(--text-secondary); margin-bottom: 24px; line-height: 1.7;">
+                        Have questions regarding your current health issues, weight loss targets, or ongoing medications? Our BAMS certified doctors reply directly on WhatsApp.
+                    </p>
+
+                    <div style="display: flex; flex-direction: column; gap: 16px; margin-bottom: 30px;">
+                        <div style="display: flex; align-items: center; gap: 12px;">
+                            <span style="font-size: 1.3rem;">📱</span>
+                            <div>
+                                <strong style="display: block; color: var(--forest-deep);">WhatsApp Hotline</strong>
+                                <a href="https://wa.me/919319468110" target="_blank" style="color: var(--emerald-vibrant); font-weight: 700;">+91 93194 68110</a>
+                            </div>
+                        </div>
+
+                        <div style="display: flex; align-items: center; gap: 12px;">
+                            <span style="font-size: 1.3rem;">✉️</span>
+                            <div>
+                                <strong style="display: block; color: var(--forest-deep);">Email Support</strong>
+                                <a href="mailto:care@parthviayurvedic.in" style="color: var(--text-secondary);">care@parthviayurvedic.in</a>
+                            </div>
+                        </div>
+
+                        <div style="display: flex; align-items: center; gap: 12px;">
+                            <span style="font-size: 1.3rem;">⏰</span>
+                            <div>
+                                <strong style="display: block; color: var(--forest-deep);">Consultation Hours</strong>
+                                <span style="color: var(--text-muted); font-size: 0.9rem;">Monday – Sunday: 9:00 AM – 8:00 PM</span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
-                <div style="margin-bottom: 20px;">
-                    <label style="display: block; font-weight: 600; margin-bottom: 8px; font-size: 0.9rem;">Mobile Number / WhatsApp</label>
-                    <input type="tel" placeholder="+91 98765 43210" required style="width: 100%; padding: 14px; border: 1px solid var(--paper-tint); border-radius: 8px; background: var(--ivory-bg);">
-                </div>
+                <a href="https://wa.me/919319468110?text=Hello%20Parthvi%20Ayurvedic,%20I%20would%20like%20to%20consult%20an%20Ayurvedic%20doctor." target="_blank" class="whatsapp-btn" style="text-align: center; justify-content: center;">
+                    <span>💬</span> Chat on WhatsApp Now →
+                </a>
+            </div>
 
-                <div style="margin-bottom: 20px;">
-                    <label style="display: block; font-weight: 600; margin-bottom: 8px; font-size: 0.9rem;">Primary Skin / Hair / Wellness Concern</label>
-                    <textarea rows="4" placeholder="Describe your concern or query..." required style="width: 100%; padding: 14px; border: 1px solid var(--paper-tint); border-radius: 8px; background: var(--ivory-bg);"></textarea>
-                </div>
+            <!-- Consultation Form -->
+            <div style="background: var(--bg-surface); padding: 40px; border-radius: var(--radius-lg); border: 1.5px solid var(--border-card); box-shadow: var(--shadow-sm);">
+                <h3 style="font-size: 1.4rem; color: var(--forest-deep); margin-bottom: 8px;">Schedule Callback</h3>
+                <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 20px;">Fill in your details below and our Ayurvedic doctor will connect with you.</p>
 
-                <button type="submit" class="primary-btn" style="width: 100%; justify-content: center;">
-                    Request Free Consultation →
-                </button>
-            </form>
+                <form onsubmit="event.preventDefault(); const n=document.getElementById('cName').value; const p=document.getElementById('cPhone').value; const q=document.getElementById('cQuery').value; window.open(`https://wa.me/919319468110?text=*New%20Consultation%20Request*%0AName:%20${encodeURIComponent(n)}%0APhone:%20${encodeURIComponent(p)}%0AConcern:%20${encodeURIComponent(q)}`, '_blank');">
+                    <div class="form-group">
+                        <label for="cName">Your Full Name *</label>
+                        <input type="text" id="cName" placeholder="e.g. Ananya Sharma" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="cPhone">WhatsApp Number *</label>
+                        <input type="tel" id="cPhone" placeholder="10-digit mobile number" maxlength="10" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="cQuery">Primary Health / Wellness Goal *</label>
+                        <textarea id="cQuery" rows="3" placeholder="e.g. Stubborn belly fat, low energy, hair fall, skin pigmentation..." required></textarea>
+                    </div>
+
+                    <button type="submit" class="primary-btn" style="width: 100%; justify-content: center; margin-top: 10px;">
+                        Request Free Consultation →
+                    </button>
+                </form>
+            </div>
         </div>
-    </section>
+    </div>
 </main>
 
 <footer class="footer">
-    <div class="footer-bottom" style="text-align: center; justify-content: center;">
-        <span>© 2026 Parthvi Ayurvedic. All rights reserved.</span>
+    <div class="container">
+        <div class="footer-bottom" style="text-align: center; justify-content: center;">
+            <span>© 2026 Parthvi Ayurvedic. All rights reserved. • 100% Ayush Certified Herbal Formulations 🌿</span>
+        </div>
     </div>
 </footer>
-
-<div class="cart-overlay" id="cartOverlay">
-    <div class="cart-panel">
-        <div class="cart-header">
-            <div>
-                <span class="eyebrow dark">YOUR SELECTION</span>
-                <h2 style="font-size: 1.5rem; color: var(--forest-deep);">Shopping Bag</h2>
-            </div>
-            <button id="closeCart" class="close-btn">×</button>
-        </div>
-        <div id="cartItems" class="cart-items">
-            <div class="empty-cart">
-                <span>🌿</span>
-                <p>Your bag is empty.</p>
-            </div>
-        </div>
-        <div class="cart-footer">
-            <div class="cart-total">
-                <span>Total Amount</span>
-                <strong id="cartTotal">₹0</strong>
-            </div>
-            <button class="checkout-btn" onclick="openCheckout()">Proceed to Checkout →</button>
-        </div>
-    </div>
-</div>
 
 <script src="script.js"></script>
 </body>

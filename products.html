@@ -3,16 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Our Ayurvedic Medicine | Parthvi Ayurvedic</title>
-    <meta name="description" content="Discover Parthvi Ayurvedic Slimming & Immunity Booster medicine. Pure organic formulation for natural weight management and health resilience.">
+    <title>Parthvi Slim & Immunity Rasayana | Flagship Medicine</title>
+    <meta http-equiv="refresh" content="0; url=product.html">
+    <meta name="description" content="Discover Parthvi Ayurvedic: 100% pure organic herbal remedy for natural weight loss and immunity vitality.">
     <link rel="stylesheet" href="styles.css">
+    <script>window.location.replace("product.html");</script>
 </head>
 <body>
 
+<div class="top-bar">
+    <div class="top-bar-inner">
+        <span>🌿 100% Ayush Certified Organic Formulations</span>
+        <span>🚚 Free Express Dispatch Across India</span>
+        <span>💬 Instant WhatsApp Doctor Consultation</span>
+        <span class="top-bar-badge">100% PURE HERBS</span>
+    </div>
+</div>
+
 <header class="navbar" id="navbar">
     <div class="nav-container">
-        <a href="index.html" class="brand">
-            <img src="assets/logo.png" alt="Parthvi Ayurvedic Emblem">
+        <a href="index.html" class="brand" aria-label="Parthvi Ayurvedic Home">
+            <div class="brand-emblem">🌿</div>
             <div class="brand-text">
                 <span class="brand-name">PARTHVI</span>
                 <span class="brand-tagline">PURE AYURVEDA</span>
@@ -21,84 +32,38 @@
 
         <nav class="desktop-nav">
             <a href="index.html">Home</a>
-            <a href="products.html" class="active">Our Medicine</a>
+            <a href="product.html" class="active">Slim Rasayana</a>
+            <a href="index.html#benefits">Herbal Alchemy</a>
+            <a href="index.html#ritual">Daily Ritual</a>
             <a href="about.html">Our Story</a>
-            <a href="contact.html">Consultation</a>
+            <a href="contact.html">Doctor Consultation</a>
         </nav>
 
         <div class="nav-actions">
-            <button class="icon-btn" id="searchBtn" aria-label="Search">⌕</button>
             <button class="cart-button" id="cartBtn">
                 <span>Bag</span>
                 <b id="cartCount">0</b>
             </button>
-            <button class="menu-btn" id="menuBtn">☰</button>
         </div>
     </div>
 </header>
 
-<main style="padding-top: 130px; min-height: 80vh;">
-    <section class="section">
-        <div class="section-heading">
-            <span class="eyebrow dark">PARTHVI FLAGSHIP MEDICINE</span>
-            <h2>Ayurvedic <em>Formulation.</em></h2>
-            <p>Our specialized dual-action medicine for natural weight loss and immune system enhancement.</p>
-        </div>
-
-        <div style="max-width: 900px; margin: 0 auto;">
-            <article class="product-card" style="display: flex; flex-direction: row; flex-wrap: wrap;">
-                <div class="product-image" style="flex: 1 1 300px; padding-top: 0; height: 350px;">
-                    <span class="product-tag">WEIGHT LOSS & IMMUNITY</span>
-                    <img src="assets/products/product-1.jpg" alt="Parthvi Ayurvedic Slimming & Immunity Booster" style="height: 100%; object-fit: cover;">
-                </div>
-                <div class="product-info" style="flex: 1 1 350px;">
-                    <div>
-                        <span class="product-category">100% HERBAL FORMULATION</span>
-                        <h3>Parthvi Ayurvedic Slimming & Immunity Booster</h3>
-                        <p>Infused with Garcinia, Guggulu, Giloy, and Triphala to naturally accelerate metabolism, burn obstinate fat, and fortify immune resilience.</p>
-                    </div>
-                    <div class="product-bottom" style="margin-top: 20px;">
-                        <span class="product-price">₹2200</span>
-                        <button class="primary-btn" onclick="addToCart('Parthvi Ayurvedic Slimming & Immunity Booster', 2200, 'assets/products/product-1.jpg')">
-                            Add to Bag +
-                        </button>
-                    </div>
-                </div>
-            </article>
-        </div>
-    </section>
+<main style="padding: 80px 0 100px; text-align: center;">
+    <div class="container">
+        <span class="eyebrow">PARTHVI AYURVEDIC APOTHECARY</span>
+        <h1 style="font-size: 2.2rem; color: var(--forest-deep); margin: 12px 0 20px;">Parthvi Slim & Immunity Rasayana</h1>
+        <p style="max-width: 600px; margin: 0 auto 30px; color: var(--text-secondary);">Redirecting you to our authentic Ayurvedic single-formulation medicine...</p>
+        <a href="product.html" class="primary-btn" style="display: inline-flex;">View Slim Medicine Details →</a>
+    </div>
 </main>
 
 <footer class="footer">
-    <div class="footer-bottom" style="text-align: center; justify-content: center;">
-        <span>© 2026 Parthvi Ayurvedic. All rights reserved.</span>
+    <div class="container">
+        <div class="footer-bottom" style="text-align: center; justify-content: center;">
+            <span>© 2026 Parthvi Ayurvedic. All rights reserved. • 100% Ayush Certified Herbal Formulations 🌿</span>
+        </div>
     </div>
 </footer>
-
-<div class="cart-overlay" id="cartOverlay">
-    <div class="cart-panel">
-        <div class="cart-header">
-            <div>
-                <span class="eyebrow dark">YOUR SELECTION</span>
-                <h2 style="font-size: 1.5rem; color: var(--forest-deep);">Shopping Bag</h2>
-            </div>
-            <button id="closeCart" class="close-btn">×</button>
-        </div>
-        <div id="cartItems" class="cart-items">
-            <div class="empty-cart">
-                <span>🌿</span>
-                <p>Your bag is empty.</p>
-            </div>
-        </div>
-        <div class="cart-footer">
-            <div class="cart-total">
-                <span>Total Amount</span>
-                <strong id="cartTotal">₹2200</strong>
-            </div>
-            <button class="checkout-btn" onclick="openCheckout()">Proceed to Checkout →</button>
-        </div>
-    </div>
-</div>
 
 <script src="script.js"></script>
 </body>

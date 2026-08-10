@@ -3,16 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Weight Loss & Immunity Booster Medicine | Parthvi Ayurvedic</title>
-    <meta name="description" content="Detailed information on Parthvi Ayurvedic Slimming & Immunity Booster medicine - dosage, benefits, and ingredients.">
+    <title>Parthvi Slim & Immunity Rasayana | Weight Loss & Immunity Medicine</title>
+    <meta name="description" content="Detailed clinical formulation and dosage guide for Parthvi Ayurvedic Slimming & Immunity Booster medicine. 100% natural Ayurvedic healing.">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
+<div class="top-bar">
+    <div class="top-bar-inner">
+        <span>🌿 100% Ayush Certified Organic Formulations</span>
+        <span>🚚 Free Express Dispatch Across India</span>
+        <span>💬 Instant WhatsApp Doctor Consultation</span>
+        <span class="top-bar-badge">100% PURE HERBS</span>
+    </div>
+</div>
+
 <header class="navbar" id="navbar">
     <div class="nav-container">
-        <a href="index.html" class="brand">
-            <img src="assets/logo.png" alt="Parthvi Ayurvedic Emblem">
+        <a href="index.html" class="brand" aria-label="Parthvi Ayurvedic Home">
+            <div class="brand-emblem">🌿</div>
             <div class="brand-text">
                 <span class="brand-name">PARTHVI</span>
                 <span class="brand-tagline">PURE AYURVEDA</span>
@@ -21,9 +30,11 @@
 
         <nav class="desktop-nav">
             <a href="index.html">Home</a>
-            <a href="products.html">Our Medicine</a>
+            <a href="product.html" class="active">Slim Rasayana</a>
+            <a href="index.html#benefits">Herbal Alchemy</a>
+            <a href="index.html#ritual">Daily Ritual</a>
             <a href="about.html">Our Story</a>
-            <a href="contact.html">Consultation</a>
+            <a href="contact.html">Doctor Consultation</a>
         </nav>
 
         <div class="nav-actions">
@@ -35,53 +46,177 @@
     </div>
 </header>
 
-<main style="padding-top: 130px; min-height: 80vh;">
-    <section class="section">
-        <div style="max-width: 1000px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px; background: var(--sand-card); padding: 40px; border-radius: var(--radius-md); border: 1px solid var(--paper-tint);">
-            <div style="border-radius: 12px; overflow: hidden;">
-                <img src="assets/products/product-1.jpg" alt="Parthvi Ayurvedic Slimming & Immunity Booster" style="width: 100%; height: auto; object-fit: cover;">
+<main style="padding: 60px 0 90px;">
+    <div class="container">
+        <div class="flagship-card" style="margin-bottom: 60px;">
+            <div class="flagship-gallery">
+                <span class="flagship-tag">AYUSH CERTIFIED</span>
+                <img src="assets/products/product-1.png" alt="Parthvi Ayurvedic Slimming & Immunity Booster" class="flagship-image-main">
             </div>
-            <div style="display: flex; flex-direction: column; justify-content: center;">
-                <span class="eyebrow dark">WEIGHT LOSS & IMMUNITY FORMULA</span>
-                <h2 style="font-size: 2rem; color: var(--forest-deep); margin-bottom: 12px;">Parthvi Ayurvedic Slimming & Immunity Booster</h2>
-                <p style="color: var(--text-muted); margin-bottom: 20px; line-height: 1.6;">Pure Ayurvedic formulation enriched with Garcinia (Vrikshamla), Guggulu, Giloy, and Triphala. Curbs excessive appetite, burns obstinate fat naturally, and strengthens immune defense.</p>
-                <div style="font-family: var(--font-serif); font-size: 1.8rem; font-weight: 700; color: var(--forest-deep); margin-bottom: 24px;">₹2200</div>
-                <button onclick="addToCart('Parthvi Ayurvedic Slimming & Immunity Booster', 2200, 'assets/products/product-1.jpg')" class="primary-btn" style="justify-content: center;">
-                    Add Medicine to Bag +
-                </button>
+
+            <div class="flagship-details">
+                <div>
+                    <span class="eyebrow">DUAL-ACTION WEIGHT LOSS & IMMUNITY</span>
+                    <h1 style="font-size: 2.3rem; margin-bottom: 12px; color: var(--forest-deep);">Parthvi Slim & Immunity Rasayana</h1>
+                    
+                    <div class="flagship-price-bar">
+                        <span class="current-price">₹2,200</span>
+                        <span class="original-price">₹2,800</span>
+                        <span class="save-badge">Save 21% Off</span>
+                    </div>
+
+                    <p class="flagship-desc">
+                        Expertly formulated using classical Vedic extraction methods. Combines wild <strong>Garcinia (Vrikshamla)</strong>, <strong>Shuddha Guggulu</strong>, <strong>Giloy</strong>, and <strong>Triphala</strong> to systematically address slow metabolism, stubborn belly fat, and weakened immune resistance without synthetic compounds.
+                    </p>
+
+                    <div class="flagship-benefits-grid">
+                        <div class="benefit-bullet">
+                            <span class="bullet-icon">✓</span>
+                            <span>Dissolves Stubborn Fat</span>
+                        </div>
+                        <div class="benefit-bullet">
+                            <span class="bullet-icon">✓</span>
+                            <span>Boosts Cellular Immunity</span>
+                        </div>
+                        <div class="benefit-bullet">
+                            <span class="bullet-icon">✓</span>
+                            <span>Flushes Bodily Toxins (Ama)</span>
+                        </div>
+                        <div class="benefit-bullet">
+                            <span class="bullet-icon">✓</span>
+                            <span>100% Ayush Lab Tested</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flagship-actions">
+                    <button onclick="addToCart('Parthvi Slim & Immunity Rasayana', 2200, 'assets/products/product-1.png')" class="secondary-btn">
+                        + Add to Bag
+                    </button>
+                    <button onclick="instantBuyProduct(1)" class="primary-btn">
+                        Order on WhatsApp →
+                    </button>
+                </div>
             </div>
         </div>
-    </section>
+
+        <!-- Detailed Tabs Section -->
+        <div style="background: var(--bg-pure); border-radius: var(--radius-lg); padding: 48px; border: 1px solid var(--border-card); box-shadow: var(--shadow-sm);">
+            <span class="eyebrow">THERAPEUTIC INSIGHTS</span>
+            <h2 style="margin-bottom: 24px;">Herbal Alchemy & <em>Dosage Ritual.</em></h2>
+            
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 32px; line-height: 1.7; color: var(--text-secondary);">
+                <div>
+                    <h3 style="color: var(--forest-deep); font-size: 1.25rem; margin-bottom: 12px;">🌿 Key Ingredients</h3>
+                    <p>• <strong>Vrikshamla (Garcinia Cambogia):</strong> Standardized to 60% HCA to inhibit citrate lyase and prevent fat accumulation.</p>
+                    <p>• <strong>Shuddha Guggulu:</strong> Pure Commiphora mukul resin to balance Kapha and lower systemic inflammation.</p>
+                    <p>• <strong>Giloy (Tinospora cordifolia):</strong> Classical Rasayana for building Ojas (vital immune glow).</p>
+                </div>
+
+                <div>
+                    <h3 style="color: var(--forest-deep); font-size: 1.25rem; margin-bottom: 12px;">🍵 How to Take</h3>
+                    <p>Take 1-2 spoons / tablets twice daily with lukewarm water 30 minutes before breakfast and dinner, or as directed by your Ayurvedic physician.</p>
+                    <p style="margin-top: 10px; font-weight: 600; color: var(--emerald-vibrant);">Recommended course: 60 to 90 days for sustainable metabolic resetting.</p>
+                </div>
+
+                <div>
+                    <h3 style="color: var(--forest-deep); font-size: 1.25rem; margin-bottom: 12px;">🛡️ Safety & Quality</h3>
+                    <p>• Heavy metal tested (Lead, Mercury, Arsenic < 0.01 ppm)</p>
+                    <p>• 100% vegetarian & gelatin-free</p>
+                    <p>• Zero side effects or dependency</p>
+                </div>
+            </div>
+        </div>
+    </div>
 </main>
 
 <footer class="footer">
-    <div class="footer-bottom" style="text-align: center; justify-content: center;">
-        <span>© 2026 Parthvi Ayurvedic. All rights reserved.</span>
+    <div class="container">
+        <div class="footer-bottom" style="text-align: center; justify-content: center;">
+            <span>© 2026 Parthvi Ayurvedic. All rights reserved. • 100% Ayush Certified Herbal Formulations 🌿</span>
+        </div>
     </div>
 </footer>
 
+<!-- Cart Drawer -->
 <div class="cart-overlay" id="cartOverlay">
     <div class="cart-panel">
         <div class="cart-header">
             <div>
-                <span class="eyebrow dark">YOUR SELECTION</span>
-                <h2 style="font-size: 1.5rem; color: var(--forest-deep);">Shopping Bag</h2>
+                <span class="eyebrow" style="font-size: 0.7rem; margin-bottom: 2px;">YOUR SELECTION</span>
+                <h2>Shopping Bag</h2>
             </div>
             <button id="closeCart" class="close-btn">×</button>
         </div>
-        <div id="cartItems" class="cart-items">
-            <div class="empty-cart">
-                <span>🌿</span>
-                <p>Your bag is empty.</p>
+        <div class="cart-delivery-progress">
+            <span>🚚 <strong>Free Express Shipping</strong> applied on your order!</span>
+            <div class="progress-bar-wrap">
+                <div class="progress-bar-fill"></div>
             </div>
         </div>
+        <div id="cartItems" class="cart-items"></div>
         <div class="cart-footer">
-            <div class="cart-total">
-                <span>Total Amount</span>
-                <strong id="cartTotal">₹2200</strong>
+            <div class="cart-subtotal-row">
+                <span>Total Amount:</span>
+                <span id="cartTotal">₹0</span>
             </div>
-            <button class="checkout-btn" onclick="openCheckout()">Proceed to Checkout →</button>
+            <button class="checkout-btn" onclick="openCheckout()">Proceed to WhatsApp Checkout →</button>
         </div>
+    </div>
+</div>
+
+<!-- Checkout Modal -->
+<div class="checkout-overlay" id="checkoutOverlay">
+    <div class="checkout-modal">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; padding-bottom: 14px; border-bottom: 1px solid var(--border-subtle);">
+            <div>
+                <span class="eyebrow">EXPRESS DELIVERY</span>
+                <h2 style="font-size: 1.6rem; color: var(--forest-deep);">Complete Your Order</h2>
+            </div>
+            <button id="closeCheckout" class="close-btn">×</button>
+        </div>
+
+        <form id="checkoutForm">
+            <div class="form-group">
+                <label for="customerName">Full Name *</label>
+                <input type="text" id="customerName" placeholder="e.g. Ramesh Kumar" required>
+            </div>
+            <div class="form-group">
+                <label for="customerPhone">WhatsApp Mobile Number *</label>
+                <input type="tel" id="customerPhone" placeholder="10-digit mobile number" maxlength="10" required>
+            </div>
+            <div class="form-group">
+                <label for="customerAddress">Complete Delivery Address *</label>
+                <textarea id="customerAddress" rows="2" placeholder="House/Flat No., Street, Landmark" required></textarea>
+            </div>
+            <div class="form-grid three">
+                <div class="form-group">
+                    <label for="customerCity">City *</label>
+                    <input type="text" id="customerCity" placeholder="City" required>
+                </div>
+                <div class="form-group">
+                    <label for="customerState">State *</label>
+                    <input type="text" id="customerState" placeholder="State" required>
+                </div>
+                <div class="form-group">
+                    <label for="customerPincode">Pincode *</label>
+                    <input type="text" id="customerPincode" placeholder="6 digits" maxlength="6" required>
+                </div>
+            </div>
+
+            <div class="order-summary-box">
+                <div style="font-weight: 700; font-size: 0.8rem; text-transform: uppercase; color: var(--emerald-vibrant); margin-bottom: 6px;">Order Breakdown</div>
+                <div id="checkoutItems"></div>
+                <div style="display: flex; justify-content: space-between; font-weight: 700; font-size: 1.1rem; margin-top: 10px; padding-top: 10px; border-top: 1px dashed var(--sage-tint); color: var(--forest-deep);">
+                    <span>Total (Free Shipping)</span>
+                    <span id="checkoutTotal">₹0</span>
+                </div>
+            </div>
+
+            <button type="submit" class="place-order-btn">
+                <span>💬</span> Place Order on WhatsApp →
+            </button>
+        </form>
     </div>
 </div>
 

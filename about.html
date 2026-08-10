@@ -4,15 +4,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Our Story & Botanical Philosophy | Parthvi Ayurvedic</title>
-    <meta name="description" content="Learn about Parthvi Ayurvedic's commitment to wild-harvested herbs, authentic Vedic extraction, and traditional wellness rituals.">
+    <meta name="description" content="Discover the origins of Parthvi Ayurvedic: classical Vedic formulations, wild-harvested herbs, and traditional slow extraction methods.">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
+<div class="top-bar">
+    <div class="top-bar-inner">
+        <span>🌿 100% Ayush Certified Organic Formulations</span>
+        <span>🚚 Free Express Dispatch Across India</span>
+        <span>💬 Instant WhatsApp Doctor Consultation</span>
+        <span class="top-bar-badge">100% PURE HERBS</span>
+    </div>
+</div>
+
 <header class="navbar" id="navbar">
     <div class="nav-container">
-        <a href="index.html" class="brand">
-            <img src="assets/logo.png" alt="Parthvi Ayurvedic Emblem">
+        <a href="index.html" class="brand" aria-label="Parthvi Ayurvedic Home">
+            <div class="brand-emblem">🌿</div>
             <div class="brand-text">
                 <span class="brand-name">PARTHVI</span>
                 <span class="brand-tagline">PURE AYURVEDA</span>
@@ -21,9 +30,11 @@
 
         <nav class="desktop-nav">
             <a href="index.html">Home</a>
-            <a href="products.html">Products</a>
+            <a href="index.html#flagship">Slim Rasayana</a>
+            <a href="index.html#benefits">Herbal Alchemy</a>
+            <a href="index.html#ritual">Daily Ritual</a>
             <a href="about.html" class="active">Our Story</a>
-            <a href="contact.html">Consultation</a>
+            <a href="contact.html">Doctor Consultation</a>
         </nav>
 
         <div class="nav-actions">
@@ -31,59 +42,47 @@
                 <span>Bag</span>
                 <b id="cartCount">0</b>
             </button>
-            <button class="menu-btn" id="menuBtn">☰</button>
         </div>
     </div>
 </header>
 
-<main style="padding-top: 130px; min-height: 80vh;">
-    <section class="section">
-        <div class="section-heading">
-            <span class="eyebrow dark">ROOTED IN NATURE</span>
-            <h2>Our Story & <em>Philosophy.</em></h2>
-            <p>Parthvi Ayurvedic was founded to preserve authentic Vedic remedies and make pure botanical care a seamless part of everyday life.</p>
+<main style="padding: 60px 0 90px;">
+    <div class="container">
+        <div class="section-header">
+            <span class="eyebrow">VEDIC HERITAGE & VISION</span>
+            <h2>Honoring the Wisdom of <em>Mother Earth.</em></h2>
+            <p>Parthvi was founded with a single mission: to bring unadulterated, classical Ayurvedic science into modern daily life without cutting corners.</p>
         </div>
 
-        <div style="max-width: 900px; margin: 0 auto; background: var(--sand-card); padding: 48px; border-radius: var(--radius-md); border: 1px solid var(--paper-tint); line-height: 1.8;">
-            <h3 style="margin-bottom: 16px; color: var(--forest-deep);">Purity Without Compromise</h3>
-            <p style="margin-bottom: 20px; color: var(--text-secondary);">Every product we create is rooted in authentic Ayurvedic text traditions. We source raw herbs directly from wild-harvested forest regions where soil and climate nurture maximum bio-potency.</p>
-            
-            <h3 style="margin-bottom: 16px; color: var(--forest-deep);">Traditional Slow Extraction</h3>
-            <p style="color: var(--text-secondary);">Our oils undergo slow copper-vessel decoctions (Taila Paka Vidhi) spanning days to ensure active plant compounds remain intact and bioavailable to your skin and hair.</p>
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: center; margin-bottom: 60px;">
+            <div style="border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-md); border: 6px solid #FFFFFF;">
+                <img src="assets/hero.png" alt="Ayurvedic Heritage" style="width: 100%; height: 100%; object-fit: cover;">
+            </div>
+
+            <div style="background: var(--bg-pure); padding: 40px; border-radius: var(--radius-lg); border: 1px solid var(--border-card); box-shadow: var(--shadow-sm); line-height: 1.8;">
+                <h3 style="font-size: 1.8rem; color: var(--forest-deep); margin-bottom: 16px;">The Parthvi Promise of Purity</h3>
+                <p style="color: var(--text-secondary); margin-bottom: 20px;">
+                    In Sanskrit, <strong>'Parthvi'</strong> signifies that which is born of the Earth. We believe true healing originates from wild, organically nurtured botanicals harvested in harmony with seasonal rhythms.
+                </p>
+                <p style="color: var(--text-secondary); margin-bottom: 20px;">
+                    Unlike mass-produced health supplements loaded with maltodextrin and synthetic vitamins, our flagship Slim & Immunity Rasayana undergoes traditional <em>Rasayana decoctions</em> inside sterilized copper vessels to maximize metabolic bioavailability.
+                </p>
+                <div style="display: flex; gap: 16px; margin-top: 24px;">
+                    <a href="index.html#flagship" class="primary-btn">Explore Slim Rasayana →</a>
+                    <a href="contact.html" class="secondary-btn">Ask Our Doctor</a>
+                </div>
+            </div>
         </div>
-    </section>
+    </div>
 </main>
 
 <footer class="footer">
-    <div class="footer-bottom" style="text-align: center; justify-content: center;">
-        <span>© 2026 Parthvi Ayurvedic. All rights reserved.</span>
+    <div class="container">
+        <div class="footer-bottom" style="text-align: center; justify-content: center;">
+            <span>© 2026 Parthvi Ayurvedic. All rights reserved. • 100% Ayush Certified Herbal Formulations 🌿</span>
+        </div>
     </div>
 </footer>
-
-<div class="cart-overlay" id="cartOverlay">
-    <div class="cart-panel">
-        <div class="cart-header">
-            <div>
-                <span class="eyebrow dark">YOUR SELECTION</span>
-                <h2 style="font-size: 1.5rem; color: var(--forest-deep);">Shopping Bag</h2>
-            </div>
-            <button id="closeCart" class="close-btn">×</button>
-        </div>
-        <div id="cartItems" class="cart-items">
-            <div class="empty-cart">
-                <span>🌿</span>
-                <p>Your bag is empty.</p>
-            </div>
-        </div>
-        <div class="cart-footer">
-            <div class="cart-total">
-                <span>Total Amount</span>
-                <strong id="cartTotal">₹0</strong>
-            </div>
-            <button class="checkout-btn" onclick="openCheckout()">Proceed to Checkout →</button>
-        </div>
-    </div>
-</div>
 
 <script src="script.js"></script>
 </body>

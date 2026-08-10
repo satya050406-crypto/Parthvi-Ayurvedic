@@ -4,51 +4,164 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Express Checkout | Parthvi Ayurvedic</title>
-    <meta name="description" content="Complete your order for pure Ayurvedic botanicals. Express delivery across India.">
+    <meta name="description" content="Complete your purchase with Parthvi Ayurvedic. 100% secure WhatsApp express order and free delivery across India.">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
+<div class="top-bar">
+    <div class="top-bar-inner">
+        <span>🌿 100% Ayush Certified Organic Formulations</span>
+        <span>🚚 Free Express Dispatch Across India</span>
+        <span class="top-bar-badge">100% PURE HERBS</span>
+    </div>
+</div>
+
 <header class="navbar" id="navbar">
     <div class="nav-container">
-        <a href="index.html" class="brand">
-            <img src="assets/logo.png" alt="Parthvi Ayurvedic Emblem">
+        <a href="index.html" class="brand" aria-label="Parthvi Ayurvedic Home">
+            <div class="brand-emblem">🌿</div>
             <div class="brand-text">
                 <span class="brand-name">PARTHVI</span>
                 <span class="brand-tagline">PURE AYURVEDA</span>
             </div>
         </a>
+
+        <div class="nav-actions">
+            <a href="index.html" class="secondary-btn" style="padding: 8px 18px; font-size: 0.85rem;">
+                ← Back to Shop
+            </a>
+        </div>
     </div>
 </header>
 
-<main style="padding-top: 130px; min-height: 80vh;">
-    <section class="section">
-        <div class="section-heading">
-            <span class="eyebrow dark">SECURE EXPRESS ORDER</span>
-            <h2>Complete Your <em>Purchase.</em></h2>
-            <p>Orders are dispatched directly from our herbal apothecary via express courier.</p>
+<main style="padding: 60px 0 90px; min-height: 80vh;">
+    <div class="container" style="max-width: 800px;">
+        <div class="section-header" style="margin-bottom: 32px;">
+            <span class="eyebrow">EXPRESS WHATSAPP CHECKOUT</span>
+            <h2>Complete Your <em>Order.</em></h2>
+            <p>Orders are dispatched directly from our herbal apothecary with Free Express Shipping across India.</p>
         </div>
 
-        <div style="max-width: 600px; margin: 0 auto; background: var(--sand-card); padding: 40px; border-radius: var(--radius-md); border: 1px solid var(--paper-tint); text-align: center;">
-            <p style="font-size: 1.1rem; color: var(--forest-deep); margin-bottom: 24px; font-weight: 600;">Your order details will be processed securely via WhatsApp instant checkout.</p>
-            
-            <button onclick="openCheckout()" class="checkout-btn" style="padding: 18px 36px; font-size: 1rem;">
-                Open WhatsApp Checkout Order →
-            </button>
-            
-            <p style="margin-top: 20px; font-size: 0.85rem; color: var(--text-muted);">
-                Need assistance? Call us directly at <a href="tel:+919876543210" style="color: var(--gold-deep); font-weight: bold;">+91 98765 43210</a>
-            </p>
+        <div style="background: var(--bg-pure); border-radius: var(--radius-lg); padding: 40px; border: 1.5px solid var(--border-card); box-shadow: var(--shadow-lg);">
+            <form id="standaloneCheckoutForm">
+                <h3 style="font-size: 1.25rem; color: var(--forest-deep); margin-bottom: 20px; border-bottom: 1px solid var(--border-subtle); padding-bottom: 10px;">1. Customer & Delivery Address</h3>
+                
+                <div class="form-group">
+                    <label for="soCustomerName">Full Name *</label>
+                    <input type="text" id="soCustomerName" placeholder="Enter your full name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="soCustomerPhone">WhatsApp Mobile Number *</label>
+                    <input type="tel" id="soCustomerPhone" placeholder="10-digit mobile number" maxlength="10" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="soCustomerAddress">Complete House & Street Address *</label>
+                    <textarea id="soCustomerAddress" rows="2" placeholder="House/Flat No., Building, Street, Landmark" required></textarea>
+                </div>
+
+                <div class="form-grid three">
+                    <div class="form-group">
+                        <label for="soCustomerCity">City *</label>
+                        <input type="text" id="soCustomerCity" placeholder="City" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="soCustomerState">State *</label>
+                        <input type="text" id="soCustomerState" placeholder="State" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="soCustomerPincode">Pincode *</label>
+                        <input type="text" id="soCustomerPincode" placeholder="Pincode" maxlength="6" required>
+                    </div>
+                </div>
+
+                <div class="order-summary-box" style="margin-top: 28px;">
+                    <div style="font-weight: 700; font-size: 0.82rem; text-transform: uppercase; color: var(--emerald-vibrant); margin-bottom: 10px;">2. Selected Remedies Breakdown</div>
+                    <div id="standaloneCheckoutItems">
+                        <!-- Populated by script -->
+                    </div>
+                    <div style="display: flex; justify-content: space-between; font-weight: 700; font-size: 1.2rem; margin-top: 14px; padding-top: 14px; border-top: 1px dashed var(--sage-tint); color: var(--forest-deep);">
+                        <span>Total (Free Express Delivery)</span>
+                        <span id="standaloneCheckoutTotal">₹2,200</span>
+                    </div>
+                </div>
+
+                <button type="submit" class="place-order-btn" style="margin-top: 24px;">
+                    <span>💬</span> Confirm & Dispatch Order on WhatsApp →
+                </button>
+            </form>
         </div>
-    </section>
+    </div>
 </main>
 
 <footer class="footer">
-    <div class="footer-bottom" style="text-align: center; justify-content: center;">
-        <span>© 2026 Parthvi Ayurvedic. All rights reserved.</span>
+    <div class="container">
+        <div class="footer-bottom" style="text-align: center; justify-content: center;">
+            <span>© 2026 Parthvi Ayurvedic. All rights reserved. • 100% Ayush Certified Herbal Formulations 🌿</span>
+        </div>
     </div>
 </footer>
 
 <script src="script.js"></script>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+    const itemsContainer = document.getElementById("standaloneCheckoutItems");
+    const totalContainer = document.getElementById("standaloneCheckoutTotal");
+    
+    if (cart.length === 0) {
+        addToCart("Parthvi Slim & Immunity Rasayana", 2200, "assets/products/product-1.png");
+    }
+
+    if (itemsContainer && totalContainer) {
+        const total = cart.reduce((s, i) => s + (i.price * i.quantity), 0);
+        totalContainer.textContent = `₹${total.toLocaleString("en-IN")}`;
+        itemsContainer.innerHTML = cart.map(i => `
+            <div style="display: flex; justify-content: space-between; align-items: center; padding: 6px 0; color: var(--forest-deep); font-size: 0.95rem;">
+                <span>• ${i.name} (Qty: ${i.quantity})</span>
+                <strong>₹${(i.price * i.quantity).toLocaleString("en-IN")}</strong>
+            </div>
+        `).join("");
+    }
+
+    const form = document.getElementById("standaloneCheckoutForm");
+    if (form) {
+        form.addEventListener("submit", (e) => {
+            e.preventDefault();
+            const name = document.getElementById("soCustomerName").value.trim();
+            const phone = document.getElementById("soCustomerPhone").value.trim();
+            const address = document.getElementById("soCustomerAddress").value.trim();
+            const city = document.getElementById("soCustomerCity").value.trim();
+            const state = document.getElementById("soCustomerState").value.trim();
+            const pincode = document.getElementById("soCustomerPincode").value.trim();
+
+            const itemsSummary = cart.map(i => `• ${i.name} (Qty: ${i.quantity}) - ₹${i.price * i.quantity}`).join("%0A");
+            const total = cart.reduce((s, i) => s + (i.price * i.quantity), 0);
+
+            const msg = 
+`🌿 *NEW ORDER - PARTHVI AYURVEDIC*%0A` +
+`==================================%0A` +
+`*ORDER ITEMS:*%0A` +
+`${itemsSummary}%0A%0A` +
+`*TOTAL AMOUNT:* ₹${total.toLocaleString("en-IN")} (Free Express Shipping)%0A%0A` +
+`*CUSTOMER INFORMATION:*%0A` +
+`• Name: ${encodeURIComponent(name)}%0A` +
+`• WhatsApp: ${encodeURIComponent(phone)}%0A%0A` +
+`*DELIVERY ADDRESS:*%0A` +
+`• Street: ${encodeURIComponent(address)}%0A` +
+`• City: ${encodeURIComponent(city)}%0A` +
+`• State: ${encodeURIComponent(state)}%0A` +
+`• Pincode: ${encodeURIComponent(pincode)}%0A` +
+`==================================%0A` +
+`Please confirm my order & provide tracking details! 📦`;
+
+            window.open(`https://wa.me/919319468110?text=${msg}`, "_blank");
+        });
+    }
+});
+</script>
 </body>
 </html>
