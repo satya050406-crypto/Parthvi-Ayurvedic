@@ -1,26 +1,36 @@
-# Parthvi Ayurvedic | Natural Weight Loss & Immunity Booster
+# Parthvi Ayurvedic - Premium E-Commerce Website
 
-An ultra-premium, nature-infused e-commerce web application for **Parthvi Ayurvedic**, featuring a specialized 100% natural formulation for weight loss and immunity boosting.
+A state-of-the-art, high-converting e-commerce web application for **Parthvi Ayurvedic**, featuring its flagship Ayurvedic formulation: **Parthvi Slim & Immunity Rasayana** (₹2,200).
 
 ## 🌿 Key Features
 
-- **Luxury Nature UI**: Curated botanical color palette featuring Deep Emerald Forest Green (`#0B2418`), Royal Gold (`#C5A059`), Sage (`#7B9984`), and Warm Sand Ivory (`#FCFAF4`).
-- **Single Flagship Product Focus**: Showcases *Parthvi Ayurvedic Slimming & Immunity Booster* (Price: ₹2200).
-- **Direct WhatsApp Checkout**: Customers fill in delivery details (Name, Phone, Address, City, State, Pincode) and submit orders directly to WhatsApp (`+91 93194 68110`).
-- **Responsive & Modern**: Glassmorphism navigation, live search, shopping drawer, and interactive dosage rituals.
+- **Single Product Apothecary**: Centered exclusively on Parthvi's flagship slimming and immunity-boosting Rasayana.
+- **Direct Express Checkout (`checkout.html`)**: Complete on-page customer order form capturing:
+  - Full Name
+  - Mobile Number (10 digits)
+  - Delivery Address (Street / House / Landmark)
+  - City, State, and Pincode (6 digits)
+  - Payment Method: Cash on Delivery (COD) or UPI / Online Payment
+- **Instant Order Confirmation Screen**: Generates unique Order IDs (`#PAR-XXXXX`), displays detailed order breakdown, and provides a printable order receipt.
+- **Botanical Aesthetic**: Curated color palette (pure white background, deep Himalayan forest greens, fresh sage tints, and warm Vedic gold accents).
+- **Responsive & Accessible**: Seamlessly optimized across desktop, tablet, and mobile displays.
 
 ## 📂 Project Structure
 
 ```
-├── index.html       # Primary landing page & single-product showcase
-├── styles.css       # Full botanical luxury design system & responsive layout
-├── script.js        # Cart logic, checkout modal, and WhatsApp message generator
-├── products.html    # Products apothecary subpage
-├── about.html       # Brand story & Ayurvedic philosophy
-├── contact.html     # Personalized consultation & inquiry form
-└── assets/          # Brand logo & product photography
+├── index.html        # Main landing page & botanical alchemy showcase
+├── checkout.html     # Dedicated high-converting direct checkout page
+├── product.html      # Detailed therapeutic and dosage ritual page
+├── products.html     # Redirects to single flagship medicine page
+├── about.html        # Vedic heritage and herbal philosophy
+├── contact.html      # Direct physician helpline & callback scheduler
+├── styles.css        # Vanilla CSS design system
+├── script.js         # Cart logic and live search
+├── vercel.json       # Vercel deployment routing configuration
+└── assets/           # High-resolution botanical assets & imagery
 ```
 
-## 🚀 How to Run Locally
+## 🚀 Live Deployment
 
-Simply open `index.html` in any web browser or serve using a local development server.
+- Configured for 1-click deployment on **Vercel** with clean URLs.
+- GitHub Repository: [satya050406-crypto/Parthvi-Ayurvedic](https://github.com/satya050406-crypto/Parthvi-Ayurvedic)

@@ -13,7 +13,7 @@
     <div class="top-bar-inner">
         <span>🌿 100% Ayush Certified Organic Formulations</span>
         <span>🚚 Free Express Dispatch Across India</span>
-        <span>💬 Instant WhatsApp Doctor Consultation</span>
+        <span>📞 Direct Ayurvedic Support: +91 93194 68110</span>
         <span class="top-bar-badge">100% PURE HERBS</span>
     </div>
 </div>
@@ -38,10 +38,13 @@
         </nav>
 
         <div class="nav-actions">
-            <button class="cart-button" id="cartBtn">
+            <button class="cart-button" id="cartBtn" aria-label="Open Shopping Bag">
                 <span>Bag</span>
                 <b id="cartCount">0</b>
             </button>
+            <a href="checkout.html" class="primary-btn" style="padding: 8px 18px; font-size: 0.85rem;">
+                Buy Now →
+            </a>
         </div>
     </div>
 </header>
@@ -93,9 +96,9 @@
                     <button onclick="addToCart('Parthvi Slim & Immunity Rasayana', 2200, 'assets/products/product-1.png')" class="secondary-btn">
                         + Add to Bag
                     </button>
-                    <button onclick="instantBuyProduct(1)" class="primary-btn">
-                        Order on WhatsApp →
-                    </button>
+                    <a href="checkout.html" class="primary-btn">
+                        Buy Now (₹2,200) →
+                    </a>
                 </div>
             </div>
         </div>
@@ -160,63 +163,10 @@
                 <span>Total Amount:</span>
                 <span id="cartTotal">₹0</span>
             </div>
-            <button class="checkout-btn" onclick="openCheckout()">Proceed to WhatsApp Checkout →</button>
+            <a href="checkout.html" class="checkout-btn" style="text-align: center; text-decoration: none; display: block;">
+                Proceed to Checkout (₹2,200) →
+            </a>
         </div>
-    </div>
-</div>
-
-<!-- Checkout Modal -->
-<div class="checkout-overlay" id="checkoutOverlay">
-    <div class="checkout-modal">
-        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; padding-bottom: 14px; border-bottom: 1px solid var(--border-subtle);">
-            <div>
-                <span class="eyebrow">EXPRESS DELIVERY</span>
-                <h2 style="font-size: 1.6rem; color: var(--forest-deep);">Complete Your Order</h2>
-            </div>
-            <button id="closeCheckout" class="close-btn">×</button>
-        </div>
-
-        <form id="checkoutForm">
-            <div class="form-group">
-                <label for="customerName">Full Name *</label>
-                <input type="text" id="customerName" placeholder="e.g. Ramesh Kumar" required>
-            </div>
-            <div class="form-group">
-                <label for="customerPhone">WhatsApp Mobile Number *</label>
-                <input type="tel" id="customerPhone" placeholder="10-digit mobile number" maxlength="10" required>
-            </div>
-            <div class="form-group">
-                <label for="customerAddress">Complete Delivery Address *</label>
-                <textarea id="customerAddress" rows="2" placeholder="House/Flat No., Street, Landmark" required></textarea>
-            </div>
-            <div class="form-grid three">
-                <div class="form-group">
-                    <label for="customerCity">City *</label>
-                    <input type="text" id="customerCity" placeholder="City" required>
-                </div>
-                <div class="form-group">
-                    <label for="customerState">State *</label>
-                    <input type="text" id="customerState" placeholder="State" required>
-                </div>
-                <div class="form-group">
-                    <label for="customerPincode">Pincode *</label>
-                    <input type="text" id="customerPincode" placeholder="6 digits" maxlength="6" required>
-                </div>
-            </div>
-
-            <div class="order-summary-box">
-                <div style="font-weight: 700; font-size: 0.8rem; text-transform: uppercase; color: var(--emerald-vibrant); margin-bottom: 6px;">Order Breakdown</div>
-                <div id="checkoutItems"></div>
-                <div style="display: flex; justify-content: space-between; font-weight: 700; font-size: 1.1rem; margin-top: 10px; padding-top: 10px; border-top: 1px dashed var(--sage-tint); color: var(--forest-deep);">
-                    <span>Total (Free Shipping)</span>
-                    <span id="checkoutTotal">₹0</span>
-                </div>
-            </div>
-
-            <button type="submit" class="place-order-btn">
-                <span>💬</span> Place Order on WhatsApp →
-            </button>
-        </form>
     </div>
 </div>
 

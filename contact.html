@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Doctor Consultation & Contact | Parthvi Ayurvedic</title>
-    <meta name="description" content="Connect with certified Ayurvedic physicians at Parthvi Ayurvedic for personalized Dosha consultations, weight loss advice, and customer support.">
+    <meta name="description" content="Connect with certified Ayurvedic physicians at Parthvi Ayurvedic for personalized consultations, weight loss advice, and customer support.">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -13,7 +13,7 @@
     <div class="top-bar-inner">
         <span>🌿 100% Ayush Certified Organic Formulations</span>
         <span>🚚 Free Express Dispatch Across India</span>
-        <span>💬 Instant WhatsApp Doctor Consultation</span>
+        <span>📞 Direct Ayurvedic Support: +91 93194 68110</span>
         <span class="top-bar-badge">100% PURE HERBS</span>
     </div>
 </div>
@@ -38,10 +38,13 @@
         </nav>
 
         <div class="nav-actions">
-            <button class="cart-button" id="cartBtn">
+            <button class="cart-button" id="cartBtn" aria-label="Open Shopping Bag">
                 <span>Bag</span>
                 <b id="cartCount">0</b>
             </button>
+            <a href="checkout.html" class="primary-btn" style="padding: 8px 18px; font-size: 0.85rem;">
+                Buy Now →
+            </a>
         </div>
     </div>
 </header>
@@ -51,25 +54,25 @@
         <div class="section-header">
             <span class="eyebrow">PERSONAL CARE & CONSULTATION</span>
             <h2>Talk to Our <em>Ayurvedic Doctors.</em></h2>
-            <p>Receive personalized guidance on your body's Prakriti, customized dosage rituals, and dietary recommendations directly via WhatsApp or direct call.</p>
+            <p>Receive personalized guidance on your body's Prakriti, customized dosage rituals, and dietary recommendations directly via phone helpline or request a callback.</p>
         </div>
 
         <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px; max-width: 1000px; margin: 0 auto;">
             <!-- Direct Channels Card -->
             <div style="background: var(--bg-pure); padding: 40px; border-radius: var(--radius-lg); border: 1px solid var(--border-card); box-shadow: var(--shadow-sm); display: flex; flex-direction: column; justify-content: space-between;">
                 <div>
-                    <span class="eyebrow">INSTANT WHATSAPP HOTLINE</span>
-                    <h3 style="font-size: 1.6rem; color: var(--forest-deep); margin-bottom: 12px;">Direct Physician Support</h3>
+                    <span class="eyebrow">DIRECT PHYSICIAN HELPLINE</span>
+                    <h3 style="font-size: 1.6rem; color: var(--forest-deep); margin-bottom: 12px;">Doctor Support Desk</h3>
                     <p style="color: var(--text-secondary); margin-bottom: 24px; line-height: 1.7;">
-                        Have questions regarding your current health issues, weight loss targets, or ongoing medications? Our BAMS certified doctors reply directly on WhatsApp.
+                        Have questions regarding your current health issues, weight loss targets, or dosage routine? Our certified Ayurvedic doctors are available for direct telephone guidance.
                     </p>
 
                     <div style="display: flex; flex-direction: column; gap: 16px; margin-bottom: 30px;">
                         <div style="display: flex; align-items: center; gap: 12px;">
-                            <span style="font-size: 1.3rem;">📱</span>
+                            <span style="font-size: 1.3rem;">📞</span>
                             <div>
-                                <strong style="display: block; color: var(--forest-deep);">WhatsApp Hotline</strong>
-                                <a href="https://wa.me/919319468110" target="_blank" style="color: var(--emerald-vibrant); font-weight: 700;">+91 93194 68110</a>
+                                <strong style="display: block; color: var(--forest-deep);">Phone Helpline</strong>
+                                <a href="tel:+919319468110" style="color: var(--emerald-vibrant); font-weight: 700;">+91 93194 68110</a>
                             </div>
                         </div>
 
@@ -91,8 +94,8 @@
                     </div>
                 </div>
 
-                <a href="https://wa.me/919319468110?text=Hello%20Parthvi%20Ayurvedic,%20I%20would%20like%20to%20consult%20an%20Ayurvedic%20doctor." target="_blank" class="whatsapp-btn" style="text-align: center; justify-content: center;">
-                    <span>💬</span> Chat on WhatsApp Now →
+                <a href="tel:+919319468110" class="primary-btn" style="text-align: center; justify-content: center; padding: 14px;">
+                    <span>📞</span> Call Doctor Helpline Now →
                 </a>
             </div>
 
@@ -101,26 +104,32 @@
                 <h3 style="font-size: 1.4rem; color: var(--forest-deep); margin-bottom: 8px;">Schedule Callback</h3>
                 <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 20px;">Fill in your details below and our Ayurvedic doctor will connect with you.</p>
 
-                <form onsubmit="event.preventDefault(); const n=document.getElementById('cName').value; const p=document.getElementById('cPhone').value; const q=document.getElementById('cQuery').value; window.open(`https://wa.me/919319468110?text=*New%20Consultation%20Request*%0AName:%20${encodeURIComponent(n)}%0APhone:%20${encodeURIComponent(p)}%0AConcern:%20${encodeURIComponent(q)}`, '_blank');">
+                <form id="consultForm">
                     <div class="form-group">
                         <label for="cName">Your Full Name *</label>
                         <input type="text" id="cName" placeholder="e.g. Ananya Sharma" required>
                     </div>
 
                     <div class="form-group">
-                        <label for="cPhone">WhatsApp Number *</label>
-                        <input type="tel" id="cPhone" placeholder="10-digit mobile number" maxlength="10" required>
+                        <label for="cPhone">Phone Number *</label>
+                        <input type="tel" id="cPhone" placeholder="10-digit mobile number" maxlength="10" pattern="[0-9]{10}" required>
                     </div>
 
                     <div class="form-group">
                         <label for="cQuery">Primary Health / Wellness Goal *</label>
-                        <textarea id="cQuery" rows="3" placeholder="e.g. Stubborn belly fat, low energy, hair fall, skin pigmentation..." required></textarea>
+                        <textarea id="cQuery" rows="3" placeholder="e.g. Stubborn belly fat, sluggish metabolism, low energy..." required></textarea>
                     </div>
 
                     <button type="submit" class="primary-btn" style="width: 100%; justify-content: center; margin-top: 10px;">
-                        Request Free Consultation →
+                        Request Free Callback →
                     </button>
                 </form>
+
+                <div id="consultSuccess" style="display: none; background: var(--bg-sage-mist); border: 1.5px solid var(--emerald-vibrant); border-radius: var(--radius-md); padding: 20px; text-align: center; margin-top: 15px;">
+                    <span style="font-size: 1.8rem; display: block; margin-bottom: 6px;">🌿</span>
+                    <strong style="color: var(--forest-deep); font-size: 1.1rem; display: block;">Callback Request Received!</strong>
+                    <p style="color: var(--text-secondary); font-size: 0.9rem; margin-top: 6px;">Our certified Ayurvedic doctor will call you shortly on your provided number.</p>
+                </div>
             </div>
         </div>
     </div>
@@ -135,5 +144,12 @@
 </footer>
 
 <script src="script.js"></script>
+<script>
+document.getElementById("consultForm")?.addEventListener("submit", (e) => {
+    e.preventDefault();
+    document.getElementById("consultForm").style.display = "none";
+    document.getElementById("consultSuccess").style.display = "block";
+});
+</script>
 </body>
 </html>
