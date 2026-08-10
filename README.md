@@ -15,11 +15,21 @@ A state-of-the-art, high-converting e-commerce web application for **Parthvi Ayu
 - **Botanical Aesthetic**: Curated color palette (pure white background, deep Himalayan forest greens, fresh sage tints, and warm Vedic gold accents).
 - **Responsive & Accessible**: Seamlessly optimized across desktop, tablet, and mobile displays.
 
+- **Admin Customer Data & Dispatch Portal (`admin.html`)**:
+  - Protected with a 4-digit Master Security PIN (Default: `1234`).
+  - Live revenue analytics and order counter (Pending, Dispatched, Delivered).
+  - Search customer database by name, phone, city, state, or order ID.
+  - 1-Click WhatsApp customer order update and direct phone calling.
+  - 1-Click **Export to CSV / Excel** for shipping partner uploads (Delhivery, Shiprocket, Blue Dart, India Post).
+  - Printable official packaging slip & dispatch label with customer address.
+  - Ability to add manual offline / phone orders.
+
 ## 📂 Project Structure
 
 ```
 ├── index.html        # Main landing page & botanical alchemy showcase
-├── checkout.html     # Dedicated high-converting direct checkout page
+├── checkout.html     # Dedicated direct checkout page
+├── admin.html        # Admin portal for customer data & dispatch management
 ├── product.html      # Detailed therapeutic and dosage ritual page
 ├── products.html     # Redirects to single flagship medicine page
 ├── about.html        # Vedic heritage and herbal philosophy
