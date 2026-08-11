@@ -1970,3 +1970,803 @@ em {
         max-width: 100%;
     }
 }
+
+/* =========================================================
+   PAARTVI AYURVEDA - NEW HOMEPAGE DESIGN SYSTEM
+========================================================= */
+
+/* Dark Top Bar */
+.paartvi-top-bar {
+    background: #08140D;
+    color: #E2ECE5;
+    padding: 9px 0;
+    font-size: 0.82rem;
+    font-weight: 500;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.paartvi-top-bar-inner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    text-align: center;
+    flex-wrap: wrap;
+}
+
+/* Header & Brand */
+.paartvi-navbar {
+    background: #FFFFFF;
+    border-bottom: 1px solid rgba(8, 33, 22, 0.08);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.03);
+}
+
+.paartvi-nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 24px;
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+.paartvi-brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    text-decoration: none;
+}
+
+.paartvi-brand-icon {
+    font-size: 2rem;
+    color: #1F6B4A;
+    display: flex;
+    align-items: center;
+}
+
+.paartvi-brand-title {
+    font-family: var(--font-display);
+    font-size: 1.55rem;
+    font-weight: 800;
+    letter-spacing: 0.06em;
+    color: #0F3524;
+    line-height: 1.05;
+    display: block;
+}
+
+.paartvi-brand-tagline {
+    font-size: 0.72rem;
+    color: #557564;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    display: block;
+    margin-top: 1px;
+}
+
+/* Header Right Circular Action Icons */
+.paartvi-header-actions {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.header-icon-circle {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    background: #EEF4F0;
+    color: #1F6B4A;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.15rem;
+    position: relative;
+    border: 1px solid rgba(31, 107, 74, 0.12);
+    cursor: pointer;
+    transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.header-icon-circle:hover {
+    background: #E1ECE5;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(31, 107, 74, 0.15);
+    color: #0F3524;
+}
+
+.header-badge {
+    position: absolute;
+    top: -4px;
+    right: -4px;
+    background: #E67E22;
+    color: #FFFFFF;
+    font-size: 0.7rem;
+    font-weight: 700;
+    width: 19px;
+    height: 19px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #FFFFFF;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+}
+
+/* Secondary Sub-Navbar */
+.sub-navbar {
+    background: #FFFFFF;
+    border-bottom: 1px solid rgba(8, 33, 22, 0.08);
+    padding: 10px 0;
+}
+
+.sub-navbar-container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.shop-categories-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    color: #164D35;
+    font-weight: 700;
+    font-size: 0.95rem;
+    cursor: pointer;
+    padding: 6px 12px;
+    border-radius: 8px;
+    transition: var(--transition-fast);
+}
+
+.shop-categories-btn:hover {
+    background: #EEF6F1;
+    color: #082116;
+}
+
+.sub-nav-search-btn {
+    width: 38px;
+    height: 38px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    color: #164D35;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: var(--transition-fast);
+}
+
+.sub-nav-search-btn:hover {
+    background: #EEF6F1;
+}
+
+/* =========================================================
+   HERO WEIGHT LOSS BANNER
+========================================================= */
+.paartvi-hero-wrap {
+    padding: 20px 0 10px;
+}
+
+.paartvi-hero-card {
+    background: linear-gradient(105deg, #FAFDFB 0%, #E6F3EB 55%, #D4EADB 100%);
+    border-radius: 20px;
+    border: 1px solid rgba(31, 107, 74, 0.16);
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 10px 35px rgba(8, 33, 22, 0.06);
+}
+
+.paartvi-hero-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.15fr;
+    align-items: center;
+    min-height: 420px;
+}
+
+.paartvi-hero-content {
+    padding: 48px 48px 36px;
+    z-index: 2;
+}
+
+.paartvi-hero-brand {
+    font-family: var(--font-display);
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: #1F6B4A;
+    letter-spacing: 0.05em;
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.paartvi-hero-heading-sub {
+    font-size: 1.1rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    color: #10241A;
+    text-transform: uppercase;
+    display: block;
+    margin-bottom: 2px;
+}
+
+.paartvi-hero-heading-main {
+    font-family: var(--font-sans);
+    font-size: clamp(2.4rem, 4vw, 3.6rem);
+    font-weight: 900;
+    color: #0F3524;
+    line-height: 1.02;
+    letter-spacing: -0.02em;
+    margin-bottom: 14px;
+}
+
+.paartvi-hero-desc {
+    font-size: 1.05rem;
+    color: #3D5548;
+    font-weight: 500;
+    margin-bottom: 24px;
+}
+
+.paartvi-btn-shop {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: #103825;
+    color: #FFFFFF;
+    padding: 13px 32px;
+    border-radius: 28px;
+    font-weight: 700;
+    font-size: 0.95rem;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    box-shadow: 0 6px 20px rgba(16, 56, 37, 0.28);
+    transition: all 0.25s ease;
+}
+
+.paartvi-btn-shop:hover {
+    background: #1B5C3D;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 26px rgba(16, 56, 37, 0.35);
+    color: #FFFFFF;
+}
+
+.paartvi-hero-image-wrap {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    position: relative;
+}
+
+.paartvi-hero-image-wrap img {
+    max-height: 380px;
+    width: auto;
+    object-fit: contain;
+    filter: drop-shadow(0 14px 30px rgba(8, 33, 22, 0.14));
+    transition: transform 0.4s ease;
+}
+
+.paartvi-hero-card:hover .paartvi-hero-image-wrap img {
+    transform: scale(1.02);
+}
+
+/* 4 Feature Pills Bar at bottom of Hero */
+.hero-feature-pills-bar {
+    background: #FFFFFF;
+    border-top: 1px solid rgba(31, 107, 74, 0.12);
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    padding: 14px 20px;
+    gap: 12px;
+}
+
+.hero-pill-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 6px 12px;
+    border-right: 1px solid rgba(31, 107, 74, 0.1);
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: #0F3524;
+    letter-spacing: 0.02em;
+}
+
+.hero-pill-item:last-child {
+    border-right: none;
+}
+
+.hero-pill-icon {
+    font-size: 1.15rem;
+}
+
+/* =========================================================
+   CATEGORY CARDS SECTION
+========================================================= */
+.category-section-wrap {
+    padding: 30px 0 20px;
+}
+
+.category-cards-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+}
+
+.category-card {
+    background: #EAF5EE;
+    border: 1.5px solid rgba(31, 107, 74, 0.12);
+    border-radius: 16px;
+    padding: 20px 16px 18px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 180px;
+    text-decoration: none;
+}
+
+.category-card:hover {
+    background: #DFF0E5;
+    border-color: #1F6B4A;
+    transform: translateY(-4px);
+    box-shadow: 0 10px 24px rgba(31, 107, 74, 0.12);
+}
+
+.category-card-img {
+    height: 100px;
+    width: 100%;
+    object-fit: contain;
+    margin-bottom: 12px;
+    transition: transform 0.3s ease;
+}
+
+.category-card:hover .category-card-img {
+    transform: scale(1.06);
+}
+
+.category-card-title {
+    font-size: 0.98rem;
+    font-weight: 700;
+    color: #164D35;
+    letter-spacing: 0.01em;
+}
+
+/* =========================================================
+   MIDDLE CARE PROMO BANNER
+========================================================= */
+.care-promo-section {
+    padding: 20px 0;
+}
+
+.care-promo-card {
+    background: linear-gradient(100deg, #EDF7F1 0%, #D8EDE0 60%, #CCE6D5 100%);
+    border-radius: 18px;
+    border: 1.5px solid rgba(31, 107, 74, 0.15);
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    align-items: center;
+    box-shadow: 0 8px 30px rgba(8, 33, 22, 0.05);
+}
+
+.care-promo-content {
+    padding: 36px 44px;
+}
+
+.care-promo-brand {
+    font-family: var(--font-display);
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: #1F6B4A;
+    letter-spacing: 0.05em;
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.care-promo-title {
+    font-family: var(--font-sans);
+    font-size: clamp(1.6rem, 2.5vw, 2.3rem);
+    font-weight: 900;
+    color: #0F3524;
+    line-height: 1.12;
+    margin-bottom: 8px;
+    letter-spacing: -0.01em;
+}
+
+.care-promo-sub {
+    font-size: 0.95rem;
+    color: #3D5548;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.care-promo-img-wrap {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    overflow: hidden;
+}
+
+.care-promo-img-wrap img {
+    height: 220px;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 0 16px 16px 0;
+}
+
+/* =========================================================
+   TOP OFFERS SECTION
+========================================================= */
+.section-header-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 18px;
+}
+
+.section-title-bold {
+    font-size: 1.35rem;
+    font-weight: 800;
+    color: #0F3524;
+    letter-spacing: -0.01em;
+}
+
+.see-all-link {
+    font-size: 0.92rem;
+    font-weight: 700;
+    color: #164D35;
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    text-decoration: none;
+    transition: var(--transition-fast);
+}
+
+.see-all-link:hover {
+    color: #2FA368;
+    transform: translateX(3px);
+}
+
+.offers-cards-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+}
+
+.offer-card {
+    background: #EAF5EE;
+    border: 1.5px solid rgba(31, 107, 74, 0.12);
+    border-radius: 16px;
+    padding: 16px 14px 14px;
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 180px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.offer-card:hover {
+    background: #DFEFE5;
+    border-color: #1F6B4A;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(31, 107, 74, 0.12);
+}
+
+.offer-card-img {
+    height: 95px;
+    width: 100%;
+    object-fit: contain;
+    margin-bottom: 12px;
+}
+
+.offer-card-text {
+    border-top: 1px solid rgba(31, 107, 74, 0.1);
+    padding-top: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.offer-card-upto {
+    font-size: 0.72rem;
+    color: #557564;
+    font-weight: 600;
+    text-transform: uppercase;
+    display: block;
+}
+
+.offer-card-discount {
+    font-size: 1.15rem;
+    font-weight: 800;
+    color: #0F3524;
+    line-height: 1.1;
+    display: block;
+}
+
+.offer-card-category {
+    font-size: 0.78rem;
+    font-weight: 700;
+    color: #1F6B4A;
+    display: block;
+}
+
+.offer-card-arrow {
+    color: #1F6B4A;
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+/* =========================================================
+   FEATURED PRODUCTS SECTION
+========================================================= */
+.featured-products-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.featured-product-card {
+    background: #FFFFFF;
+    border: 1.5px solid rgba(31, 107, 74, 0.12);
+    border-radius: 16px;
+    padding: 16px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.03);
+}
+
+.featured-product-card:hover {
+    border-color: #1F6B4A;
+    transform: translateY(-4px);
+    box-shadow: 0 12px 30px rgba(31, 107, 74, 0.12);
+}
+
+.product-featured-tag {
+    position: absolute;
+    top: 14px;
+    right: 14px;
+    background: #0F3524;
+    color: #FFFFFF;
+    font-size: 0.7rem;
+    font-weight: 700;
+    padding: 3px 8px;
+    border-radius: 6px;
+    letter-spacing: 0.02em;
+    z-index: 2;
+}
+
+.featured-product-img-wrap {
+    height: 160px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 12px;
+}
+
+.featured-product-img-wrap img {
+    max-height: 150px;
+    width: auto;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+}
+
+.featured-product-card:hover .featured-product-img-wrap img {
+    transform: scale(1.05);
+}
+
+.featured-product-title {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: #0F3524;
+    margin-bottom: 6px;
+    line-height: 1.3;
+}
+
+.featured-product-rating {
+    font-size: 0.8rem;
+    color: #E67E22;
+    margin-bottom: 8px;
+}
+
+.featured-product-price-row {
+    display: flex;
+    align-items: baseline;
+    gap: 8px;
+    margin-bottom: 14px;
+}
+
+.featured-price-current {
+    font-size: 1.15rem;
+    font-weight: 800;
+    color: #0F3524;
+}
+
+.featured-price-original {
+    font-size: 0.85rem;
+    color: #8E9F94;
+    text-decoration: line-through;
+}
+
+.featured-product-btn-group {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 8px;
+}
+
+.btn-add-bag {
+    background: #EEF6F1;
+    color: #164D35;
+    border: 1px solid rgba(31, 107, 74, 0.2);
+    padding: 9px 12px;
+    border-radius: 8px;
+    font-weight: 700;
+    font-size: 0.85rem;
+    cursor: pointer;
+    transition: var(--transition-fast);
+}
+
+.btn-add-bag:hover {
+    background: #164D35;
+    color: #FFFFFF;
+}
+
+.btn-quick-buy {
+    background: #0F3524;
+    color: #FFFFFF;
+    padding: 9px 14px;
+    border-radius: 8px;
+    font-weight: 700;
+    font-size: 0.85rem;
+    cursor: pointer;
+    transition: var(--transition-fast);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-quick-buy:hover {
+    background: #238654;
+}
+
+/* =========================================================
+   CATEGORY DRAWER & RESPONSIVENESS
+========================================================= */
+.category-drawer {
+    position: fixed;
+    top: 0;
+    left: -320px;
+    width: 300px;
+    height: 100%;
+    background: #FFFFFF;
+    z-index: 10000;
+    box-shadow: 4px 0 25px rgba(0, 0, 0, 0.15);
+    transition: left 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+    padding: 24px;
+    overflow-y: auto;
+}
+
+.category-drawer.active {
+    left: 0;
+}
+
+.category-drawer-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(8, 33, 22, 0.5);
+    z-index: 9999;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+}
+
+.category-drawer-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.category-drawer-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 14px;
+    border-radius: 10px;
+    color: #0F3524;
+    font-weight: 600;
+    font-size: 0.95rem;
+    text-decoration: none;
+    transition: var(--transition-fast);
+    margin-bottom: 4px;
+}
+
+.category-drawer-item:hover {
+    background: #EEF6F1;
+    color: #1F6B4A;
+}
+
+/* Responsive adjustments for Paartvi layout */
+@media (max-width: 1024px) {
+    .category-cards-grid,
+    .offers-cards-grid,
+    .featured-products-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .paartvi-hero-grid {
+        grid-template-columns: 1fr;
+    }
+    .paartvi-hero-image-wrap {
+        order: -1;
+        min-height: 260px;
+    }
+    .care-promo-card {
+        grid-template-columns: 1fr;
+    }
+    .care-promo-img-wrap img {
+        height: 180px;
+        border-radius: 0 0 16px 16px;
+    }
+}
+
+@media (max-width: 640px) {
+    .paartvi-nav-container {
+        padding: 10px 14px;
+    }
+    .paartvi-brand-title {
+        font-size: 1.25rem;
+    }
+    .paartvi-brand-tagline {
+        font-size: 0.65rem;
+    }
+    .header-icon-circle {
+        width: 36px;
+        height: 36px;
+        font-size: 1rem;
+    }
+    .hero-feature-pills-bar {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 8px;
+    }
+    .hero-pill-item {
+        border-right: none;
+        border-bottom: 1px solid rgba(31, 107, 74, 0.08);
+        font-size: 0.78rem;
+    }
+    .paartvi-hero-content {
+        padding: 24px 20px 20px;
+    }
+    .category-cards-grid,
+    .offers-cards-grid,
+    .featured-products-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+    }
+    .category-card {
+        padding: 14px 10px;
+        min-height: 140px;
+    }
+    .category-card-img {
+        height: 70px;
+    }
+    .category-card-title {
+        font-size: 0.85rem;
+    }
+}
