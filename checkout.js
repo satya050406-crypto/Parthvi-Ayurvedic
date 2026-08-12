@@ -90,7 +90,7 @@ function handleGoogleLogin(customEmail = null, customName = null) {
     renderAuthenticatedUser(userObj);
 
     // Show instant visual feedback and advance to Step 2
-    showToast(`Signed in as ${userObj.name} (${userObj.email}) ✓`);
+    showToast(`Signed in as ${userObj.name} (${userObj.email})`);
     setTimeout(() => {
         goToStep(2);
     }, 450);
@@ -147,7 +147,7 @@ function goToStep(step) {
             if (i < step) {
                 stepBtn.classList.add("completed");
                 const bubble = stepBtn.querySelector(".step-item-bubble");
-                if (bubble) bubble.textContent = "✓";
+                if (bubble) bubble.innerHTML = `<i class="fa-solid fa-check" style="font-size:0.75rem;"></i>`;
             } else if (i === step) {
                 stepBtn.classList.add("active");
                 const bubble = stepBtn.querySelector(".step-item-bubble");
@@ -284,11 +284,11 @@ function updatePaymentDetails() {
 
     if (payBtnText) {
         if (selectedPayment === "COD") {
-            payBtnText.textContent = `📦 Confirm Cash on Delivery Order (₹${totalAmount.toLocaleString("en-IN")}) →`;
+            payBtnText.innerHTML = `<i class="fa-solid fa-box-open"></i> Confirm Cash on Delivery Order (₹${totalAmount.toLocaleString("en-IN")}) →`;
         } else if (selectedPayment === "UPI") {
-            payBtnText.textContent = `📱 Verify & Place UPI Order (₹${totalAmount.toLocaleString("en-IN")}) →`;
+            payBtnText.innerHTML = `<i class="fa-solid fa-qrcode"></i> Verify & Place UPI Order (₹${totalAmount.toLocaleString("en-IN")}) →`;
         } else {
-            payBtnText.textContent = `🔒 Pay & Place Order (₹${totalAmount.toLocaleString("en-IN")}) →`;
+            payBtnText.innerHTML = `<i class="fa-solid fa-lock"></i> Pay & Place Order (₹${totalAmount.toLocaleString("en-IN")}) →`;
         }
     }
 }
@@ -389,8 +389,8 @@ function renderSuccessReceipt(order) {
             <div>
                 <div style="color: var(--text-muted); font-size: 0.78rem; text-transform: uppercase; font-weight: 700; margin-bottom: 2px;">Customer Details</div>
                 <strong style="color: var(--forest-deep); font-size: 0.98rem;">${order.name}</strong>
-                <div>📞 +91 ${order.phone}</div>
-                ${order.email !== "Not Provided" ? `<div>✉️ ${order.email}</div>` : ""}
+                <div style="display:flex; align-items:center; gap:6px; margin-top:2px;"><i class="fa-solid fa-phone" style="font-size:0.8rem; color:var(--forest-emerald);"></i> +91 ${order.phone}</div>
+                ${order.email !== "Not Provided" ? `<div style="display:flex; align-items:center; gap:6px; margin-top:2px;"><i class="fa-solid fa-envelope" style="font-size:0.8rem; color:var(--forest-emerald);"></i> ${order.email}</div>` : ""}
             </div>
             <div>
                 <div style="color: var(--text-muted); font-size: 0.78rem; text-transform: uppercase; font-weight: 700; margin-bottom: 2px;">Delivery Destination</div>

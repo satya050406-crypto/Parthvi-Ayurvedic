@@ -5,40 +5,47 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Parthvi Slim & Immunity Rasayana | Weight Loss & Immunity Medicine</title>
     <meta name="description" content="Detailed clinical formulation and dosage guide for Parthvi Ayurvedic Slimming & Immunity Booster medicine. 100% natural Ayurvedic healing.">
+    <link rel="icon" type="image/png" href="assets/logo.png">
+    <link rel="apple-touch-icon" href="assets/logo.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
 <div class="top-bar">
     <div class="top-bar-inner">
-        <span>🌿 100% Ayush Certified Organic Formulations</span>
-        <span>🚚 Free Express Dispatch Across India</span>
-        <span>📞 Direct Ayurvedic Support: +91 93194 68110</span>
-        <span class="top-bar-badge">100% PURE HERBS</span>
+        <span class="flag-badge-pill"><span class="flag-tiranga-icon"><span class="bar-saffron"></span><span class="bar-white"></span><span class="bar-green"></span></span> 100% Authentic Indian Ayurveda</span>
+        <span><i class="fa-solid fa-leaf"></i> 100% Ayush Certified Organic Formulations</span>
+        <span><i class="fa-solid fa-truck-fast"></i> Free Express Dispatch Across India</span>
+        <span><i class="fa-solid fa-phone"></i> Helpline: +91 93194 68110</span>
     </div>
 </div>
 
 <header class="navbar" id="navbar">
     <div class="nav-container">
         <a href="index.html" class="brand" aria-label="Parthvi Ayurvedic Home">
-            <div class="brand-emblem">🌿</div>
+            <img src="assets/logo.png" alt="Parthvi Ayurveda Official Logo" class="brand-logo-img">
             <div class="brand-text">
                 <span class="brand-name">PARTHVI</span>
-                <span class="brand-tagline">PURE AYURVEDA</span>
+                <span class="brand-tagline" style="display:flex; align-items:center; gap:6px;">
+                    PURE AYURVEDA <span class="flag-tiranga-icon"><span class="bar-saffron"></span><span class="bar-white"></span><span class="bar-green"></span></span>
+                </span>
             </div>
         </a>
 
         <nav class="desktop-nav">
             <a href="index.html">Home</a>
-            <a href="product.html" class="active">Slim Rasayana</a>
-            <a href="index.html#benefits">Herbal Alchemy</a>
-            <a href="index.html#ritual">Daily Ritual</a>
+            <a href="category-healthcare.html" class="active">Health Care</a>
+            <a href="category-personalcare.html">Personal Care</a>
+            <a href="category-medicine.html">Medicine</a>
+            <a href="category-nutraceuticals.html">Nutraceuticals</a>
             <a href="about.html">Our Story</a>
             <a href="contact.html">Doctor Consultation</a>
         </nav>
 
         <div class="nav-actions">
             <button class="cart-button" id="cartBtn" aria-label="Open Shopping Bag">
+                <i class="fa-solid fa-bag-shopping"></i>
                 <span>Bag</span>
                 <b id="cartCount">0</b>
             </button>
@@ -74,30 +81,30 @@
 
                     <div class="flagship-benefits-grid">
                         <div class="benefit-bullet">
-                            <span class="bullet-icon">✓</span>
+                            <span class="bullet-icon"><i class="fa-solid fa-check"></i></span>
                             <span>Dissolves Stubborn Fat</span>
                         </div>
                         <div class="benefit-bullet">
-                            <span class="bullet-icon">✓</span>
+                            <span class="bullet-icon"><i class="fa-solid fa-check"></i></span>
                             <span>Boosts Cellular Immunity</span>
                         </div>
                         <div class="benefit-bullet">
-                            <span class="bullet-icon">✓</span>
+                            <span class="bullet-icon"><i class="fa-solid fa-check"></i></span>
                             <span>Flushes Bodily Toxins (Ama)</span>
                         </div>
                         <div class="benefit-bullet">
-                            <span class="bullet-icon">✓</span>
+                            <span class="bullet-icon"><i class="fa-solid fa-check"></i></span>
                             <span>100% Ayush Lab Tested</span>
                         </div>
                     </div>
                 </div>
 
                 <div class="flagship-actions">
-                    <button onclick="addToCart('Parthvi Slim & Immunity Rasayana', 2200, 'assets/products/product-1.png')" class="secondary-btn">
-                        + Add to Bag
+                    <button onclick="addToCart('Parthvi Slim & Immunity Rasayana', 2200, 'assets/products/product-1.png')" class="secondary-btn" style="gap: 8px;">
+                        <i class="fa-solid fa-cart-plus"></i> Add to Bag
                     </button>
-                    <a href="checkout.html" class="primary-btn">
-                        Buy Now (₹2,200) →
+                    <a href="checkout.html" class="primary-btn" style="gap: 8px;">
+                        <i class="fa-solid fa-bolt"></i> Buy Now (₹2,200) →
                     </a>
                 </div>
             </div>
@@ -110,20 +117,26 @@
             
             <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 32px; line-height: 1.7; color: var(--text-secondary);">
                 <div>
-                    <h3 style="color: var(--forest-deep); font-size: 1.25rem; margin-bottom: 12px;">🌿 Key Ingredients</h3>
+                    <h3 style="color: var(--forest-deep); font-size: 1.25rem; margin-bottom: 12px; display: flex; align-items: center; gap: 8px;">
+                        <i class="fa-solid fa-seedling" style="color: var(--forest-emerald);"></i> Key Ingredients
+                    </h3>
                     <p>• <strong>Vrikshamla (Garcinia Cambogia):</strong> Standardized to 60% HCA to inhibit citrate lyase and prevent fat accumulation.</p>
                     <p>• <strong>Shuddha Guggulu:</strong> Pure Commiphora mukul resin to balance Kapha and lower systemic inflammation.</p>
                     <p>• <strong>Giloy (Tinospora cordifolia):</strong> Classical Rasayana for building Ojas (vital immune glow).</p>
                 </div>
 
                 <div>
-                    <h3 style="color: var(--forest-deep); font-size: 1.25rem; margin-bottom: 12px;">🍵 How to Take</h3>
+                    <h3 style="color: var(--forest-deep); font-size: 1.25rem; margin-bottom: 12px; display: flex; align-items: center; gap: 8px;">
+                        <i class="fa-solid fa-mortar-pestle" style="color: var(--forest-emerald);"></i> How to Take
+                    </h3>
                     <p>Take 1-2 spoons / tablets twice daily with lukewarm water 30 minutes before breakfast and dinner, or as directed by your Ayurvedic physician.</p>
                     <p style="margin-top: 10px; font-weight: 600; color: var(--emerald-vibrant);">Recommended course: 60 to 90 days for sustainable metabolic resetting.</p>
                 </div>
 
                 <div>
-                    <h3 style="color: var(--forest-deep); font-size: 1.25rem; margin-bottom: 12px;">🛡️ Safety & Quality</h3>
+                    <h3 style="color: var(--forest-deep); font-size: 1.25rem; margin-bottom: 12px; display: flex; align-items: center; gap: 8px;">
+                        <i class="fa-solid fa-shield-halved" style="color: var(--forest-emerald);"></i> Safety & Quality
+                    </h3>
                     <p>• Heavy metal tested (Lead, Mercury, Arsenic < 0.01 ppm)</p>
                     <p>• 100% vegetarian & gelatin-free</p>
                     <p>• Zero side effects or dependency</p>
@@ -136,7 +149,7 @@
 <footer class="footer">
     <div class="container">
         <div class="footer-bottom" style="text-align: center; justify-content: center;">
-            <span>© 2026 Parthvi Ayurvedic. All rights reserved. • 100% Ayush Certified Herbal Formulations 🌿</span>
+            <span>© 2026 Parthvi Ayurvedic. All rights reserved. • 100% Ayush Certified Herbal Formulations <i class="fa-solid fa-leaf" style="color: #2FA368;"></i></span>
         </div>
     </div>
 </footer>
@@ -149,10 +162,10 @@
                 <span class="eyebrow" style="font-size: 0.7rem; margin-bottom: 2px;">YOUR SELECTION</span>
                 <h2>Shopping Bag</h2>
             </div>
-            <button id="closeCart" class="close-btn">×</button>
+            <button id="closeCart" class="close-btn">&times;</button>
         </div>
         <div class="cart-delivery-progress">
-            <span>🚚 <strong>Free Express Shipping</strong> applied on your order!</span>
+            <span><i class="fa-solid fa-truck-fast"></i> <strong>Free Express Shipping</strong> applied on your order!</span>
             <div class="progress-bar-wrap">
                 <div class="progress-bar-fill"></div>
             </div>

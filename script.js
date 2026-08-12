@@ -5,8 +5,9 @@
 // Support Helpline Number
 const STORE_HELPLINE_NUMBER = "+919319468110"; 
 
-// Ayurvedic Product Catalog
+// Complete Ayurvedic Multi-Category Catalog
 const products = [
+    // Health Care
     {
         id: 1,
         name: "Parthvi Weight Loss Rasayana & Capsules",
@@ -17,22 +18,68 @@ const products = [
         rating: 4.9,
         reviewsCount: 384,
         isFlagship: true,
-        tag: "Featured",
+        tag: "Best Seller",
+        badge: "Top Choice",
         description: "Dual-action Vedic formula powered by Garcinia, Guggulu, Giloy & Triphala. Accelerates natural fat breakdown while building robust daily immunity."
     },
     {
-        id: 2,
-        name: "Parthvi Pure Shilajit Gold Himalayan Resin",
-        category: "Nutraceuticals",
-        price: 1499,
-        originalPrice: 1999,
-        image: "assets/products/product-2.png",
+        id: 101,
+        name: "Parthvi Immuno-Shakti Chyawanprash",
+        category: "Health Care",
+        price: 650,
+        originalPrice: 850,
+        image: "assets/cat_healthcare.png",
         rating: 4.9,
-        reviewsCount: 219,
+        reviewsCount: 210,
         isFlagship: false,
-        tag: "Featured",
-        description: "100% pure Himalayan Shilajit resin enriched with 80+ ionic minerals and fulvic acid for stamina, vitality, and cellular rejuvenation."
+        tag: "Immunity",
+        badge: "Pure Amla",
+        description: "Ancient 48-herb classical Chyawanprash formulated with wild organic amla, Kashmiri saffron, and silver leaf for full-family vitality."
     },
+    {
+        id: 102,
+        name: "Parthvi Liv-Care Detox & Metabolism Syrup",
+        category: "Health Care",
+        price: 420,
+        originalPrice: 550,
+        image: "assets/cat_healthcare.png",
+        rating: 4.8,
+        reviewsCount: 142,
+        isFlagship: false,
+        tag: "Liver Care",
+        badge: "Detox Formula",
+        description: "Pure Bhumi Amla, Kalmegh, and Punarnava formulation to protect liver cells, eliminate toxic Ama, and stimulate healthy metabolic bile."
+    },
+    {
+        id: 103,
+        name: "Parthvi Triphala Cleanse & Digestion Kwath",
+        category: "Health Care",
+        price: 380,
+        originalPrice: 499,
+        image: "assets/products/product-1.png",
+        rating: 4.9,
+        reviewsCount: 178,
+        isFlagship: false,
+        tag: "Digestion",
+        badge: "Tri-Dosha",
+        description: "Balanced Haritaki, Bibhitaki, and Amalaki trio. Regulates bowel movements, cures chronic acidity, and purifies the colon naturally."
+    },
+    {
+        id: 104,
+        name: "Parthvi Giloy Tulsi Daily Immunity Drops",
+        category: "Health Care",
+        price: 299,
+        originalPrice: 399,
+        image: "assets/cat_healthcare.png",
+        rating: 4.7,
+        reviewsCount: 95,
+        isFlagship: false,
+        tag: "Immunity",
+        badge: "Ayush 82",
+        description: "Concentrated extract of Neem-Giloy stem and Rama Tulsi. Enhances platelet count and fortifies cellular defense against seasonal infections."
+    },
+
+    // Personal Care
     {
         id: 3,
         name: "Parthvi Kumkumadi Ayurvedic Glow Tailam",
@@ -43,9 +90,68 @@ const products = [
         rating: 4.8,
         reviewsCount: 167,
         isFlagship: false,
-        tag: "Featured",
+        tag: "Best Seller",
+        badge: "Kashmiri Saffron",
         description: "Authentic Kashmiri saffron infused facial oil that enhances skin luminescence, reduces pigmentation, and deeply hydrates."
     },
+    {
+        id: 201,
+        name: "Parthvi Bhringraj & Amla Hair Growth Oil",
+        category: "Personal Care",
+        price: 649,
+        originalPrice: 850,
+        image: "assets/cat_personalcare.png",
+        rating: 4.9,
+        reviewsCount: 234,
+        isFlagship: false,
+        tag: "Hair Care",
+        badge: "Kshir Pak Vidhi",
+        description: "Cooked in pure goat milk and sesame oil with 16 potent hair herbs. Stops premature greying, controls severe hair fall, and triggers follicle growth."
+    },
+    {
+        id: 202,
+        name: "Parthvi Neem & Tea Tree Purifying Face Wash",
+        category: "Personal Care",
+        price: 399,
+        originalPrice: 499,
+        image: "assets/cat_personalcare.png",
+        rating: 4.8,
+        reviewsCount: 118,
+        isFlagship: false,
+        tag: "Skin Cleanser",
+        badge: "Sulphate Free",
+        description: "Gentle soap-free Ayurvedic herbal cleanser that removes deep impurities, controls excess sebum, and clears active acne blemishes."
+    },
+    {
+        id: 203,
+        name: "Parthvi Pure Aloe Radiance Hydrating Gel",
+        category: "Personal Care",
+        price: 349,
+        originalPrice: 450,
+        image: "assets/cat_personalcare.png",
+        rating: 4.7,
+        reviewsCount: 88,
+        isFlagship: false,
+        tag: "Moisturizer",
+        badge: "99% Pure Gel",
+        description: "Cold-extracted organic Aloe Vera enriched with Vitamin E. Soothes sunburns, calms inflammation, and locks in dewy all-day moisture."
+    },
+    {
+        id: 204,
+        name: "Parthvi Herbal Scalp Therapy Shampoo",
+        category: "Personal Care",
+        price: 499,
+        originalPrice: 650,
+        image: "assets/cat_personalcare.png",
+        rating: 4.8,
+        reviewsCount: 145,
+        isFlagship: false,
+        tag: "Anti-Dandruff",
+        badge: "Reetha Shikakai",
+        description: "Natural saponin formula with Reetha, Shikakai, and Methi seed. Cleanses gently without stripping scalp natural moisture barrier."
+    },
+
+    // Medicine
     {
         id: 4,
         name: "Parthvi Ashwagandha Pro Vitality Churna",
@@ -56,8 +162,267 @@ const products = [
         rating: 4.9,
         reviewsCount: 194,
         isFlagship: false,
-        tag: "Featured",
-        description: "Organic KSM-66 Ashwagandha root powder to reduce cortisol, relieve anxiety, and promote restful deep sleep."
+        tag: "Vitality",
+        badge: "KSM-66 Extract",
+        description: "Organic KSM-66 Ashwagandha root powder to reduce cortisol, relieve anxiety, build physical strength, and promote restful deep sleep."
+    },
+    {
+        id: 301,
+        name: "Parthvi Shuddha Guggulu Metabolic Tablets",
+        category: "Medicine",
+        price: 749,
+        originalPrice: 950,
+        image: "assets/cat_medicine.png",
+        rating: 4.9,
+        reviewsCount: 162,
+        isFlagship: false,
+        tag: "Lipid Support",
+        badge: "Shodhita Resin",
+        description: "Purified Commiphora mukul processed in Triphala decoction. Aids healthy cholesterol maintenance, clears blocked srotas, and burns deep tissue fat."
+    },
+    {
+        id: 302,
+        name: "Parthvi Yograj Guggulu for Joint Comfort",
+        category: "Medicine",
+        price: 699,
+        originalPrice: 899,
+        image: "assets/cat_medicine.png",
+        rating: 4.8,
+        reviewsCount: 130,
+        isFlagship: false,
+        tag: "Joint Relief",
+        badge: "Vata Balancing",
+        description: "Classical Shastriya formulation of 27 herbs. Calms chronic Vata aggravation, relieves morning stiffness, and lubricates cartilage joints."
+    },
+    {
+        id: 303,
+        name: "Parthvi Maha Sudarshan Antiviral Kwath",
+        category: "Medicine",
+        price: 450,
+        originalPrice: 599,
+        image: "assets/cat_medicine.png",
+        rating: 4.8,
+        reviewsCount: 84,
+        isFlagship: false,
+        tag: "Fever & Detox",
+        badge: "54 Herb Blend",
+        description: "Traditional bitter tonic that eliminates chronic systemic toxins, purifies the lymphatic bloodstream, and regulates normal body temperature."
+    },
+    {
+        id: 304,
+        name: "Parthvi Brahmi Memory & Stress Relief Vati",
+        category: "Medicine",
+        price: 599,
+        originalPrice: 750,
+        image: "assets/cat_medicine.png",
+        rating: 4.9,
+        reviewsCount: 112,
+        isFlagship: false,
+        tag: "Brain Tonic",
+        badge: "Medhya Rasayana",
+        description: "Concentrated Bacopa monnieri and Shankhpushpi tablet to boost cognitive memory recall, mental focus, and calm nervous restlessness."
+    },
+
+    // Nutraceuticals
+    {
+        id: 2,
+        name: "Parthvi Pure Shilajit Gold Himalayan Resin",
+        category: "Nutraceuticals",
+        price: 1499,
+        originalPrice: 1999,
+        image: "assets/products/product-2.png",
+        rating: 4.9,
+        reviewsCount: 219,
+        isFlagship: false,
+        tag: "Best Seller",
+        badge: "Grade-A Gold",
+        description: "100% pure Himalayan Shilajit resin enriched with 80+ ionic minerals and fulvic acid for stamina, vitality, and cellular rejuvenation."
+    },
+    {
+        id: 401,
+        name: "Parthvi Wild Forest Organic Raw Honey",
+        category: "Nutraceuticals",
+        price: 550,
+        originalPrice: 720,
+        image: "assets/cat_nutraceuticals.png",
+        rating: 4.9,
+        reviewsCount: 175,
+        isFlagship: false,
+        tag: "Superfood",
+        badge: "Unpasteurized",
+        description: "Unfiltered, unheated Himalayan wild bee honey packed with live pollen enzymes, rich amino acids, and high antioxidant potency."
+    },
+    {
+        id: 402,
+        name: "Parthvi Organic Moringa Superfood Capsules",
+        category: "Nutraceuticals",
+        price: 699,
+        originalPrice: 899,
+        image: "assets/cat_nutraceuticals.png",
+        rating: 4.8,
+        reviewsCount: 96,
+        isFlagship: false,
+        tag: "Daily Greens",
+        badge: "Nutrient Dense",
+        description: "Rich green miracle leaf capsules containing 7x more Vitamin C than oranges and 4x more calcium than milk for non-stop daily stamina."
+    },
+    {
+        id: 403,
+        name: "Parthvi Apple Cider Vinegar with Mother",
+        category: "Nutraceuticals",
+        price: 499,
+        originalPrice: 650,
+        image: "assets/cat_nutraceuticals.png",
+        rating: 4.7,
+        reviewsCount: 104,
+        isFlagship: false,
+        tag: "Weight & Gut",
+        badge: "With Mother",
+        description: "Raw fermented Himalayan apple vinegar with live probiotics, Garcinia, and ginger for appetite control and healthy gut microbiome."
+    },
+    {
+        id: 404,
+        name: "Parthvi Golden Turmeric Curcumin 95%",
+        category: "Nutraceuticals",
+        price: 799,
+        originalPrice: 999,
+        image: "assets/cat_nutraceuticals.png",
+        rating: 4.9,
+        reviewsCount: 140,
+        isFlagship: false,
+        tag: "Antioxidant",
+        badge: "95% Curcuminoids",
+        description: "Standardized organic Lakadong turmeric extract with BioPerine black pepper for 2000% improved bio-absorption and cellular repair."
+    },
+
+    // Paridhan
+    {
+        id: 501,
+        name: "Parthvi Pure Organic Cotton Ayurvedic Kurta",
+        category: "Paridhan",
+        price: 1299,
+        originalPrice: 1699,
+        image: "assets/cat_paridhan.png",
+        rating: 4.8,
+        reviewsCount: 76,
+        isFlagship: false,
+        tag: "Apparel",
+        badge: "100% Organic",
+        description: "Handcrafted breathable cotton kurta woven from pesticide-free handpicked organic cotton. Keeps skin cool and comfortable all day."
+    },
+    {
+        id: 502,
+        name: "Parthvi Herbal-Dyed Cotton Yoga & Meditation Mat",
+        category: "Paridhan",
+        price: 1499,
+        originalPrice: 1999,
+        image: "assets/cat_paridhan.png",
+        rating: 4.9,
+        reviewsCount: 92,
+        isFlagship: false,
+        tag: "Yoga Linen",
+        badge: "Ayurvastra Dyed",
+        description: "Traditional Ayurvastra mat treated with Neem, Tulsi, and Turmeric plant dyes. Provides non-slip natural grip and grounding energy."
+    },
+    {
+        id: 503,
+        name: "Parthvi Handspun Khadi Meditation Stole",
+        category: "Paridhan",
+        price: 899,
+        originalPrice: 1199,
+        image: "assets/cat_paridhan.png",
+        rating: 4.8,
+        reviewsCount: 64,
+        isFlagship: false,
+        tag: "Khadi",
+        badge: "Artisan Spun",
+        description: "Super soft pure handspun Khadi cotton meditation shawl. Enhances meditative stillness and shields from draft during early morning sadhana."
+    },
+    {
+        id: 504,
+        name: "Parthvi Pure Cotton Wellness Dhoti Set",
+        category: "Paridhan",
+        price: 1199,
+        originalPrice: 1599,
+        image: "assets/cat_paridhan.png",
+        rating: 4.9,
+        reviewsCount: 58,
+        isFlagship: false,
+        tag: "Traditional",
+        badge: "Pure Cotton",
+        description: "Classic gold-bordered Vedic cotton dhoti and angavastram set for religious rituals, pujas, and traditional auspicious ceremonies."
+    },
+
+    // Hawan Samagri
+    {
+        id: 601,
+        name: "Parthvi Sacred Vedic Hawan Samagri (51 Herbs)",
+        category: "Hawan Samagri",
+        price: 499,
+        originalPrice: 699,
+        image: "assets/cat_hawan.png",
+        rating: 4.9,
+        reviewsCount: 188,
+        isFlagship: false,
+        tag: "Best Seller",
+        badge: "51 Sacred Herbs",
+        description: "Authentic Vedic blend of Jatamansi, Guggal, Loban, Nagarmotha, Kapoor Kachri, and Kamal Gatta for sacred environmental purification."
+    },
+    {
+        id: 602,
+        name: "Parthvi Organic Guggal & Loban Dhoop Cups (24 Pcs)",
+        category: "Hawan Samagri",
+        price: 399,
+        originalPrice: 549,
+        image: "assets/cat_hawan.png",
+        rating: 4.9,
+        reviewsCount: 145,
+        isFlagship: false,
+        tag: "Dhoop Cups",
+        badge: "Charcoal Free",
+        description: "Ready-to-light natural cow dung sambrani cups filled with organic Guggal and fragrant Frankincense to cleanse negative energies."
+    },
+    {
+        id: 603,
+        name: "Parthvi 100% Pure Bhimseni Camphor (250g)",
+        category: "Hawan Samagri",
+        price: 349,
+        originalPrice: 450,
+        image: "assets/cat_hawan.png",
+        rating: 4.9,
+        reviewsCount: 120,
+        isFlagship: false,
+        tag: "Pure Camphor",
+        badge: "Edible Grade",
+        description: "Original crystalline Bhimseni Kapoor that leaves zero residue upon burning. Produces sweet therapeutic medicinal aroma."
+    },
+    {
+        id: 604,
+        name: "Parthvi Desi Cow Ghee Hawan Sticks (500g)",
+        category: "Hawan Samagri",
+        price: 299,
+        originalPrice: 399,
+        image: "assets/cat_hawan.png",
+        rating: 4.8,
+        reviewsCount: 88,
+        isFlagship: false,
+        tag: "Yajna Woods",
+        badge: "A2 Cow Ghee",
+        description: "Sacred Mango wood and Palash samidha dipped in pure Gir cow Vedic ghee for smokeless, divine Agnihotra rituals."
+    },
+    {
+        id: 605,
+        name: "Parthvi Premium Sandalwood Hawan Wood Pack",
+        category: "Hawan Samagri",
+        price: 599,
+        originalPrice: 799,
+        image: "assets/cat_hawan.png",
+        rating: 4.9,
+        reviewsCount: 72,
+        isFlagship: false,
+        tag: "Chandan",
+        badge: "Pure Chandan",
+        description: "Natural fragrant red and white sandalwood billets for elevating yajna spiritual atmosphere and attracting prosperity."
     }
 ];
 
@@ -113,9 +478,82 @@ document.addEventListener("DOMContentLoaded", () => {
     initSearch();
     initCart();
     renderFeaturedProducts();
+    initCategoryPageIfPresent();
     updateCartUI();
     updateWishlistUI();
 });
+
+function initCategoryPageIfPresent() {
+    const grid = document.getElementById("categoryProductGrid");
+    if (grid && grid.dataset.category) {
+        renderCategoryPageProducts(grid.dataset.category, "ALL");
+    }
+}
+
+function renderCategoryPageProducts(categoryName, filterType = "ALL") {
+    const grid = document.getElementById("categoryProductGrid");
+    if (!grid) return;
+
+    let items = products.filter(p => p.category.toLowerCase() === categoryName.toLowerCase());
+    
+    if (filterType === "BEST") {
+        items = items.filter(p => p.tag === "Best Seller" || p.rating >= 4.9);
+    } else if (filterType === "PRICE_LOW") {
+        items = [...items].sort((a, b) => a.price - b.price);
+    } else if (filterType === "PRICE_HIGH") {
+        items = [...items].sort((a, b) => b.price - a.price);
+    } else if (filterType === "RATING") {
+        items = [...items].sort((a, b) => b.rating - a.rating);
+    }
+
+    grid.innerHTML = items.map(p => `
+        <div class="cat-product-card">
+            <span class="cat-product-badge">${p.badge || p.tag}</span>
+            <button onclick="toggleWishlist(${p.id})" class="cat-product-wishlist-btn" title="Save to Wishlist" aria-label="Wishlist">
+                <i class="${wishlist.includes(p.id) ? 'fa-solid fa-heart' : 'fa-regular fa-heart'}" style="${wishlist.includes(p.id) ? 'color:#E11D48;' : ''}"></i>
+            </button>
+            
+            <div class="cat-product-img-wrap">
+                <img src="${p.image}" alt="${p.name}" loading="lazy">
+            </div>
+
+            <div>
+                <div class="cat-product-rating">
+                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    <span style="color:var(--text-muted); font-size:0.75rem; margin-left:4px;">(${p.reviewsCount})</span>
+                </div>
+                <h3 class="cat-product-title">${p.name}</h3>
+                <p class="cat-product-desc">${p.description}</p>
+                
+                <div class="cat-product-price-row">
+                    <span class="cat-price-current">₹${p.price.toLocaleString("en-IN")}</span>
+                    <span class="cat-price-original">₹${p.originalPrice.toLocaleString("en-IN")}</span>
+                    <span class="cat-price-save">Save ${Math.round(((p.originalPrice - p.price) / p.originalPrice) * 100)}% Off</span>
+                </div>
+            </div>
+
+            <div class="cat-product-actions">
+                <button onclick="addToCart('${p.name}', ${p.price}, '${p.image}')" class="cat-btn-add">
+                    <i class="fa-solid fa-cart-plus"></i> Add
+                </button>
+                <button onclick="instantBuyProduct(${p.id})" class="cat-btn-buy">
+                    <i class="fa-solid fa-bolt"></i> Buy Now
+                </button>
+            </div>
+        </div>
+    `).join("");
+}
+
+function handleCategoryFilter(filterType, btnEl, categoryName) {
+    document.querySelectorAll(".cat-filter-pill-btn").forEach(btn => btn.classList.remove("active"));
+    if (btnEl) btnEl.classList.add("active");
+    renderCategoryPageProducts(categoryName, filterType);
+}
+
+function handleCategorySort(sortSelect, categoryName) {
+    const sortVal = sortSelect.value;
+    renderCategoryPageProducts(categoryName, sortVal);
+}
 
 /* =========================================================
    NAVBAR & SCROLL EFFECTS
@@ -164,10 +602,18 @@ function toggleCategoryDrawer() {
 
 function filterByCategory(categoryName) {
     toggleCategoryDrawer();
-    showToast(`Exploring ${categoryName} Collection 🌿`);
-    const featuredSec = document.getElementById("featuredSection");
-    if (featuredSec) {
-        featuredSec.scrollIntoView({ behavior: "smooth" });
+    const map = {
+        'Health Care': 'category-healthcare.html',
+        'Personal Care': 'category-personalcare.html',
+        'Medicine': 'category-medicine.html',
+        'Nutraceuticals': 'category-nutraceuticals.html',
+        'Paridhan': 'category-paridhan.html',
+        'Hawan Samagri': 'category-hawan.html'
+    };
+    if (map[categoryName]) {
+        window.location.href = map[categoryName];
+    } else {
+        window.location.href = "index.html#categories";
     }
 }
 
@@ -181,7 +627,7 @@ function toggleWishlist(productId) {
         showToast("Item removed from Wishlist");
     } else {
         wishlist.push(productId);
-        showToast("Item added to Wishlist ❤️");
+        showToast("Item added to Wishlist");
     }
     saveWishlist();
     updateWishlistUI();
@@ -195,7 +641,7 @@ function updateWishlistUI() {
 }
 
 function showPrescriptionUpload() {
-    showToast("📑 Doctor Consultation & Ayurvedic Prescription Desk: WhatsApp +91 93194 68110");
+    showToast("Doctor Consultation & Ayurvedic Prescription Desk: WhatsApp +91 93194 68110");
 }
 
 function openAccountModal() {
@@ -210,9 +656,12 @@ function renderFeaturedProducts() {
     const grid = document.getElementById("featuredProductsGrid");
     if (!grid) return;
 
-    grid.innerHTML = products.map(p => `
+    // Pick top 4 products for homepage
+    const homeFeatured = [products[0], products[5], products[10], products[15]];
+
+    grid.innerHTML = homeFeatured.map(p => `
         <div class="featured-product-card">
-            <span class="product-featured-tag">${p.tag}</span>
+            <span class="product-featured-tag">${p.badge || p.tag}</span>
             
             <div class="featured-product-img-wrap">
                 <img src="${p.image}" alt="${p.name}" loading="lazy">
@@ -220,7 +669,7 @@ function renderFeaturedProducts() {
 
             <div style="flex: 1;">
                 <div class="featured-product-rating">
-                    ★ ★ ★ ★ ★ <span style="color: var(--text-muted); font-size: 0.75rem;">(${p.reviewsCount})</span>
+                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i> <span style="color: var(--text-muted); font-size: 0.75rem;">(${p.reviewsCount})</span>
                 </div>
                 <h3 class="featured-product-title">${p.name}</h3>
                 
@@ -232,10 +681,10 @@ function renderFeaturedProducts() {
 
             <div class="featured-product-btn-group">
                 <button onclick="addToCart('${p.name}', ${p.price}, '${p.image}')" class="btn-add-bag" aria-label="Add to Bag">
-                    + Add
+                    <i class="fa-solid fa-cart-plus"></i> Add
                 </button>
                 <button onclick="instantBuyProduct(${p.id})" class="btn-quick-buy" title="Instant Buy (3-Step Checkout)">
-                    ⚡ Buy Now
+                    <i class="fa-solid fa-bolt"></i> Buy Now
                 </button>
             </div>
         </div>
@@ -300,13 +749,14 @@ function initSearch() {
             );
 
             if (matched.length === 0) {
-                searchResults.innerHTML = `<div style="padding: 20px; text-align: center; color: var(--text-muted);">No remedies matching "${query}". Try searching 'Weight Loss', 'Shilajit', or 'Kumkumadi'.</div>`;
+                searchResults.innerHTML = `<div style="padding: 20px; text-align: center; color: var(--text-muted);">No remedies matching "${query}". Try searching 'Health Care', 'Shilajit', 'Kumkumadi', 'Hawan', or 'Ashwagandha'.</div>`;
             } else {
                 searchResults.innerHTML = matched.map(p => `
                     <div onclick="instantBuyProduct(${p.id})" style="display:flex; align-items:center; gap:14px; padding:12px; border-bottom:1px solid var(--border-subtle); cursor:pointer; background:#FFFFFF; border-radius:8px; margin-bottom:8px;">
                         <img src="${p.image}" alt="${p.name}" style="width:50px; height:50px; object-fit:contain;">
                         <div style="flex:1;">
                             <strong style="color:var(--forest-deep); font-size:0.95rem;">${p.name}</strong>
+                            <div style="color:var(--text-muted); font-size:0.75rem;">${p.category}</div>
                             <div style="color:var(--emerald-vibrant); font-weight:700;">₹${p.price}</div>
                         </div>
                         <span class="primary-btn" style="padding:6px 14px; font-size:0.8rem;">Buy →</span>
@@ -347,7 +797,7 @@ function addToCart(name, price, image) {
     }
     saveCart();
     updateCartUI();
-    showToast(`Added ${name} to your Bag! 🛍️`);
+    showToast(`Added ${name} to your Bag!`);
 }
 
 function updateCartQty(index, change) {
@@ -376,8 +826,8 @@ function updateCartUI() {
         if (cart.length === 0) {
             itemsContainer.innerHTML = `
                 <div style="text-align: center; padding: 40px 20px; color: var(--text-muted);">
-                    <div style="font-size: 2.5rem; margin-bottom: 12px;">🌿</div>
-                    <strong>Your Bag is Empty</strong>
+                    <div style="font-size: 2.2rem; color: var(--forest-emerald); margin-bottom: 12px;"><i class="fa-solid fa-bag-shopping"></i></div>
+                    <strong style="color: var(--forest-deep); font-size: 1.05rem;">Your Bag is Empty</strong>
                     <p style="font-size: 0.88rem; margin-top: 6px;">Add authentic Ayurvedic formulations to begin your wellness journey.</p>
                 </div>
             `;
