@@ -3050,30 +3050,28 @@ em {
 }
 
 /* =========================================================
-   HOMEPAGE HERO EXCLUSIVE SALE BANNER (PERFECT PAGE FIT)
+   HOMEPAGE HERO EXCLUSIVE SALE BANNER (100% FULL BLEED - NO SIDE GAPS)
 ========================================================= */
 .home-hero-banner-section {
-    padding: 16px 0 20px;
-    background: linear-gradient(180deg, rgba(238, 246, 241, 0.4) 0%, rgba(248, 250, 248, 0) 100%);
     width: 100%;
+    padding: 0;
+    margin: 0;
+    background: #FAF8F5;
+    overflow: hidden;
 }
 
 .home-hero-banner-link {
     display: block;
     width: 100%;
-    border-radius: 16px;
+    margin: 0;
+    padding: 0;
+    border-radius: 0;
+    border: none;
+    border-bottom: 2px solid rgba(197, 160, 89, 0.35);
+    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.06);
     overflow: hidden;
-    box-shadow: 0 6px 28px rgba(15, 53, 36, 0.1), 0 2px 8px rgba(0, 0, 0, 0.04);
-    border: 1.5px solid rgba(197, 160, 89, 0.35);
-    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
     position: relative;
     background: #FFFFFF;
-}
-
-.home-hero-banner-link:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 12px 36px rgba(15, 53, 36, 0.15), 0 4px 12px rgba(255, 103, 31, 0.15);
-    border-color: #FF671F;
 }
 
 .home-hero-banner-img {
@@ -3082,19 +3080,8 @@ em {
     display: block;
     object-fit: cover;
     object-position: center;
-    border-radius: 14px;
-}
-
-@media (max-width: 768px) {
-    .home-hero-banner-section {
-        padding: 10px 0 14px;
-    }
-    .home-hero-banner-link {
-        border-radius: 12px;
-    }
-    .home-hero-banner-img {
-        border-radius: 10px;
-    }
+    border-radius: 0;
+    margin: 0;
 }
 
 /* =========================================================
