@@ -3050,27 +3050,29 @@ em {
 }
 
 /* =========================================================
-   HOMEPAGE HERO INDEPENDENCE DAY SALE BANNER
+   HOMEPAGE HERO EXCLUSIVE SALE BANNER (PERFECT PAGE FIT)
 ========================================================= */
 .home-hero-banner-section {
-    padding: 12px 0 16px;
+    padding: 16px 0 20px;
     background: linear-gradient(180deg, rgba(238, 246, 241, 0.4) 0%, rgba(248, 250, 248, 0) 100%);
+    width: 100%;
 }
 
 .home-hero-banner-link {
     display: block;
-    border-radius: 18px;
+    width: 100%;
+    border-radius: 16px;
     overflow: hidden;
-    box-shadow: 0 8px 32px rgba(15, 53, 36, 0.12), 0 2px 8px rgba(0, 0, 0, 0.05);
-    border: 1.5px solid rgba(197, 160, 89, 0.4);
-    transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+    box-shadow: 0 6px 28px rgba(15, 53, 36, 0.1), 0 2px 8px rgba(0, 0, 0, 0.04);
+    border: 1.5px solid rgba(197, 160, 89, 0.35);
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
     position: relative;
     background: #FFFFFF;
 }
 
 .home-hero-banner-link:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 16px 42px rgba(15, 53, 36, 0.18), 0 4px 14px rgba(255, 103, 31, 0.2);
+    transform: translateY(-2px);
+    box-shadow: 0 12px 36px rgba(15, 53, 36, 0.15), 0 4px 12px rgba(255, 103, 31, 0.15);
     border-color: #FF671F;
 }
 
@@ -3079,12 +3081,13 @@ em {
     height: auto;
     display: block;
     object-fit: cover;
-    border-radius: 16px;
+    object-position: center;
+    border-radius: 14px;
 }
 
-@media (max-width: 640px) {
+@media (max-width: 768px) {
     .home-hero-banner-section {
-        padding: 8px 0 12px;
+        padding: 10px 0 14px;
     }
     .home-hero-banner-link {
         border-radius: 12px;
