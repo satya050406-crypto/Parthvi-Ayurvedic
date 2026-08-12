@@ -1,5 +1,5 @@
 /* =========================================================
-   PARTHVI AYURVEDA - ECOMMERCE & HOME LOGIC
+   PAARTHVI AYURVEDA - ECOMMERCE & HOME LOGIC
 ========================================================= */
 
 // Support Helpline Numbers
@@ -12,7 +12,7 @@ const products = [
     // Health Care
     {
         id: 1,
-        name: "Parthvi Weight Loss Rasayana & Capsules",
+        name: "Paarthvi Weight Loss Rasayana & Capsules",
         category: "Health Care",
         price: 2200,
         originalPrice: 2800,
@@ -26,7 +26,7 @@ const products = [
     },
     {
         id: 101,
-        name: "Parthvi Immuno-Shakti Chyawanprash",
+        name: "Paarthvi Immuno-Shakti Chyawanprash",
         category: "Health Care",
         price: 650,
         originalPrice: 850,
@@ -40,7 +40,7 @@ const products = [
     },
     {
         id: 102,
-        name: "Parthvi Liv-Care Detox & Metabolism Syrup",
+        name: "Paarthvi Liv-Care Detox & Metabolism Syrup",
         category: "Health Care",
         price: 420,
         originalPrice: 550,
@@ -54,7 +54,7 @@ const products = [
     },
     {
         id: 103,
-        name: "Parthvi Triphala Cleanse & Digestion Kwath",
+        name: "Paarthvi Triphala Cleanse & Digestion Kwath",
         category: "Health Care",
         price: 380,
         originalPrice: 499,
@@ -68,7 +68,7 @@ const products = [
     },
     {
         id: 104,
-        name: "Parthvi Giloy Tulsi Daily Immunity Drops",
+        name: "Paarthvi Giloy Tulsi Daily Immunity Drops",
         category: "Health Care",
         price: 299,
         originalPrice: 399,
@@ -84,7 +84,7 @@ const products = [
     // Personal Care
     {
         id: 3,
-        name: "Parthvi Kumkumadi Ayurvedic Glow Tailam",
+        name: "Paarthvi Kumkumadi Ayurvedic Glow Tailam",
         category: "Personal Care",
         price: 999,
         originalPrice: 1350,
@@ -98,7 +98,7 @@ const products = [
     },
     {
         id: 201,
-        name: "Parthvi Bhringraj & Amla Hair Growth Oil",
+        name: "Paarthvi Bhringraj & Amla Hair Growth Oil",
         category: "Personal Care",
         price: 649,
         originalPrice: 850,
@@ -112,7 +112,7 @@ const products = [
     },
     {
         id: 202,
-        name: "Parthvi Neem & Tea Tree Purifying Face Wash",
+        name: "Paarthvi Neem & Tea Tree Purifying Face Wash",
         category: "Personal Care",
         price: 399,
         originalPrice: 499,
@@ -126,7 +126,7 @@ const products = [
     },
     {
         id: 203,
-        name: "Parthvi Pure Aloe Radiance Hydrating Gel",
+        name: "Paarthvi Pure Aloe Radiance Hydrating Gel",
         category: "Personal Care",
         price: 349,
         originalPrice: 450,
@@ -140,7 +140,7 @@ const products = [
     },
     {
         id: 204,
-        name: "Parthvi Herbal Scalp Therapy Shampoo",
+        name: "Paarthvi Herbal Scalp Therapy Shampoo",
         category: "Personal Care",
         price: 499,
         originalPrice: 650,
@@ -156,7 +156,7 @@ const products = [
     // Medicine
     {
         id: 4,
-        name: "Parthvi Ashwagandha Pro Vitality Churna",
+        name: "Paarthvi Ashwagandha Pro Vitality Churna",
         category: "Medicine",
         price: 899,
         originalPrice: 1200,
@@ -170,7 +170,7 @@ const products = [
     },
     {
         id: 301,
-        name: "Parthvi Shuddha Guggulu Metabolic Tablets",
+        name: "Paarthvi Shuddha Guggulu Metabolic Tablets",
         category: "Medicine",
         price: 749,
         originalPrice: 950,
@@ -184,7 +184,7 @@ const products = [
     },
     {
         id: 302,
-        name: "Parthvi Yograj Guggulu for Joint Comfort",
+        name: "Paarthvi Yograj Guggulu for Joint Comfort",
         category: "Medicine",
         price: 699,
         originalPrice: 899,
@@ -198,7 +198,7 @@ const products = [
     },
     {
         id: 303,
-        name: "Parthvi Maha Sudarshan Antiviral Kwath",
+        name: "Paarthvi Maha Sudarshan Antiviral Kwath",
         category: "Medicine",
         price: 450,
         originalPrice: 599,
@@ -212,7 +212,7 @@ const products = [
     },
     {
         id: 304,
-        name: "Parthvi Brahmi Memory & Stress Relief Vati",
+        name: "Paarthvi Brahmi Memory & Stress Relief Vati",
         category: "Medicine",
         price: 599,
         originalPrice: 750,
@@ -228,7 +228,7 @@ const products = [
     // Nutraceuticals
     {
         id: 2,
-        name: "Parthvi Pure Shilajit Gold Himalayan Resin",
+        name: "Paarthvi Pure Shilajit Gold Himalayan Resin",
         category: "Nutraceuticals",
         price: 1499,
         originalPrice: 1999,
@@ -242,7 +242,7 @@ const products = [
     },
     {
         id: 401,
-        name: "Parthvi Wild Forest Organic Raw Honey",
+        name: "Paarthvi Wild Forest Organic Raw Honey",
         category: "Nutraceuticals",
         price: 550,
         originalPrice: 720,
@@ -256,7 +256,7 @@ const products = [
     },
     {
         id: 402,
-        name: "Parthvi Organic Moringa Superfood Capsules",
+        name: "Paarthvi Organic Moringa Superfood Capsules",
         category: "Nutraceuticals",
         price: 699,
         originalPrice: 899,
@@ -270,7 +270,7 @@ const products = [
     },
     {
         id: 403,
-        name: "Parthvi Apple Cider Vinegar with Mother",
+        name: "Paarthvi Apple Cider Vinegar with Mother",
         category: "Nutraceuticals",
         price: 499,
         originalPrice: 650,
@@ -284,7 +284,7 @@ const products = [
     },
     {
         id: 404,
-        name: "Parthvi Golden Turmeric Curcumin 95%",
+        name: "Paarthvi Golden Turmeric Curcumin 95%",
         category: "Nutraceuticals",
         price: 799,
         originalPrice: 999,
@@ -299,7 +299,7 @@ const products = [
     // Hawan Samagri
     {
         id: 601,
-        name: "Parthvi Sacred Vedic Hawan Samagri (51 Herbs)",
+        name: "Paarthvi Sacred Vedic Hawan Samagri (51 Herbs)",
         category: "Hawan Samagri",
         price: 499,
         originalPrice: 699,
@@ -313,7 +313,7 @@ const products = [
     },
     {
         id: 602,
-        name: "Parthvi Organic Guggal & Loban Dhoop Cups (24 Pcs)",
+        name: "Paarthvi Organic Guggal & Loban Dhoop Cups (24 Pcs)",
         category: "Hawan Samagri",
         price: 399,
         originalPrice: 549,
@@ -327,7 +327,7 @@ const products = [
     },
     {
         id: 603,
-        name: "Parthvi 100% Pure Bhimseni Camphor (250g)",
+        name: "Paarthvi 100% Pure Bhimseni Camphor (250g)",
         category: "Hawan Samagri",
         price: 349,
         originalPrice: 450,
@@ -341,7 +341,7 @@ const products = [
     },
     {
         id: 604,
-        name: "Parthvi Desi Cow Ghee Hawan Sticks (500g)",
+        name: "Paarthvi Desi Cow Ghee Hawan Sticks (500g)",
         category: "Hawan Samagri",
         price: 299,
         originalPrice: 399,
@@ -355,7 +355,7 @@ const products = [
     },
     {
         id: 605,
-        name: "Parthvi Premium Sandalwood Hawan Wood Pack",
+        name: "Paarthvi Premium Sandalwood Hawan Wood Pack",
         category: "Hawan Samagri",
         price: 599,
         originalPrice: 799,
@@ -374,7 +374,7 @@ let cart = [];
 let wishlist = [];
 
 try {
-    const savedCart = localStorage.getItem("parthvi_cart");
+    const savedCart = localStorage.getItem("paarthvi_cart") || localStorage.getItem("parthvi_cart");
     if (savedCart) {
         cart = JSON.parse(savedCart);
     } else {
@@ -384,7 +384,7 @@ try {
             image: products[0].image,
             quantity: 1
         }];
-        localStorage.setItem("parthvi_cart", JSON.stringify(cart));
+        localStorage.setItem("paarthvi_cart", JSON.stringify(cart));
     }
 } catch (e) {
     cart = [{
@@ -396,7 +396,7 @@ try {
 }
 
 try {
-    const savedWishlist = localStorage.getItem("parthvi_wishlist");
+    const savedWishlist = localStorage.getItem("paarthvi_wishlist") || localStorage.getItem("parthvi_wishlist");
     if (savedWishlist) {
         wishlist = JSON.parse(savedWishlist);
     }
@@ -404,13 +404,13 @@ try {
 
 function saveCart() {
     try {
-        localStorage.setItem("parthvi_cart", JSON.stringify(cart));
+        localStorage.setItem("paarthvi_cart", JSON.stringify(cart));
     } catch (e) {}
 }
 
 function saveWishlist() {
     try {
-        localStorage.setItem("parthvi_wishlist", JSON.stringify(wishlist));
+        localStorage.setItem("paarthvi_wishlist", JSON.stringify(wishlist));
     } catch (e) {}
 }
 

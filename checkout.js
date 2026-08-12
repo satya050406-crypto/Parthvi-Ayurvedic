@@ -1,5 +1,5 @@
 /**
- * PARTHVI AYURVEDIC - 3-STEP CHECKOUT CONTROLLER
+ * PAARTHVI AYURVEDIC - 3-STEP CHECKOUT CONTROLLER
  * Step 1: Google Sign-In / Authentication
  * Step 2: Customer & Delivery Details
  * Step 3: Payment Selection & Order Confirmation
@@ -7,7 +7,7 @@
 
 const UNIT_PRICE = 2200;
 const ORIGINAL_UNIT_PRICE = 2800;
-const UPI_VPA = "parthvi.ayurvedic@upi";
+const UPI_VPA = "paarthvi.ayurvedic@upi";
 
 let currentStep = 1;
 let currentQuantity = 1;
@@ -27,7 +27,7 @@ document.addEventListener("DOMContentLoaded", () => {
 ========================================================= */
 function loadSavedUser() {
     try {
-        const saved = localStorage.getItem("parthvi_user") || sessionStorage.getItem("parthvi_user");
+        const saved = localStorage.getItem("paarthvi_user") || localStorage.getItem("parthvi_user") || sessionStorage.getItem("paarthvi_user") || sessionStorage.getItem("parthvi_user");
         if (saved) {
             currentUser = JSON.parse(saved);
             renderAuthenticatedUser(currentUser);
@@ -84,8 +84,8 @@ function handleGoogleLogin(customEmail = null, customName = null) {
     };
 
     currentUser = userObj;
-    localStorage.setItem("parthvi_user", JSON.stringify(userObj));
-    sessionStorage.setItem("parthvi_user", JSON.stringify(userObj));
+    localStorage.setItem("paarthvi_user", JSON.stringify(userObj));
+    sessionStorage.setItem("paarthvi_user", JSON.stringify(userObj));
 
     renderAuthenticatedUser(userObj);
 
@@ -97,6 +97,8 @@ function handleGoogleLogin(customEmail = null, customName = null) {
 }
 
 function logoutGoogle() {
+    localStorage.removeItem("paarthvi_user");
+    sessionStorage.removeItem("paarthvi_user");
     localStorage.removeItem("parthvi_user");
     sessionStorage.removeItem("parthvi_user");
     currentUser = null;
@@ -346,7 +348,7 @@ function submitOrder() {
         pincode,
         instructions,
         quantity: currentQuantity,
-        productName: "Parthvi Slim & Immunity Rasayana",
+        productName: "Paarthvi Slim & Immunity Rasayana",
         totalPayable,
         paymentMethod: paymentLabel,
         status: "Pending Dispatch",
@@ -355,9 +357,9 @@ function submitOrder() {
 
     // Save to localStorage for admin panel
     try {
-        const existingOrders = JSON.parse(localStorage.getItem("parthvi_orders") || "[]");
+        const existingOrders = JSON.parse(localStorage.getItem("paarthvi_orders") || localStorage.getItem("parthvi_orders") || "[]");
         existingOrders.unshift(orderData);
-        localStorage.setItem("parthvi_orders", JSON.stringify(existingOrders));
+        localStorage.setItem("paarthvi_orders", JSON.stringify(existingOrders));
     } catch(err) {
         console.error("Order storage error:", err);
     }

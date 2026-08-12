@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Parthvi Ayurvedic | Admin Customer Data & Order Management</title>
+    <title>Paarthvi Ayurvedic | Admin Customer Data & Order Management</title>
     <meta name="robots" content="noindex, nofollow">
     <link rel="icon" type="image/png" href="assets/logo.png">
     <link rel="apple-touch-icon" href="assets/logo.png">
@@ -400,8 +400,8 @@
     <header class="admin-header">
         <div class="admin-brand">
             <a href="index.html" style="text-decoration: none; display: flex; align-items: center; gap: 10px;">
-                <img src="assets/logo.png" alt="Parthvi Ayurveda Official Logo" style="width: 38px; height: 38px; border-radius: 50%; object-fit: cover; border: 1.5px solid #C5A059;">
-                <strong style="color: var(--forest-deep); font-size: 1.2rem; letter-spacing: 0.5px;">PARTHVI AYURVEDA</strong>
+                <img src="assets/logo.png" alt="Paarthvi Ayurveda Official Logo" style="width: 38px; height: 38px; border-radius: 50%; object-fit: cover; border: 1.5px solid #C5A059;">
+                <strong style="color: var(--forest-deep); font-size: 1.2rem; letter-spacing: 0.5px;">PAARTHVI AYURVEDA</strong>
             </a>
             <span class="admin-badge">Admin Workspace</span>
         </div>
@@ -572,7 +572,7 @@
 
             <div class="form-grid two" style="display: grid; grid-template-columns: 1fr 1fr; gap: 14px;">
                 <div class="form-group">
-                    <label>Quantity (Parthvi Slim Rasayana) *</label>
+                    <label>Quantity (Paarthvi Slim Rasayana) *</label>
                     <input type="number" id="mQty" value="1" min="1" max="50" required>
                 </div>
                 <div class="form-group">
@@ -600,7 +600,7 @@
             <div style="display: flex; align-items: center; gap: 8px;">
                 <span style="font-size: 1.6rem; color: var(--forest-emerald);"><i class="fa-solid fa-leaf"></i></span>
                 <div>
-                    <strong style="font-size: 1.2rem; color: var(--forest-deep); display: block;">PARTHVI AYURVEDIC APOTHECARY</strong>
+                    <strong style="font-size: 1.2rem; color: var(--forest-deep); display: block;">PAARTHVI AYURVEDIC APOTHECARY</strong>
                     <small style="color: var(--text-muted);">Official Shipping & Dispatch Invoice</small>
                 </div>
             </div>
@@ -635,7 +635,7 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 function checkSession() {
-    if (sessionStorage.getItem("parthvi_admin_auth") === "true") {
+    if (sessionStorage.getItem("paarthvi_admin_auth") === "true" || sessionStorage.getItem("parthvi_admin_auth") === "true") {
         showDashboard();
     }
 }
@@ -643,7 +643,7 @@ function checkSession() {
 function handleAdminLogin() {
     const enteredPassword = document.getElementById("adminPin").value.trim();
     if (enteredPassword === ADMIN_PASSWORD) {
-        sessionStorage.setItem("parthvi_admin_auth", "true");
+        sessionStorage.setItem("paarthvi_admin_auth", "true");
         showDashboard();
     } else {
         document.getElementById("loginError").style.display = "block";
@@ -651,6 +651,7 @@ function handleAdminLogin() {
 }
 
 function handleAdminLogout() {
+    sessionStorage.removeItem("paarthvi_admin_auth");
     sessionStorage.removeItem("parthvi_admin_auth");
     document.getElementById("adminLayout").style.display = "none";
     document.getElementById("authGate").style.display = "flex";
@@ -666,7 +667,7 @@ function showDashboard() {
 
 function loadOrders() {
     try {
-        const stored = localStorage.getItem("parthvi_orders");
+        const stored = localStorage.getItem("paarthvi_orders") || localStorage.getItem("parthvi_orders");
         if (stored) {
             orders = JSON.parse(stored);
         } else {
@@ -679,7 +680,7 @@ function loadOrders() {
 
 function saveOrdersToStorage() {
     try {
-        localStorage.setItem("parthvi_orders", JSON.stringify(orders));
+        localStorage.setItem("paarthvi_orders", JSON.stringify(orders));
     } catch(e) {}
 }
 
@@ -874,7 +875,7 @@ function saveManualOrder() {
         state,
         pincode,
         quantity: qty,
-        productName: "Parthvi Slim & Immunity Rasayana",
+        productName: "Paarthvi Slim & Immunity Rasayana",
         totalPayable: 2200 * qty,
         paymentMethod,
         status: "Pending Dispatch"
@@ -927,7 +928,7 @@ function viewOrderSlip(orderId) {
                     <th style="padding: 8px 0; text-align: right;">Price</th>
                 </tr>
                 <tr>
-                    <td style="padding: 10px 0;"><strong>Parthvi Slim & Immunity Rasayana</strong> (Dual-Action Vedic Formula)</td>
+                    <td style="padding: 10px 0;"><strong>Paarthvi Slim & Immunity Rasayana</strong> (Dual-Action Vedic Formula)</td>
                     <td style="padding: 10px 0; text-align: center;">${o.quantity || 1}</td>
                     <td style="padding: 10px 0; text-align: right;">₹${(Number(o.totalPayable) || 2200).toLocaleString("en-IN")}</td>
                 </tr>
@@ -965,7 +966,7 @@ function exportOrdersToCSV() {
         `"${o.city || ''}"`,
         `"${o.state || ''}"`,
         `"${o.pincode || ''}"`,
-        `"${o.productName || 'Parthvi Slim Rasayana'}"`,
+        `"${o.productName || 'Paarthvi Slim Rasayana'}"`,
         `"${o.quantity || 1}"`,
         `"${o.totalPayable || 2200}"`,
         `"${o.paymentMethod || 'COD'}"`,
@@ -976,7 +977,7 @@ function exportOrdersToCSV() {
     const encodedUri = encodeURI(csvContent);
     const link = document.createElement("a");
     link.setAttribute("href", encodedUri);
-    link.setAttribute("download", `Parthvi_Orders_${new Date().toISOString().slice(0,10)}.csv`);
+    link.setAttribute("download", `Paarthvi_Orders_${new Date().toISOString().slice(0,10)}.csv`);
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
@@ -996,7 +997,7 @@ function loadSampleData() {
             state: "Gujarat",
             pincode: "380054",
             quantity: 2,
-            productName: "Parthvi Slim & Immunity Rasayana",
+            productName: "Paarthvi Slim & Immunity Rasayana",
             totalPayable: 4400,
             paymentMethod: "Cash on Delivery (COD)",
             status: "Pending Dispatch"
@@ -1012,7 +1013,7 @@ function loadSampleData() {
             state: "Maharashtra",
             pincode: "411045",
             quantity: 1,
-            productName: "Parthvi Slim & Immunity Rasayana",
+            productName: "Paarthvi Slim & Immunity Rasayana",
             totalPayable: 2200,
             paymentMethod: "Online / UPI Payment",
             status: "Dispatched"
@@ -1028,7 +1029,7 @@ function loadSampleData() {
             state: "Punjab",
             pincode: "160015",
             quantity: 1,
-            productName: "Parthvi Slim & Immunity Rasayana",
+            productName: "Paarthvi Slim & Immunity Rasayana",
             totalPayable: 2200,
             paymentMethod: "Cash on Delivery (COD)",
             status: "Delivered"
