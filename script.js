@@ -2,8 +2,10 @@
    PARTHVI AYURVEDA - ECOMMERCE & HOME LOGIC
 ========================================================= */
 
-// Support Helpline Number
-const STORE_HELPLINE_NUMBER = "+919319468110"; 
+// Support Helpline Numbers
+const STORE_HELPLINE_PRIMARY = "+919259760176"; 
+const STORE_HELPLINE_SECONDARY = "+919354419950";
+const STORE_HELPLINE_NUMBER = "+91 9259760176 / +91 9354419950"; 
 
 // Complete Ayurvedic Multi-Category Catalog
 const products = [
@@ -581,7 +583,7 @@ function updateWishlistUI() {
 }
 
 function showPrescriptionUpload() {
-    showToast("Doctor Consultation & Ayurvedic Prescription: WhatsApp +91 93194 68110 | Email: contact@paarthviayurveda.com");
+    showToast("Doctor Consultation & Prescription: Call/WhatsApp +91 9259760176 / +91 9354419950 | Email: contact@paarthviayurveda.com");
 }
 
 function openAccountModal() {
