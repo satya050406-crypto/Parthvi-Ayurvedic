@@ -581,7 +581,7 @@ function updateWishlistUI() {
 }
 
 function showPrescriptionUpload() {
-    showToast("Doctor Consultation & Ayurvedic Prescription Desk: WhatsApp +91 93194 68110");
+    showToast("Doctor Consultation & Ayurvedic Prescription: WhatsApp +91 93194 68110 | Email: contact@paarthviayurveda.com");
 }
 
 function openAccountModal() {
