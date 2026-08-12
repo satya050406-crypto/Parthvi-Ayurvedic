@@ -294,65 +294,6 @@ const products = [
         badge: "95% Curcuminoids",
         description: "Standardized organic Lakadong turmeric extract with BioPerine black pepper for 2000% improved bio-absorption and cellular repair."
     },
-
-    // Paridhan
-    {
-        id: 501,
-        name: "Parthvi Pure Organic Cotton Ayurvedic Kurta",
-        category: "Paridhan",
-        price: 1299,
-        originalPrice: 1699,
-        image: "assets/cat_paridhan.png",
-        rating: 4.8,
-        reviewsCount: 76,
-        isFlagship: false,
-        tag: "Apparel",
-        badge: "100% Organic",
-        description: "Handcrafted breathable cotton kurta woven from pesticide-free handpicked organic cotton. Keeps skin cool and comfortable all day."
-    },
-    {
-        id: 502,
-        name: "Parthvi Herbal-Dyed Cotton Yoga & Meditation Mat",
-        category: "Paridhan",
-        price: 1499,
-        originalPrice: 1999,
-        image: "assets/cat_paridhan.png",
-        rating: 4.9,
-        reviewsCount: 92,
-        isFlagship: false,
-        tag: "Yoga Linen",
-        badge: "Ayurvastra Dyed",
-        description: "Traditional Ayurvastra mat treated with Neem, Tulsi, and Turmeric plant dyes. Provides non-slip natural grip and grounding energy."
-    },
-    {
-        id: 503,
-        name: "Parthvi Handspun Khadi Meditation Stole",
-        category: "Paridhan",
-        price: 899,
-        originalPrice: 1199,
-        image: "assets/cat_paridhan.png",
-        rating: 4.8,
-        reviewsCount: 64,
-        isFlagship: false,
-        tag: "Khadi",
-        badge: "Artisan Spun",
-        description: "Super soft pure handspun Khadi cotton meditation shawl. Enhances meditative stillness and shields from draft during early morning sadhana."
-    },
-    {
-        id: 504,
-        name: "Parthvi Pure Cotton Wellness Dhoti Set",
-        category: "Paridhan",
-        price: 1199,
-        originalPrice: 1599,
-        image: "assets/cat_paridhan.png",
-        rating: 4.9,
-        reviewsCount: 58,
-        isFlagship: false,
-        tag: "Traditional",
-        badge: "Pure Cotton",
-        description: "Classic gold-bordered Vedic cotton dhoti and angavastram set for religious rituals, pujas, and traditional auspicious ceremonies."
-    },
-
     // Hawan Samagri
     {
         id: 601,
@@ -607,7 +548,6 @@ function filterByCategory(categoryName) {
         'Personal Care': 'category-personalcare.html',
         'Medicine': 'category-medicine.html',
         'Nutraceuticals': 'category-nutraceuticals.html',
-        'Paridhan': 'category-paridhan.html',
         'Hawan Samagri': 'category-hawan.html'
     };
     if (map[categoryName]) {
