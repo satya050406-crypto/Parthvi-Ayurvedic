@@ -1,42 +1,43 @@
 /* =========================================================
-   PAARTHVI AYURVEDA - ECOMMERCE & HOME LOGIC
+   PAARTHVI AYURVEDA — E-COMMERCE & CLIENT CONTROLLER
 ========================================================= */
 
 // Support Helpline Numbers
 const STORE_HELPLINE_PRIMARY = "+919259760176"; 
 const STORE_HELPLINE_SECONDARY = "+919354419950";
 const STORE_HELPLINE_NUMBER = "+91 9259760176 / +91 9354419950"; 
+const STORE_EMAIL = "contact@paarthviayurveda.com";
 
 // Complete Ayurvedic Multi-Category Catalog
 const products = [
-    // Health Care
+    // Health Care & Herbal Medicine
     {
         id: 1,
-        name: "Paarthvi Weight Loss Rasayana & Capsules",
-        category: "Health Care",
-        price: 2200,
-        originalPrice: 2800,
-        image: "assets/products/product-1.png",
+        name: "Paarthvi Veda Slim Shift (100g Powder + 60 Capsules Combo)",
+        category: "Medicine",
+        price: 1500,
+        originalPrice: 2200,
+        image: "assets/products/slim-shift.jpg",
         rating: 4.9,
-        reviewsCount: 384,
+        reviewsCount: 428,
         isFlagship: true,
-        tag: "Best Seller",
-        badge: "Top Choice",
-        description: "Dual-action Vedic formula powered by Garcinia, Guggulu, Giloy & Triphala. Accelerates natural fat breakdown while building robust daily immunity."
+        tag: "Main Flagship",
+        badge: "Powder + Capsules Combo",
+        description: "Authentic Paarthvi Veda dual-action weight management system combining 100g Slim Shift botanical metabolic powder and 60 herbal 500mg capsules for natural fat breakdown, gentle gut detox, and balanced all-day metabolic vitality."
     },
     {
         id: 101,
-        name: "Paarthvi Immuno-Shakti Chyawanprash",
+        name: "Paarthvi Ayurveda Chyawanprash Avaleha (500g)",
         category: "Health Care",
         price: 650,
         originalPrice: 850,
-        image: "assets/cat_healthcare.png",
+        image: "assets/products/chyawanprash.jpg",
         rating: 4.9,
-        reviewsCount: 210,
+        reviewsCount: 248,
         isFlagship: false,
-        tag: "Immunity",
-        badge: "Pure Amla",
-        description: "Ancient 48-herb classical Chyawanprash formulated with wild organic amla, Kashmiri saffron, and silver leaf for full-family vitality."
+        tag: "100% Natural",
+        badge: "Strength & Immunity",
+        description: "Authentic classical Paarthvi Ayurveda Chyawanprash Avaleha formulated with wild fresh Amla, raw honey, and 48 revitalizing Shastriya botanicals. Free from artificial preservatives for all-season family strength, stamina, and immunity."
     },
     {
         id: 102,
@@ -58,13 +59,13 @@ const products = [
         category: "Health Care",
         price: 380,
         originalPrice: 499,
-        image: "assets/products/product-1.png",
+        image: "assets/cat_healthcare.png",
         rating: 4.9,
         reviewsCount: 178,
         isFlagship: false,
         tag: "Digestion",
         badge: "Tri-Dosha",
-        description: "Balanced Haritaki, Bibhitaki, and Amalaki trio. Regulates bowel movements, cures chronic acidity, and purifies the colon naturally."
+        description: "Balanced Haritaki, Bibhitaki, and Amalaki trio. Regulates bowel movements, relieves chronic acidity, and purifies the colon naturally."
     },
     {
         id: 104,
@@ -77,8 +78,8 @@ const products = [
         reviewsCount: 95,
         isFlagship: false,
         tag: "Immunity",
-        badge: "Ayush 82",
-        description: "Concentrated extract of Neem-Giloy stem and Rama Tulsi. Enhances platelet count and fortifies cellular defense against seasonal infections."
+        badge: "Ayush Certified",
+        description: "Concentrated extract of Neem-Giloy stem and Rama Tulsi. Enhances cellular defense against seasonal infections and supports vitality."
     },
 
     // Personal Care
@@ -108,7 +109,7 @@ const products = [
         isFlagship: false,
         tag: "Hair Care",
         badge: "Kshir Pak Vidhi",
-        description: "Cooked in pure goat milk and sesame oil with 16 potent hair herbs. Stops premature greying, controls severe hair fall, and triggers follicle growth."
+        description: "Cooked in pure goat milk and sesame oil with 16 potent hair herbs. Calms the scalp, controls hair fall, and nourishes roots."
     },
     {
         id: 202,
@@ -122,7 +123,7 @@ const products = [
         isFlagship: false,
         tag: "Skin Cleanser",
         badge: "Sulphate Free",
-        description: "Gentle soap-free Ayurvedic herbal cleanser that removes deep impurities, controls excess sebum, and clears active acne blemishes."
+        description: "Gentle soap-free Ayurvedic herbal cleanser that removes deep impurities, controls excess sebum, and clears active blemishes."
     },
     {
         id: 203,
@@ -136,7 +137,7 @@ const products = [
         isFlagship: false,
         tag: "Moisturizer",
         badge: "99% Pure Gel",
-        description: "Cold-extracted organic Aloe Vera enriched with Vitamin E. Soothes sunburns, calms inflammation, and locks in dewy all-day moisture."
+        description: "Cold-extracted organic Aloe Vera enriched with Vitamin E. Soothes sunburns, calms inflammation, and locks in dewy moisture."
     },
     {
         id: 204,
@@ -150,7 +151,7 @@ const products = [
         isFlagship: false,
         tag: "Anti-Dandruff",
         badge: "Reetha Shikakai",
-        description: "Natural saponin formula with Reetha, Shikakai, and Methi seed. Cleanses gently without stripping scalp natural moisture barrier."
+        description: "Natural saponin formula with Reetha, Shikakai, and Methi seed. Cleanses gently without stripping the scalp's natural moisture barrier."
     },
 
     // Medicine
@@ -166,7 +167,7 @@ const products = [
         isFlagship: false,
         tag: "Vitality",
         badge: "KSM-66 Extract",
-        description: "Organic KSM-66 Ashwagandha root powder to reduce cortisol, relieve anxiety, build physical strength, and promote restful deep sleep."
+        description: "Organic KSM-66 Ashwagandha root powder to balance cortisol, relieve everyday stress, build physical stamina, and promote restful sleep."
     },
     {
         id: 301,
@@ -180,7 +181,7 @@ const products = [
         isFlagship: false,
         tag: "Lipid Support",
         badge: "Shodhita Resin",
-        description: "Purified Commiphora mukul processed in Triphala decoction. Aids healthy cholesterol maintenance, clears blocked srotas, and burns deep tissue fat."
+        description: "Purified Commiphora mukul processed in Triphala decoction. Supports healthy metabolism, clears micro-channels, and aids balance."
     },
     {
         id: 302,
@@ -194,7 +195,7 @@ const products = [
         isFlagship: false,
         tag: "Joint Relief",
         badge: "Vata Balancing",
-        description: "Classical Shastriya formulation of 27 herbs. Calms chronic Vata aggravation, relieves morning stiffness, and lubricates cartilage joints."
+        description: "Classical Shastriya formulation of 27 herbs. Calms aggravated Vata dosha, eases morning stiffness, and nourishes cartilage joints."
     },
     {
         id: 303,
@@ -208,7 +209,7 @@ const products = [
         isFlagship: false,
         tag: "Fever & Detox",
         badge: "54 Herb Blend",
-        description: "Traditional bitter tonic that eliminates chronic systemic toxins, purifies the lymphatic bloodstream, and regulates normal body temperature."
+        description: "Traditional bitter tonic that eliminates systemic Ama, purifies bodily channels, and supports natural temperature balance."
     },
     {
         id: 304,
@@ -222,23 +223,23 @@ const products = [
         isFlagship: false,
         tag: "Brain Tonic",
         badge: "Medhya Rasayana",
-        description: "Concentrated Bacopa monnieri and Shankhpushpi tablet to boost cognitive memory recall, mental focus, and calm nervous restlessness."
+        description: "Concentrated Bacopa monnieri and Shankhpushpi tablet to boost cognitive memory recall, mental focus, and calm nervous tension."
     },
 
     // Nutraceuticals
     {
         id: 2,
-        name: "Paarthvi Pure Shilajit Gold Himalayan Resin",
-        category: "Nutraceuticals",
+        name: "Paarthvi Veda Pure Himalayan Shilajit Resin",
+        category: "Medicine",
         price: 1499,
         originalPrice: 1999,
-        image: "assets/products/product-2.png",
+        image: "assets/products/shilajit-resin.jpg",
         rating: 4.9,
-        reviewsCount: 219,
-        isFlagship: false,
-        tag: "Best Seller",
-        badge: "Grade-A Gold",
-        description: "100% pure Himalayan Shilajit resin enriched with 80+ ionic minerals and fulvic acid for stamina, vitality, and cellular rejuvenation."
+        reviewsCount: 312,
+        isFlagship: true,
+        tag: "Vitality Blend",
+        badge: "75% Fulvic Acid",
+        description: "Pure Himalayan Shilajit resin fortified with Ashwagandha & Gokshura. Contains 75% fulvic acid power blend and 80+ ionic trace minerals for peak physical performance, virility, and cellular endurance."
     },
     {
         id: 401,
@@ -266,7 +267,7 @@ const products = [
         isFlagship: false,
         tag: "Daily Greens",
         badge: "Nutrient Dense",
-        description: "Rich green miracle leaf capsules containing 7x more Vitamin C than oranges and 4x more calcium than milk for non-stop daily stamina."
+        description: "Rich green miracle leaf capsules containing dense natural micronutrients, Vitamin C, and plant-based calcium for daily stamina."
     },
     {
         id: 403,
@@ -280,7 +281,7 @@ const products = [
         isFlagship: false,
         tag: "Weight & Gut",
         badge: "With Mother",
-        description: "Raw fermented Himalayan apple vinegar with live probiotics, Garcinia, and ginger for appetite control and healthy gut microbiome."
+        description: "Raw fermented Himalayan apple vinegar with live beneficial cultures, Garcinia, and ginger for healthy digestion and gut microbiome."
     },
     {
         id: 404,
@@ -294,8 +295,51 @@ const products = [
         isFlagship: false,
         tag: "Antioxidant",
         badge: "95% Curcuminoids",
-        description: "Standardized organic Lakadong turmeric extract with BioPerine black pepper for 2000% improved bio-absorption and cellular repair."
+        description: "Standardized organic Lakadong turmeric extract with BioPerine black pepper for maximized bio-absorption and cellular vitality."
     },
+    {
+        id: 405,
+        name: "Paarthvi Organic Yellow Moong Daal (1kg)",
+        category: "Nutraceuticals",
+        price: 220,
+        originalPrice: 280,
+        image: "assets/cat_nutraceuticals.png",
+        rating: 4.9,
+        reviewsCount: 142,
+        isFlagship: false,
+        tag: "Organic Food",
+        badge: "Unpolished & Pure",
+        description: "100% certified organic unpolished yellow moong daal. Naturally high in bioavailable plant protein, easy to digest, and free from pesticides."
+    },
+    {
+        id: 406,
+        name: "Paarthvi Sharbati Whole Wheat Atta (5kg)",
+        category: "Nutraceuticals",
+        price: 380,
+        originalPrice: 460,
+        image: "assets/cat_nutraceuticals.png",
+        rating: 4.8,
+        reviewsCount: 198,
+        isFlagship: false,
+        tag: "Organic Food",
+        badge: "Stone Ground",
+        description: "Premium Sehore Sharbati whole wheat grains stone-ground slowly to preserve natural bran fiber, nutrients, and sweet golden aroma."
+    },
+    {
+        id: 407,
+        name: "Paarthvi Pure Vedic A2 Bilona Cow Ghee (500ml)",
+        category: "Nutraceuticals",
+        price: 950,
+        originalPrice: 1250,
+        image: "assets/cat_nutraceuticals.png",
+        rating: 4.9,
+        reviewsCount: 265,
+        isFlagship: false,
+        tag: "Vedic Ghee",
+        badge: "A2 Bilona Vidhi",
+        description: "Handcrafted from curd of grass-fed indigenous Gir cows using the traditional Vedic bilona method. Rich in fat-soluble vitamins and aroma."
+    },
+
     // Hawan Samagri
     {
         id: 601,
@@ -323,7 +367,7 @@ const products = [
         isFlagship: false,
         tag: "Dhoop Cups",
         badge: "Charcoal Free",
-        description: "Ready-to-light natural cow dung sambrani cups filled with organic Guggal and fragrant Frankincense to cleanse negative energies."
+        description: "Ready-to-light natural sambrani cups filled with organic Guggal and fragrant Frankincense to cleanse space and create serene aroma."
     },
     {
         id: 603,
@@ -336,8 +380,8 @@ const products = [
         reviewsCount: 120,
         isFlagship: false,
         tag: "Pure Camphor",
-        badge: "Edible Grade",
-        description: "Original crystalline Bhimseni Kapoor that leaves zero residue upon burning. Produces sweet therapeutic medicinal aroma."
+        badge: "Zero Residue",
+        description: "Original crystalline Bhimseni Kapoor that leaves zero residue upon burning. Produces a sweet therapeutic medicinal aroma."
     },
     {
         id: 604,
@@ -350,8 +394,8 @@ const products = [
         reviewsCount: 88,
         isFlagship: false,
         tag: "Yajna Woods",
-        badge: "A2 Cow Ghee",
-        description: "Sacred Mango wood and Palash samidha dipped in pure Gir cow Vedic ghee for smokeless, divine Agnihotra rituals."
+        badge: "Vedic Ghee Dipped",
+        description: "Sacred Mango wood and Palash samidha dipped in pure Vedic ghee for clean, fragrant, divine Agnihotra rituals."
     },
     {
         id: 605,
@@ -365,11 +409,55 @@ const products = [
         isFlagship: false,
         tag: "Chandan",
         badge: "Pure Chandan",
-        description: "Natural fragrant red and white sandalwood billets for elevating yajna spiritual atmosphere and attracting prosperity."
+        description: "Natural fragrant red and white sandalwood billets for elevating devotional atmosphere and sacred rituals."
+    },
+
+    // Paridhan (Traditional Ayurvedic Attire & Wellness Wear)
+    {
+        id: 701,
+        name: "Paarthvi Organic Khadi Cotton Kurta Pajama Set",
+        category: "Paridhan",
+        price: 1899,
+        originalPrice: 2499,
+        image: "assets/cat_paridhan.png",
+        rating: 4.9,
+        reviewsCount: 64,
+        isFlagship: false,
+        tag: "Handloom",
+        badge: "100% Khadi",
+        description: "Hand-spun organic khadi cotton kurta pajama set dyed with herbal botanical extracts for breathable, meditative comfort."
+    },
+    {
+        id: 702,
+        name: "Paarthvi Ahimsa Silk Vedic Meditation Shawl",
+        category: "Paridhan",
+        price: 1499,
+        originalPrice: 1999,
+        image: "assets/cat_paridhan.png",
+        rating: 4.9,
+        reviewsCount: 88,
+        isFlagship: false,
+        tag: "Ahimsa Silk",
+        badge: "Sacred Weave",
+        description: "Cruelty-free handwoven Ahimsa silk shawl infused with calming sandalwood essence for morning pujas and meditation."
+    },
+    {
+        id: 703,
+        name: "Paarthvi Pure Herbal Linen Yoga Robe",
+        category: "Paridhan",
+        price: 2199,
+        originalPrice: 2899,
+        image: "assets/cat_paridhan.png",
+        rating: 4.8,
+        reviewsCount: 52,
+        isFlagship: false,
+        tag: "Ayurvedic Wear",
+        badge: "Ayurvastra",
+        description: "Ayurvastra organic linen robe treated with turmeric and neem herbs to soothe the skin and promote pranic vitality."
     }
 ];
 
-// Shopping Cart State (Persisted in localStorage)
+// Shopping Cart & Wishlist State (Persisted in localStorage)
 let cart = [];
 let wishlist = [];
 
@@ -420,93 +508,24 @@ document.addEventListener("DOMContentLoaded", () => {
     initMobileMenu();
     initSearch();
     initCart();
+    initQuickView();
+    initScrollAnimations();
+    initAccordions();
     renderFeaturedProducts();
     initCategoryPageIfPresent();
     updateCartUI();
     updateWishlistUI();
 });
 
-function initCategoryPageIfPresent() {
-    const grid = document.getElementById("categoryProductGrid");
-    if (grid && grid.dataset.category) {
-        renderCategoryPageProducts(grid.dataset.category, "ALL");
-    }
-}
-
-function renderCategoryPageProducts(categoryName, filterType = "ALL") {
-    const grid = document.getElementById("categoryProductGrid");
-    if (!grid) return;
-
-    let items = products.filter(p => p.category.toLowerCase() === categoryName.toLowerCase());
-    
-    if (filterType === "BEST") {
-        items = items.filter(p => p.tag === "Best Seller" || p.rating >= 4.9);
-    } else if (filterType === "PRICE_LOW") {
-        items = [...items].sort((a, b) => a.price - b.price);
-    } else if (filterType === "PRICE_HIGH") {
-        items = [...items].sort((a, b) => b.price - a.price);
-    } else if (filterType === "RATING") {
-        items = [...items].sort((a, b) => b.rating - a.rating);
-    }
-
-    grid.innerHTML = items.map(p => `
-        <div class="cat-product-card">
-            <span class="cat-product-badge">${p.badge || p.tag}</span>
-            <button onclick="toggleWishlist(${p.id})" class="cat-product-wishlist-btn" title="Save to Wishlist" aria-label="Wishlist">
-                <i class="${wishlist.includes(p.id) ? 'fa-solid fa-heart' : 'fa-regular fa-heart'}" style="${wishlist.includes(p.id) ? 'color:#E11D48;' : ''}"></i>
-            </button>
-            
-            <div class="cat-product-img-wrap">
-                <img src="${p.image}" alt="${p.name}" loading="lazy">
-            </div>
-
-            <div>
-                <div class="cat-product-rating">
-                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
-                    <span style="color:var(--text-muted); font-size:0.75rem; margin-left:4px;">(${p.reviewsCount})</span>
-                </div>
-                <h3 class="cat-product-title">${p.name}</h3>
-                <p class="cat-product-desc">${p.description}</p>
-                
-                <div class="cat-product-price-row">
-                    <span class="cat-price-current">₹${p.price.toLocaleString("en-IN")}</span>
-                    <span class="cat-price-original">₹${p.originalPrice.toLocaleString("en-IN")}</span>
-                    <span class="cat-price-save">Save ${Math.round(((p.originalPrice - p.price) / p.originalPrice) * 100)}% Off</span>
-                </div>
-            </div>
-
-            <div class="cat-product-actions">
-                <button onclick="addToCart('${p.name}', ${p.price}, '${p.image}')" class="cat-btn-add">
-                    <i class="fa-solid fa-cart-plus"></i> Add
-                </button>
-                <button onclick="instantBuyProduct(${p.id})" class="cat-btn-buy">
-                    <i class="fa-solid fa-bolt"></i> Buy Now
-                </button>
-            </div>
-        </div>
-    `).join("");
-}
-
-function handleCategoryFilter(filterType, btnEl, categoryName) {
-    document.querySelectorAll(".cat-filter-pill-btn").forEach(btn => btn.classList.remove("active"));
-    if (btnEl) btnEl.classList.add("active");
-    renderCategoryPageProducts(categoryName, filterType);
-}
-
-function handleCategorySort(sortSelect, categoryName) {
-    const sortVal = sortSelect.value;
-    renderCategoryPageProducts(categoryName, sortVal);
-}
-
 /* =========================================================
-   NAVBAR & SCROLL EFFECTS
+   1. NAVBAR & SCROLL EFFECTS
 ========================================================= */
 function initNavbar() {
     const navbar = document.getElementById("navbar");
     if (!navbar) return;
 
     window.addEventListener("scroll", () => {
-        if (window.scrollY > 40) {
+        if (window.scrollY > 30) {
             navbar.classList.add("scrolled");
         } else {
             navbar.classList.remove("scrolled");
@@ -515,24 +534,63 @@ function initNavbar() {
 }
 
 function initMobileMenu() {
-    const menuBtn = document.getElementById("menuBtn");
-    const mobileMenu = document.getElementById("mobileMenu");
+    const menuBtns = document.querySelectorAll("#menuBtn, #sideNavToggleBtn, .side-nav-toggle-btn, .mobile-menu-toggle, .open-side-nav");
+    const mobileDrawer = document.getElementById("mobileNavDrawer") || document.getElementById("sideNavDrawer");
+    const mobileOverlay = document.getElementById("mobileNavOverlay") || document.getElementById("sideNavOverlay");
+    const closeMobileBtns = document.querySelectorAll("#closeMobileMenu, #closeSideNav, .side-nav-close-btn");
 
-    if (menuBtn && mobileMenu) {
-        menuBtn.addEventListener("click", () => {
-            mobileMenu.classList.toggle("active");
-        });
+    const openMenu = (e) => {
+        if (e) e.preventDefault();
+        const drawer = document.getElementById("mobileNavDrawer") || document.getElementById("sideNavDrawer");
+        const overlay = document.getElementById("mobileNavOverlay") || document.getElementById("sideNavOverlay");
+        if (drawer) drawer.classList.add("active");
+        if (overlay) overlay.classList.add("active");
+        document.body.style.overflow = "hidden";
+    };
 
-        document.querySelectorAll("#mobileMenu a").forEach(link => {
-            link.addEventListener("click", () => {
-                mobileMenu.classList.remove("active");
-            });
+    const closeMenu = (e) => {
+        if (e) e.preventDefault();
+        const drawer = document.getElementById("mobileNavDrawer") || document.getElementById("sideNavDrawer");
+        const overlay = document.getElementById("mobileNavOverlay") || document.getElementById("sideNavOverlay");
+        if (drawer) drawer.classList.remove("active");
+        if (overlay) overlay.classList.remove("active");
+        document.body.style.overflow = "";
+    };
+
+    menuBtns.forEach(btn => btn.addEventListener("click", openMenu));
+    closeMobileBtns.forEach(btn => btn.addEventListener("click", closeMenu));
+    if (mobileOverlay) mobileOverlay.addEventListener("click", closeMenu);
+
+    document.querySelectorAll(".mobile-drawer-link, .side-nav-cat-item, .side-nav-contact-link, .side-nav-footer-wrap a").forEach(link => {
+        link.addEventListener("click", () => {
+            // Slight timeout so smooth navigation / hash scroll occurs
+            setTimeout(closeMenu, 150);
         });
-    }
+    });
+
+    document.addEventListener("keydown", (e) => {
+        if (e.key === "Escape") {
+            closeMenu();
+        }
+    });
+
+    window.openSideNav = openMenu;
+    window.closeSideNav = closeMenu;
 }
 
+window.openCartFromSideNav = function() {
+    if (window.closeSideNav) window.closeSideNav();
+    const cartOverlay = document.getElementById("cartOverlay");
+    if (cartOverlay) {
+        setTimeout(() => {
+            cartOverlay.classList.add("active");
+            document.body.style.overflow = "hidden";
+        }, 200);
+    }
+};
+
 /* =========================================================
-   CATEGORY DRAWER
+   2. CATEGORY DRAWER & FILTERING
 ========================================================= */
 function toggleCategoryDrawer() {
     const drawer = document.getElementById("categoryDrawer");
@@ -559,8 +617,213 @@ function filterByCategory(categoryName) {
     }
 }
 
+function initCategoryPageIfPresent() {
+    const grid = document.getElementById("categoryProductGrid");
+    if (grid && grid.dataset.category) {
+        renderCategoryPageProducts(grid.dataset.category, "ALL");
+    }
+}
+
+function renderCategoryPageProducts(categoryName, filterType = "ALL") {
+    const grid = document.getElementById("categoryProductGrid");
+    if (!grid) return;
+
+    let items = products.filter(p => p.category.toLowerCase() === categoryName.toLowerCase());
+    
+    if (filterType === "BEST") {
+        items = items.filter(p => p.tag === "Best Seller" || p.rating >= 4.9);
+    } else if (filterType === "PRICE_LOW") {
+        items = [...items].sort((a, b) => a.price - b.price);
+    } else if (filterType === "PRICE_HIGH") {
+        items = [...items].sort((a, b) => b.price - a.price);
+    } else if (filterType === "RATING") {
+        items = [...items].sort((a, b) => b.rating - a.rating);
+    }
+
+    grid.innerHTML = items.map(p => `
+        <div class="product-card fade-up-element">
+            <span class="product-badge">${p.badge || p.tag}</span>
+            <button onclick="toggleWishlist(${p.id})" class="product-wishlist-btn" title="Save to Wishlist" aria-label="Wishlist">
+                <i class="${wishlist.includes(p.id) ? 'fa-solid fa-heart' : 'fa-regular fa-heart'}" style="${wishlist.includes(p.id) ? 'color:#C2410C;' : ''}"></i>
+            </button>
+            
+            <div class="product-img-wrap" onclick="openProductQuickView(${p.id})" style="cursor: pointer;">
+                <img src="${p.image}" alt="${p.name}" loading="lazy">
+                <button class="product-quick-view-btn" onclick="event.stopPropagation(); openProductQuickView(${p.id});">
+                    <i class="fa-regular fa-eye"></i> Quick View
+                </button>
+            </div>
+
+            <div>
+                <span class="product-category">${p.category}</span>
+                <h3 class="product-title">${p.name}</h3>
+                <p class="product-desc">${p.description}</p>
+                
+                <div class="product-rating">
+                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    <span class="product-rating-count">(${p.reviewsCount})</span>
+                </div>
+                
+                <div class="product-price-row">
+                    <span class="price-current">₹${p.price.toLocaleString("en-IN")}</span>
+                    <span class="price-original">₹${p.originalPrice.toLocaleString("en-IN")}</span>
+                    <span class="price-discount-tag">${Math.round(((p.originalPrice - p.price) / p.originalPrice) * 100)}% OFF</span>
+                </div>
+            </div>
+
+            <div class="product-btn-group">
+                <button onclick="addToCart('${p.name}', ${p.price}, '${p.image}')" class="btn-card-add" aria-label="Add to Bag">
+                    <i class="fa-solid fa-bag-shopping"></i> Add to Bag
+                </button>
+                <button onclick="instantBuyProduct(${p.id})" class="btn-card-buy" title="Instant Buy">
+                    Buy Now →
+                </button>
+            </div>
+        </div>
+    `).join("");
+
+    initScrollAnimations();
+}
+
+function handleCategoryFilter(filterType, btnEl, categoryName) {
+    document.querySelectorAll(".cat-filter-pill-btn").forEach(btn => btn.classList.remove("active"));
+    if (btnEl) btnEl.classList.add("active");
+    renderCategoryPageProducts(categoryName, filterType);
+}
+
+function handleCategorySort(sortSelect, categoryName) {
+    const sortVal = sortSelect.value;
+    renderCategoryPageProducts(categoryName, sortVal);
+}
+
 /* =========================================================
-   WISHLIST & STORE ACTIONS
+   3. FEATURED PRODUCTS RENDERING (HOMEPAGE)
+========================================================= */
+function renderFeaturedProducts() {
+    const grid = document.getElementById("featuredProductsGrid");
+    if (!grid) return;
+
+    // Pick top 4 products for homepage
+    const homeFeatured = [products[0], products[5], products[10], products[15]];
+
+    grid.innerHTML = homeFeatured.map(p => `
+        <div class="product-card fade-up-element">
+            <span class="product-badge">${p.badge || p.tag}</span>
+            <button onclick="toggleWishlist(${p.id})" class="product-wishlist-btn" title="Save to Wishlist" aria-label="Wishlist">
+                <i class="${wishlist.includes(p.id) ? 'fa-solid fa-heart' : 'fa-regular fa-heart'}" style="${wishlist.includes(p.id) ? 'color:#C2410C;' : ''}"></i>
+            </button>
+            
+            <div class="product-img-wrap" onclick="openProductQuickView(${p.id})" style="cursor: pointer;">
+                <img src="${p.image}" alt="${p.name}" loading="lazy">
+                <button class="product-quick-view-btn" onclick="event.stopPropagation(); openProductQuickView(${p.id});">
+                    <i class="fa-regular fa-eye"></i> Quick View
+                </button>
+            </div>
+
+            <div>
+                <span class="product-category">${p.category}</span>
+                <h3 class="product-title">${p.name}</h3>
+                
+                <div class="product-rating">
+                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    <span class="product-rating-count">(${p.reviewsCount})</span>
+                </div>
+                
+                <div class="product-price-row">
+                    <span class="price-current">₹${p.price.toLocaleString("en-IN")}</span>
+                    <span class="price-original">₹${p.originalPrice.toLocaleString("en-IN")}</span>
+                    <span class="price-discount-tag">${Math.round(((p.originalPrice - p.price) / p.originalPrice) * 100)}% OFF</span>
+                </div>
+            </div>
+
+            <div class="product-btn-group">
+                <button onclick="addToCart('${p.name}', ${p.price}, '${p.image}')" class="btn-card-add" aria-label="Add to Bag">
+                    <i class="fa-solid fa-bag-shopping"></i> Add
+                </button>
+                <button onclick="instantBuyProduct(${p.id})" class="btn-card-buy" title="Instant Buy">
+                    Buy Now →
+                </button>
+            </div>
+        </div>
+    `).join("");
+
+    initScrollAnimations();
+}
+
+/* =========================================================
+   4. QUICK VIEW MODAL
+========================================================= */
+function initQuickView() {
+    let modal = document.getElementById("quickViewModal");
+    if (!modal) {
+        modal = document.createElement("div");
+        modal.id = "quickViewModal";
+        modal.className = "modal-overlay";
+        modal.innerHTML = `
+            <div class="quick-view-box">
+                <button id="closeQuickView" class="close-btn" style="position: absolute; top: 20px; right: 20px;" aria-label="Close Quick View">&times;</button>
+                <div id="quickViewContent"></div>
+            </div>
+        `;
+        document.body.appendChild(modal);
+
+        modal.querySelector("#closeQuickView").addEventListener("click", () => {
+            modal.classList.remove("active");
+            document.body.style.overflow = "";
+        });
+
+        modal.addEventListener("click", (e) => {
+            if (e.target === modal) {
+                modal.classList.remove("active");
+                document.body.style.overflow = "";
+            }
+        });
+    }
+}
+
+function openProductQuickView(productId) {
+    const p = products.find(prod => prod.id === productId) || products[0];
+    const modal = document.getElementById("quickViewModal");
+    const content = document.getElementById("quickViewContent");
+
+    if (!modal || !content) return;
+
+    content.innerHTML = `
+        <div class="quick-view-grid" style="display: grid; grid-template-columns: 1fr 1.1fr; gap: 36px; align-items: center;">
+            <div style="background:#FFFFFF; border-radius:12px; padding:24px; display:flex; align-items:center; justify-content:center; border:1px solid var(--border-subtle);">
+                <img src="${p.image}" alt="${p.name}" style="max-height: 280px; object-fit: contain;">
+            </div>
+            <div>
+                <span class="eyebrow">${p.category}</span>
+                <h2 style="font-size:1.8rem; margin-bottom:10px; color:var(--forest-deep);">${p.name}</h2>
+                <div class="product-rating" style="margin-bottom:14px;">
+                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    <span class="product-rating-count">(${p.reviewsCount} Authentic Reviews)</span>
+                </div>
+                <div class="product-price-row" style="margin-bottom:16px;">
+                    <span class="price-current" style="font-size:1.5rem;">₹${p.price.toLocaleString("en-IN")}</span>
+                    <span class="price-original" style="font-size:1.05rem;">₹${p.originalPrice.toLocaleString("en-IN")}</span>
+                    <span class="price-discount-tag">${Math.round(((p.originalPrice - p.price) / p.originalPrice) * 100)}% OFF</span>
+                </div>
+                <p style="font-size:0.92rem; color:var(--text-secondary); line-height:1.65; margin-bottom:24px;">${p.description}</p>
+                <div style="display:flex; gap:12px;">
+                    <button onclick="addToCart('${p.name}', ${p.price}, '${p.image}'); document.getElementById('quickViewModal').classList.remove('active'); document.body.style.overflow='';" class="btn-primary" style="flex:1;">
+                        <i class="fa-solid fa-bag-shopping"></i> Add to Bag
+                    </button>
+                    <button onclick="instantBuyProduct(${p.id})" class="btn-secondary" style="flex:1;">
+                        Buy Now →
+                    </button>
+                </div>
+            </div>
+        </div>
+    `;
+
+    modal.classList.add("active");
+    document.body.style.overflow = "hidden";
+}
+
+/* =========================================================
+   5. WISHLIST & STORE ACTIONS
 ========================================================= */
 function toggleWishlist(productId) {
     const index = wishlist.indexOf(productId);
@@ -573,6 +836,8 @@ function toggleWishlist(productId) {
     }
     saveWishlist();
     updateWishlistUI();
+    renderFeaturedProducts();
+    initCategoryPageIfPresent();
 }
 
 function updateWishlistUI() {
@@ -583,78 +848,48 @@ function updateWishlistUI() {
 }
 
 function showPrescriptionUpload() {
-    showToast("Doctor Consultation & Prescription: Call/WhatsApp +91 9259760176 / +91 9354419950 | Email: contact@paarthviayurveda.com");
+    showToast(`Doctor Consultation & Helpline: ${STORE_HELPLINE_NUMBER} | Email: ${STORE_EMAIL}`);
 }
 
-function openAccountModal() {
-    // Navigate directly to Google Login / Checkout
-    window.location.href = "checkout.html?step=1";
-}
-
-/* =========================================================
-   FEATURED PRODUCT RENDERING
-========================================================= */
-function renderFeaturedProducts() {
-    const grid = document.getElementById("featuredProductsGrid");
-    if (!grid) return;
-
-    // Pick top 4 products for homepage
-    const homeFeatured = [products[0], products[5], products[10], products[15]];
-
-    grid.innerHTML = homeFeatured.map(p => `
-        <div class="featured-product-card">
-            <span class="product-featured-tag">${p.badge || p.tag}</span>
-            
-            <div class="featured-product-img-wrap">
-                <img src="${p.image}" alt="${p.name}" loading="lazy">
-            </div>
-
-            <div style="flex: 1;">
-                <div class="featured-product-rating">
-                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i> <span style="color: var(--text-muted); font-size: 0.75rem;">(${p.reviewsCount})</span>
-                </div>
-                <h3 class="featured-product-title">${p.name}</h3>
-                
-                <div class="featured-product-price-row">
-                    <span class="featured-price-current">₹${p.price.toLocaleString("en-IN")}</span>
-                    <span class="featured-price-original">₹${p.originalPrice.toLocaleString("en-IN")}</span>
-                </div>
-            </div>
-
-            <div class="featured-product-btn-group">
-                <button onclick="addToCart('${p.name}', ${p.price}, '${p.image}')" class="btn-add-bag" aria-label="Add to Bag">
-                    <i class="fa-solid fa-cart-plus"></i> Add
-                </button>
-                <button onclick="instantBuyProduct(${p.id})" class="btn-quick-buy" title="Instant Buy (3-Step Checkout)">
-                    <i class="fa-solid fa-bolt"></i> Buy Now
-                </button>
-            </div>
-        </div>
-    `).join("");
-}
 
 function instantBuyProduct(productId) {
     const p = products.find(prod => prod.id === productId) || products[0];
     if (p) {
-        cart = [{ name: p.name, price: p.price, image: p.image, quantity: 1 }];
+        cart = [{ 
+            name: p.name, 
+            price: p.price, 
+            originalPrice: p.originalPrice || Math.round(p.price * 1.3),
+            image: p.image, 
+            quantity: 1 
+        }];
         saveCart();
-        window.location.href = "checkout.html";
+        
+        const savedUser = localStorage.getItem("paarthvi_user") || localStorage.getItem("parthvi_user") || sessionStorage.getItem("paarthvi_user");
+        if (savedUser) {
+            window.location.href = "checkout.html?step=2";
+        } else {
+            window.location.href = "checkout.html?step=1";
+        }
     }
 }
 
 function openCheckout() {
-    if (cart.length === 0) {
+    if (cart.length === 0 && products.length > 0) {
         addToCart(products[0].name, products[0].price, products[0].image);
     }
-    window.location.href = "checkout.html";
+    const savedUser = localStorage.getItem("paarthvi_user") || localStorage.getItem("parthvi_user") || sessionStorage.getItem("paarthvi_user");
+    if (savedUser) {
+        window.location.href = "checkout.html?step=2";
+    } else {
+        window.location.href = "checkout.html?step=1";
+    }
 }
 
 /* =========================================================
-   LIVE SEARCH OVERLAY
+   6. LIVE SEARCH OVERLAY
 ========================================================= */
 function initSearch() {
     const searchBtn = document.getElementById("searchBtn");
-    const subNavSearchBtn = document.getElementById("subNavSearchBtn");
     const searchOverlay = document.getElementById("searchOverlay");
     const closeSearch = document.getElementById("closeSearch");
     const searchInput = document.getElementById("searchInput");
@@ -664,17 +899,21 @@ function initSearch() {
 
     const openSearchFn = () => {
         searchOverlay.classList.add("active");
+        document.body.style.overflow = "hidden";
         setTimeout(() => searchInput && searchInput.focus(), 200);
     };
 
-    if (searchBtn) searchBtn.addEventListener("click", openSearchFn);
-    if (subNavSearchBtn) subNavSearchBtn.addEventListener("click", openSearchFn);
+    const closeSearchFn = () => {
+        searchOverlay.classList.remove("active");
+        document.body.style.overflow = "";
+    };
 
-    if (closeSearch) {
-        closeSearch.addEventListener("click", () => {
-            searchOverlay.classList.remove("active");
-        });
-    }
+    if (searchBtn) searchBtn.addEventListener("click", openSearchFn);
+    if (closeSearch) closeSearch.addEventListener("click", closeSearchFn);
+
+    searchOverlay.addEventListener("click", (e) => {
+        if (e.target === searchOverlay) closeSearchFn();
+    });
 
     if (searchInput && searchResults) {
         searchInput.addEventListener("input", (e) => {
@@ -691,17 +930,17 @@ function initSearch() {
             );
 
             if (matched.length === 0) {
-                searchResults.innerHTML = `<div style="padding: 20px; text-align: center; color: var(--text-muted);">No remedies matching "${query}". Try searching 'Health Care', 'Shilajit', 'Kumkumadi', 'Hawan', or 'Ashwagandha'.</div>`;
+                searchResults.innerHTML = `<div style="padding: 24px; text-align: center; color: var(--text-muted);">No remedies matching "${query}". Try searching 'Health Care', 'Shilajit', 'Kumkumadi', or 'Ashwagandha'.</div>`;
             } else {
                 searchResults.innerHTML = matched.map(p => `
-                    <div onclick="instantBuyProduct(${p.id})" style="display:flex; align-items:center; gap:14px; padding:12px; border-bottom:1px solid var(--border-subtle); cursor:pointer; background:#FFFFFF; border-radius:8px; margin-bottom:8px;">
-                        <img src="${p.image}" alt="${p.name}" style="width:50px; height:50px; object-fit:contain;">
+                    <div onclick="instantBuyProduct(${p.id})" style="display:flex; align-items:center; gap:14px; padding:14px; border-bottom:1px solid var(--border-subtle); cursor:pointer; background:#FFFFFF; border-radius:8px; margin-bottom:8px; transition: transform 0.2s ease;">
+                        <img src="${p.image}" alt="${p.name}" style="width:52px; height:52px; object-fit:contain; border-radius:4px; border:1px solid var(--border-subtle);">
                         <div style="flex:1;">
                             <strong style="color:var(--forest-deep); font-size:0.95rem;">${p.name}</strong>
-                            <div style="color:var(--text-muted); font-size:0.75rem;">${p.category}</div>
-                            <div style="color:var(--emerald-vibrant); font-weight:700;">₹${p.price}</div>
+                            <div style="color:var(--sage); font-size:0.75rem; text-transform:uppercase; font-weight:600;">${p.category}</div>
+                            <div style="color:var(--forest-deep); font-weight:700; font-size:0.92rem;">₹${p.price.toLocaleString("en-IN")}</div>
                         </div>
-                        <span class="primary-btn" style="padding:6px 14px; font-size:0.8rem;">Buy →</span>
+                        <span class="btn-secondary" style="padding:6px 14px; font-size:0.75rem;">View & Buy →</span>
                     </div>
                 `).join("");
             }
@@ -710,22 +949,34 @@ function initSearch() {
 }
 
 /* =========================================================
-   CART DRAWER & FUNCTIONALITY
+   7. SHOPPING CART DRAWER ("YOUR RITUAL BAG")
 ========================================================= */
 function initCart() {
     const cartBtn = document.getElementById("cartBtn");
     const cartOverlay = document.getElementById("cartOverlay");
     const closeCart = document.getElementById("closeCart");
 
+    const openCart = () => {
+        if (cartOverlay) cartOverlay.classList.add("active");
+        document.body.style.overflow = "hidden";
+    };
+
+    const closeCartFn = () => {
+        if (cartOverlay) cartOverlay.classList.remove("active");
+        document.body.style.overflow = "";
+    };
+
     if (cartBtn && cartOverlay) {
-        cartBtn.addEventListener("click", () => {
-            cartOverlay.classList.add("active");
-        });
+        cartBtn.addEventListener("click", openCart);
     }
 
     if (closeCart && cartOverlay) {
-        closeCart.addEventListener("click", () => {
-            cartOverlay.classList.remove("active");
+        closeCart.addEventListener("click", closeCartFn);
+    }
+
+    if (cartOverlay) {
+        cartOverlay.addEventListener("click", (e) => {
+            if (e.target === cartOverlay) closeCartFn();
         });
     }
 }
@@ -739,7 +990,14 @@ function addToCart(name, price, image) {
     }
     saveCart();
     updateCartUI();
-    showToast(`Added ${name} to your Bag!`);
+    showToast(`Added ${name} to your Ritual Bag!`);
+
+    // Auto-open cart drawer
+    const cartOverlay = document.getElementById("cartOverlay");
+    if (cartOverlay) {
+        cartOverlay.classList.add("active");
+        document.body.style.overflow = "hidden";
+    }
 }
 
 function updateCartQty(index, change) {
@@ -754,38 +1012,55 @@ function updateCartQty(index, change) {
 }
 
 function updateCartUI() {
-    const countEl = document.getElementById("cartCount");
+    const countEls = document.querySelectorAll("#cartCount, #cartBadge, #sideNavBadgeCount");
+    const wishlistEls = document.querySelectorAll("#wishlistCount, #wishlistBadge");
     const itemsContainer = document.getElementById("cartItems");
     const subtotalEl = document.getElementById("cartSubtotal");
+    const totalEl = document.getElementById("cartTotal");
+    const sideNavCountEl = document.getElementById("sideNavCartCount");
+    const sideNavTotalEl = document.getElementById("sideNavCartTotal");
 
     const totalCount = cart.reduce((sum, i) => sum + i.quantity, 0);
     const subtotal = cart.reduce((sum, i) => sum + (i.price * i.quantity), 0);
 
-    if (countEl) countEl.textContent = totalCount;
+    countEls.forEach(el => el.textContent = totalCount);
+    wishlistEls.forEach(el => el.textContent = wishlist.length);
+
     if (subtotalEl) subtotalEl.textContent = `₹${subtotal.toLocaleString("en-IN")}`;
+    if (totalEl) totalEl.textContent = `₹${subtotal.toLocaleString("en-IN")}`;
+
+    if (sideNavCountEl) {
+        sideNavCountEl.textContent = `${totalCount} ${totalCount === 1 ? 'Item' : 'Items'}`;
+    }
+    if (sideNavTotalEl) {
+        sideNavTotalEl.textContent = `₹${subtotal.toLocaleString("en-IN")}`;
+    }
 
     if (itemsContainer) {
         if (cart.length === 0) {
             itemsContainer.innerHTML = `
-                <div style="text-align: center; padding: 40px 20px; color: var(--text-muted);">
-                    <div style="font-size: 2.2rem; color: var(--forest-emerald); margin-bottom: 12px;"><i class="fa-solid fa-bag-shopping"></i></div>
-                    <strong style="color: var(--forest-deep); font-size: 1.05rem;">Your Bag is Empty</strong>
-                    <p style="font-size: 0.88rem; margin-top: 6px;">Add authentic Ayurvedic formulations to begin your wellness journey.</p>
+                <div style="text-align: center; padding: 60px 20px; color: var(--text-muted);">
+                    <div style="font-size: 2.5rem; color: var(--sage); margin-bottom: 14px;"><i class="fa-solid fa-bag-shopping"></i></div>
+                    <h3 style="color: var(--forest-deep); font-size: 1.25rem; margin-bottom: 6px;">Your Ritual Bag is Empty</h3>
+                    <p style="font-size: 0.88rem; line-height: 1.6;">Add authentic Ayurvedic formulations to begin your wellness journey.</p>
                 </div>
             `;
         } else {
             itemsContainer.innerHTML = cart.map((item, idx) => `
-                <div class="cart-item-row" style="display:flex; gap:12px; align-items:center; padding:12px 0; border-bottom:1px solid var(--border-subtle);">
-                    <img src="${item.image}" alt="${item.name}" style="width:60px; height:60px; object-fit:contain; border-radius:8px; border:1px solid var(--sage-tint); background:#FFFFFF;">
-                    <div style="flex:1;">
-                        <h4 style="font-size:0.9rem; color:var(--forest-deep); margin-bottom:4px;">${item.name}</h4>
-                        <div style="color:var(--emerald-vibrant); font-weight:700; font-size:0.92rem;">₹${(item.price * item.quantity).toLocaleString("en-IN")}</div>
-                        <div style="display:flex; align-items:center; gap:8px; margin-top:6px;">
-                            <button onclick="updateCartQty(${idx}, -1)" style="width:22px; height:22px; border:1px solid var(--border-card); border-radius:4px; font-weight:bold; cursor:pointer;">-</button>
-                            <span style="font-size:0.85rem; font-weight:700;">${item.quantity}</span>
-                            <button onclick="updateCartQty(${idx}, 1)" style="width:22px; height:22px; border:1px solid var(--border-card); border-radius:4px; font-weight:bold; cursor:pointer;">+</button>
+                <div class="cart-item-card">
+                    <img src="${item.image}" alt="${item.name}" class="cart-item-img">
+                    <div class="cart-item-info">
+                        <h4 class="cart-item-name">${item.name}</h4>
+                        <div class="cart-item-price">₹${(item.price * item.quantity).toLocaleString("en-IN")}</div>
+                        <div class="cart-item-stepper">
+                            <button onclick="updateCartQty(${idx}, -1)" class="cart-qty-btn" aria-label="Decrease quantity">-</button>
+                            <span class="cart-qty-val">${item.quantity}</span>
+                            <button onclick="updateCartQty(${idx}, 1)" class="cart-qty-btn" aria-label="Increase quantity">+</button>
                         </div>
                     </div>
+                    <button onclick="updateCartQty(${idx}, -${item.quantity})" style="color:var(--text-muted); font-size:0.9rem; padding:6px;" title="Remove Item" aria-label="Remove Item">
+                        <i class="fa-regular fa-trash-can"></i>
+                    </button>
                 </div>
             `).join("");
         }
@@ -793,30 +1068,206 @@ function updateCartUI() {
 }
 
 /* =========================================================
-   TOAST NOTIFICATION
+   8. ACCORDIONS (PRODUCT DETAIL PAGE)
+========================================================= */
+function initAccordions() {
+    document.querySelectorAll(".accordion-header").forEach(header => {
+        header.addEventListener("click", () => {
+            const item = header.parentElement;
+            const wasActive = item.classList.contains("active");
+
+            document.querySelectorAll(".accordion-item").forEach(other => {
+                other.classList.remove("active");
+            });
+
+            if (!wasActive) {
+                item.classList.add("active");
+            }
+        });
+    });
+}
+
+/* =========================================================
+   9. SCROLL FADE-UP ANIMATIONS (INTERSECTION OBSERVER)
+========================================================= */
+function initScrollAnimations() {
+    if (!('IntersectionObserver' in window)) {
+        document.querySelectorAll(".fade-up-element").forEach(el => el.classList.add("in-view"));
+        return;
+    }
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add("in-view");
+                observer.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.12 });
+
+    document.querySelectorAll(".fade-up-element").forEach(el => observer.observe(el));
+}
+
+/* =========================================================
+   10. MODAL POPUPS (LOCATION, ORDERS, WISHLIST, ACCOUNT)
+========================================================= */
+function openLocationModal() {
+    const modal = document.getElementById("locationModalOverlay");
+    if (modal) {
+        modal.classList.add("active");
+        document.body.style.overflow = "hidden";
+    }
+}
+
+function closeLocationModal() {
+    const modal = document.getElementById("locationModalOverlay");
+    if (modal) {
+        modal.classList.remove("active");
+        document.body.style.overflow = "";
+    }
+}
+
+function checkPincodeAvailability() {
+    const pin = document.getElementById("pincodeCheckInput")?.value.trim();
+    const status = document.getElementById("pincodeStatus");
+    if (!status) return;
+
+    if (!pin || !/^[0-9]{6}$/.test(pin)) {
+        status.style.color = "#C2410C";
+        status.textContent = "Please enter a valid 6-digit Pincode.";
+        return;
+    }
+
+    status.style.color = "#136B3E";
+    status.innerHTML = `✓ Free Express Delivery available for Pincode ${pin}! Estimated dispatch: 24 Hours.`;
+}
+
+function openOrdersModal() {
+    const modal = document.getElementById("ordersModalOverlay");
+    const list = document.getElementById("ordersModalList");
+    if (!modal) return;
+
+    modal.classList.add("active");
+    document.body.style.overflow = "hidden";
+
+    try {
+        const orders = JSON.parse(localStorage.getItem("paarthvi_orders") || localStorage.getItem("parthvi_orders") || "[]");
+        if (list) {
+            if (orders.length === 0) {
+                list.innerHTML = `
+                    <div style="text-align: center; padding: 36px 16px; color: var(--text-muted);">
+                        <i class="fa-solid fa-box-open" style="font-size: 2rem; color: var(--sage); margin-bottom: 8px;"></i>
+                        <p>No recent orders found on this device.</p>
+                        <a href="product.html" class="btn-primary" style="margin-top: 12px; display: inline-flex;">Shop Now →</a>
+                    </div>
+                `;
+            } else {
+                list.innerHTML = orders.map(ord => `
+                    <div style="background: #FFFFFF; border: 1px solid var(--border-subtle); border-radius: 8px; padding: 12px 16px; margin-bottom: 10px; font-size: 0.88rem;">
+                        <div style="display: flex; justify-content: space-between; font-weight: 700; color: var(--forest-deep); margin-bottom: 4px;">
+                            <span>#${ord.orderId}</span>
+                            <span style="color: #136B3E;">₹${ord.totalPayable.toLocaleString("en-IN")}</span>
+                        </div>
+                        <div style="color: var(--text-muted); font-size: 0.78rem;">${ord.productName} • ${ord.orderDate}</div>
+                        <div style="margin-top: 6px; display: flex; justify-content: space-between; align-items: center;">
+                            <span style="background: #EBF6EE; color: #136B3E; padding: 2px 8px; border-radius: 4px; font-size: 0.72rem; font-weight: 700;">${ord.status}</span>
+                            <span style="color: var(--text-muted); font-size: 0.76rem;">${ord.paymentMethod}</span>
+                        </div>
+                    </div>
+                `).join("");
+            }
+        }
+    } catch(e) {}
+}
+
+function closeOrdersModal() {
+    const modal = document.getElementById("ordersModalOverlay");
+    if (modal) {
+        modal.classList.remove("active");
+        document.body.style.overflow = "";
+    }
+}
+
+function openWishlistModal() {
+    const modal = document.getElementById("wishlistModalOverlay");
+    const list = document.getElementById("wishlistModalList");
+    if (!modal) return;
+
+    modal.classList.add("active");
+    document.body.style.overflow = "hidden";
+
+    if (list) {
+        const wishProducts = products.filter(p => wishlist.includes(p.id));
+        if (wishProducts.length === 0) {
+            list.innerHTML = `
+                <div style="text-align: center; padding: 36px 16px; color: var(--text-muted);">
+                    <i class="fa-regular fa-heart" style="font-size: 2rem; color: #E65100; margin-bottom: 8px;"></i>
+                    <p>Your saved wishlist is empty.</p>
+                    <span style="font-size: 0.82rem;">Click the heart icon on any formulation to save it.</span>
+                </div>
+            `;
+        } else {
+            list.innerHTML = wishProducts.map(p => `
+                <div style="display: flex; align-items: center; justify-content: space-between; background: #FFFFFF; border: 1px solid var(--border-subtle); border-radius: 8px; padding: 10px 14px; margin-bottom: 10px;">
+                    <div style="display: flex; align-items: center; gap: 12px;">
+                        <img src="${p.image}" alt="${p.name}" style="width: 44px; height: 44px; object-fit: contain;">
+                        <div>
+                            <strong style="color: var(--forest-deep); font-size: 0.88rem; display: block;">${p.name}</strong>
+                            <span style="color: #136B3E; font-weight: 700; font-size: 0.84rem;">₹${p.price.toLocaleString("en-IN")}</span>
+                        </div>
+                    </div>
+                    <button onclick="addToCart('${p.name}', ${p.price}, '${p.image}'); closeWishlistModal();" class="btn-card-add" style="padding: 6px 12px; font-size: 0.78rem;">
+                        Add to Bag
+                    </button>
+                </div>
+            `).join("");
+        }
+    }
+}
+
+function closeWishlistModal() {
+    const modal = document.getElementById("wishlistModalOverlay");
+    if (modal) {
+        modal.classList.remove("active");
+        document.body.style.overflow = "";
+    }
+}
+
+function openAccountModal() {
+    const modal = document.getElementById("accountModalOverlay");
+    if (modal) {
+        modal.classList.add("active");
+        document.body.style.overflow = "hidden";
+    }
+}
+
+function closeAccountModal() {
+    const modal = document.getElementById("accountModalOverlay");
+    if (modal) {
+        modal.classList.remove("active");
+        document.body.style.overflow = "";
+    }
+}
+
+function handleGoogleSignInDemo() {
+    const user = {
+        name: "Satya Prakash",
+        email: "satya.ayurveda@gmail.com",
+        avatar: "S"
+    };
+    localStorage.setItem("paarthvi_user", JSON.stringify(user));
+    closeAccountModal();
+    showToast(`Welcome back, ${user.name}!`);
+}
+
+/* =========================================================
+   11. TOAST NOTIFICATION
 ========================================================= */
 function showToast(msg) {
     let toast = document.getElementById("homeToast");
     if (!toast) {
         toast = document.createElement("div");
         toast.id = "homeToast";
-        toast.style.cssText = `
-            position: fixed;
-            bottom: 24px;
-            right: 24px;
-            background: #082116;
-            color: #FFFFFF;
-            padding: 12px 20px;
-            border-radius: 24px;
-            font-size: 0.88rem;
-            font-weight: 600;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.25);
-            z-index: 100000;
-            transition: all 0.3s ease;
-            border-left: 4px solid #2FA368;
-            opacity: 0;
-            transform: translateY(10px);
-        `;
         document.body.appendChild(toast);
     }
 
@@ -826,6 +1277,6 @@ function showToast(msg) {
 
     setTimeout(() => {
         toast.style.opacity = "0";
-        toast.style.transform = "translateY(10px)";
-    }, 3000);
+        toast.style.transform = "translateY(14px)";
+    }, 3200);
 }

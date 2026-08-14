@@ -3,186 +3,570 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Paarthvi Slim & Immunity Rasayana | Weight Loss & Immunity Medicine</title>
-    <meta name="description" content="Detailed clinical formulation and dosage guide for Paarthvi Ayurvedic Slimming & Immunity Booster medicine. 100% natural Ayurvedic healing.">
+    <title>Paarthvi Weight Loss Rasayana & Capsules | Paarthvi Ayurveda</title>
+    <meta name="description" content="Detailed clinical formulation and dosage ritual guide for Paarthvi Weight Loss Rasayana & Capsules. Dual-action Garcinia, Guggulu, Giloy & Triphala.">
     <link rel="icon" type="image/png" href="assets/logo.png">
     <link rel="apple-touch-icon" href="assets/logo.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="checkout.css">
 </head>
 <body>
 
-<div class="top-bar">
-    <div class="top-bar-inner">
-        <span class="flag-badge-pill"><span class="flag-tiranga-icon"><span class="bar-saffron"></span><span class="bar-white"></span><span class="bar-green"></span></span> 100% Authentic Indian Ayurveda</span>
-        <span><i class="fa-solid fa-leaf"></i> 100% Ayush Certified Organic Formulations</span>
-        <span><i class="fa-solid fa-phone"></i> Helpline: <a href="tel:+919259760176" style="color:inherit;">+91 9259760176</a> / <a href="tel:+919354419950" style="color:inherit;">+91 9354419950</a></span>
-        <span><i class="fa-solid fa-envelope"></i> <a href="mailto:contact@paarthviayurveda.com" style="color:inherit;">contact@paarthviayurveda.com</a></span>
+<!-- Announcement Bar -->
+<aside class="announcement-bar" aria-label="Announcement">
+    <div class="container">
+        <div class="announcement-bar-content">
+            <span>FREE SHIPPING</span>
+            <span class="announcement-dot dot-saffron">•</span>
+            <span>AUTHENTIC AYURVEDIC FORMULATIONS</span>
+            <span class="announcement-dot dot-green">•</span>
+            <span>MADE IN INDIA</span>
+        </div>
     </div>
-</div>
+</aside>
 
-<header class="navbar" id="navbar">
-    <div class="nav-container">
-        <a href="index.html" class="brand" aria-label="Paarthvi Ayurvedic Home">
-            <img src="assets/logo.png" alt="Paarthvi Ayurveda Official Logo" class="brand-logo-img">
-            <div class="brand-text">
-                <span class="brand-name">PAARTHVI</span>
-                <span class="brand-tagline" style="display:flex; align-items:center; gap:6px;">
-                    PURE AYURVEDA <span class="flag-tiranga-icon"><span class="bar-saffron"></span><span class="bar-white"></span><span class="bar-green"></span></span>
+<!-- Header -->
+<header class="main-header" id="navbar">
+    <div class="header-container">
+        
+        <div class="header-left-group">
+            <button type="button" class="side-nav-toggle-btn" id="menuBtn" aria-label="Open Navigation Menu">
+                <span class="toggle-icon-wrap">
+                    <i class="fa-solid fa-bars-staggered"></i>
                 </span>
-            </div>
-        </a>
-
-        <nav class="desktop-nav">
-            <a href="index.html">Home</a>
-            <a href="category-healthcare.html" class="active">Health Care</a>
-            <a href="category-personalcare.html">Personal Care</a>
-            <a href="category-medicine.html">Medicine</a>
-            <a href="category-nutraceuticals.html">Nutraceuticals</a>
-            <a href="about.html">Our Story</a>
-            <a href="contact.html">Doctor Consultation</a>
-        </nav>
-
-        <div class="nav-actions">
-            <button class="cart-button" id="cartBtn" aria-label="Open Shopping Bag">
-                <i class="fa-solid fa-bag-shopping"></i>
-                <span>Bag</span>
-                <b id="cartCount">0</b>
+                <span class="toggle-label">Menu & Categories</span>
             </button>
-            <a href="checkout.html" class="primary-btn" style="padding: 8px 18px; font-size: 0.85rem;">
-                Buy Now →
+
+            <a href="index.html" class="brand-logo" aria-label="Paarthvi Ayurveda Home">
+                <img src="assets/logo.png" alt="Paarthvi Ayurveda Emblem" class="brand-emblem">
+                <div class="brand-text-wrap">
+                    <span class="brand-title">PAARTHVI</span>
+                    <span class="brand-subtitle">AYURVEDA</span>
+                </div>
             </a>
+        </div>
+
+        <div class="header-actions">
+            <button type="button" class="header-action-btn" id="searchBtn" title="Search" aria-label="Search remedies">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+            <button type="button" class="header-action-btn" onclick="openAccountModal()" title="Account" aria-label="Account Login">
+                <i class="fa-regular fa-user"></i>
+            </button>
+            <button type="button" class="header-action-btn" id="cartBtn" title="Your Bag" aria-label="Shopping Bag">
+                <i class="fa-solid fa-bag-shopping"></i>
+                <span class="badge-count" id="cartCount">1</span>
+            </button>
         </div>
     </div>
 </header>
 
-<main style="padding: 60px 0 90px;">
-    <div class="container">
-        <div class="flagship-card" style="margin-bottom: 60px;">
-            <div class="flagship-gallery">
-                <span class="flagship-tag">AYUSH CERTIFIED</span>
-                <img src="assets/products/product-1.png" alt="Paarthvi Ayurvedic Slimming & Immunity Booster" class="flagship-image-main">
+<!-- =====================================================
+     LUXURY SIDE NAVIGATION BAR (DRAWER)
+===================================================== -->
+<div class="side-nav-overlay mobile-nav-overlay" id="mobileNavOverlay"></div>
+<aside class="side-nav-drawer mobile-nav-drawer" id="mobileNavDrawer" aria-label="Side Navigation Menu">
+    <div class="side-nav-header mobile-drawer-header">
+        <a href="index.html" class="side-nav-brand">
+            <img src="assets/logo.png" alt="Paarthvi Ayurveda" class="side-nav-brand-emblem">
+            <div>
+                <span class="side-nav-brand-title">PAARTHVI</span>
+                <span class="side-nav-brand-sub">Pure Vedic Apothecary</span>
             </div>
+        </a>
+        <button type="button" id="closeMobileMenu" class="side-nav-close-btn close-btn" aria-label="Close Side Navigation">
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+    </div>
 
-            <div class="flagship-details">
-                <div>
-                    <span class="eyebrow">DUAL-ACTION WEIGHT LOSS & IMMUNITY</span>
-                    <h1 style="font-size: 2.3rem; margin-bottom: 12px; color: var(--forest-deep);">Paarthvi Slim & Immunity Rasayana</h1>
-                    
-                    <div class="flagship-price-bar">
-                        <span class="current-price">₹2,200</span>
-                        <span class="original-price">₹2,800</span>
-                        <span class="save-badge">Save 21% Off</span>
-                    </div>
-
-                    <p class="flagship-desc">
-                        Expertly formulated using classical Vedic extraction methods. Combines wild <strong>Garcinia (Vrikshamla)</strong>, <strong>Shuddha Guggulu</strong>, <strong>Giloy</strong>, and <strong>Triphala</strong> to systematically address slow metabolism, stubborn belly fat, and weakened immune resistance without synthetic compounds.
-                    </p>
-
-                    <div class="flagship-benefits-grid">
-                        <div class="benefit-bullet">
-                            <span class="bullet-icon"><i class="fa-solid fa-check"></i></span>
-                            <span>Dissolves Stubborn Fat</span>
-                        </div>
-                        <div class="benefit-bullet">
-                            <span class="bullet-icon"><i class="fa-solid fa-check"></i></span>
-                            <span>Boosts Cellular Immunity</span>
-                        </div>
-                        <div class="benefit-bullet">
-                            <span class="bullet-icon"><i class="fa-solid fa-check"></i></span>
-                            <span>Flushes Bodily Toxins (Ama)</span>
-                        </div>
-                        <div class="benefit-bullet">
-                            <span class="bullet-icon"><i class="fa-solid fa-check"></i></span>
-                            <span>100% Ayush Lab Tested</span>
-                        </div>
-                    </div>
+    <div class="side-nav-scroll-body">
+        
+        <!-- SECTION 1: COMPANY DESCRIPTION & HERITAGE -->
+        <div class="side-nav-section">
+            <div class="side-nav-section-title">
+                <i class="fa-solid fa-seedling"></i> Company & Heritage
+            </div>
+            <div class="side-nav-company-card">
+                <div class="side-nav-company-header">
+                    <i class="fa-solid fa-spa" style="color: var(--gold-dark); font-size: 0.85rem;"></i>
+                    <span class="side-nav-company-tag">Pure Ayurvedic Living</span>
                 </div>
+                <p class="side-nav-company-desc">
+                    Rooted in timeless Vedic wisdom from the <em>Charaka & Sushruta Samhitas</em>, Paarthvi crafts authentic, 100% natural formulations using pure Himalayan botanicals and classical Shastra decoctions.
+                </p>
+                <div class="side-nav-trust-badges">
+                    <span class="side-nav-badge-pill"><i class="fa-solid fa-leaf"></i> 100% Herbal</span>
+                    <span class="side-nav-badge-pill"><i class="fa-solid fa-shield-halved"></i> GMP Certified</span>
+                    <span class="side-nav-badge-pill"><i class="fa-solid fa-flask-vial"></i> AYUSH Tested</span>
+                    <span class="side-nav-badge-pill"><i class="fa-solid fa-sun"></i> Made in India</span>
+                </div>
+            </div>
+        </div>
 
-                <div class="flagship-actions">
-                    <button onclick="addToCart('Parthvi Slim & Immunity Rasayana', 2200, 'assets/products/product-1.png')" class="secondary-btn" style="gap: 8px;">
-                        <i class="fa-solid fa-cart-plus"></i> Add to Bag
+        <!-- SECTION 2: CATEGORIES -->
+        <div class="side-nav-section">
+            <div class="side-nav-section-title">
+                <i class="fa-solid fa-layer-group"></i> Shop Categories
+            </div>
+            <ul class="side-nav-categories-list mobile-drawer-links">
+                <li>
+                    <a href="category-healthcare.html" class="side-nav-cat-item">
+                        <div class="side-nav-cat-left">
+                            <span class="side-nav-cat-icon"><i class="fa-solid fa-heart-pulse"></i></span>
+                            <div class="side-nav-cat-info">
+                                <span class="side-nav-cat-name">Health Care</span>
+                                <span class="side-nav-cat-sub">Immunity, Vitality & Digestion</span>
+                            </div>
+                        </div>
+                        <i class="fa-solid fa-chevron-right side-nav-cat-arrow"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="category-personalcare.html" class="side-nav-cat-item">
+                        <div class="side-nav-cat-left">
+                            <span class="side-nav-cat-icon"><i class="fa-solid fa-wand-magic-sparkles"></i></span>
+                            <div class="side-nav-cat-info">
+                                <span class="side-nav-cat-name">Personal Care</span>
+                                <span class="side-nav-cat-sub">Kumkumadi, Hair Oils & Ubtans</span>
+                            </div>
+                        </div>
+                        <i class="fa-solid fa-chevron-right side-nav-cat-arrow"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="category-medicine.html" class="side-nav-cat-item">
+                        <div class="side-nav-cat-left">
+                            <span class="side-nav-cat-icon"><i class="fa-solid fa-prescription-bottle-medical"></i></span>
+                            <div class="side-nav-cat-info">
+                                <span class="side-nav-cat-name">Ayurvedic Medicine</span>
+                                <span class="side-nav-cat-sub">Classical Asavas, Arishtas & Vatis</span>
+                            </div>
+                        </div>
+                        <i class="fa-solid fa-chevron-right side-nav-cat-arrow"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="category-nutraceuticals.html" class="side-nav-cat-item">
+                        <div class="side-nav-cat-left">
+                            <span class="side-nav-cat-icon"><i class="fa-solid fa-capsules"></i></span>
+                            <div class="side-nav-cat-info">
+                                <span class="side-nav-cat-name">Nutraceuticals</span>
+                                <span class="side-nav-cat-sub">Supplements, Shilajit & Vital Herbs</span>
+                            </div>
+                        </div>
+                        <i class="fa-solid fa-chevron-right side-nav-cat-arrow"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="category-hawan.html" class="side-nav-cat-item">
+                        <div class="side-nav-cat-left">
+                            <span class="side-nav-cat-icon"><i class="fa-solid fa-fire-flame-curved"></i></span>
+                            <div class="side-nav-cat-info">
+                                <span class="side-nav-cat-name">Hawan Samagri</span>
+                                <span class="side-nav-cat-sub">Sacred Vedic Yajna Herbs & Dhoop</span>
+                            </div>
+                        </div>
+                        <i class="fa-solid fa-chevron-right side-nav-cat-arrow"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="category-paridhan.html" class="side-nav-cat-item">
+                        <div class="side-nav-cat-left">
+                            <span class="side-nav-cat-icon"><i class="fa-solid fa-shirt"></i></span>
+                            <div class="side-nav-cat-info">
+                                <span class="side-nav-cat-name">Vedic Paridhan</span>
+                                <span class="side-nav-cat-sub">Traditional Handcrafted Attire</span>
+                            </div>
+                        </div>
+                        <i class="fa-solid fa-chevron-right side-nav-cat-arrow"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="index.html#categories" class="side-nav-cat-item" style="border-style: dashed; background: rgba(8, 76, 39, 0.03);">
+                        <div class="side-nav-cat-left">
+                            <span class="side-nav-cat-icon" style="color: var(--saffron);"><i class="fa-solid fa-boxes-stacked"></i></span>
+                            <div class="side-nav-cat-info">
+                                <span class="side-nav-cat-name">All Formulations</span>
+                                <span class="side-nav-cat-sub">Browse Full Apothecary Collection</span>
+                            </div>
+                        </div>
+                        <i class="fa-solid fa-arrow-right side-nav-cat-arrow"></i>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <!-- SECTION 3: RITUAL BAG / CART -->
+        <div class="side-nav-section">
+            <div class="side-nav-section-title">
+                <i class="fa-solid fa-bag-shopping"></i> Ritual Cart
+            </div>
+            <div class="side-nav-cart-card">
+                <div class="side-nav-cart-head">
+                    <div class="side-nav-cart-title">
+                        <i class="fa-solid fa-basket-shopping"></i> Your Bag
+                    </div>
+                    <span class="side-nav-cart-badge" id="sideNavBadgeCount">0</span>
+                </div>
+                <div class="side-nav-cart-status">
+                    <span id="sideNavCartCount" style="font-weight: 500;">0 Items</span>
+                    <span class="side-nav-cart-total-val" id="sideNavCartTotal">₹0</span>
+                </div>
+                <div class="side-nav-cart-actions">
+                    <button type="button" class="btn-side-cart" onclick="openCartFromSideNav()">
+                        <i class="fa-solid fa-bag-shopping"></i> Open Bag
                     </button>
-                    <a href="checkout.html" class="primary-btn" style="gap: 8px;">
-                        <i class="fa-solid fa-bolt"></i> Buy Now (₹2,200) →
+                    <a href="checkout.html" class="btn-side-checkout">
+                        Checkout →
                     </a>
                 </div>
+                <div class="side-nav-shipping-hint">
+                    <i class="fa-solid fa-truck-fast"></i> Free shipping on orders over ₹999
+                </div>
             </div>
         </div>
 
-        <!-- Detailed Tabs Section -->
-        <div style="background: var(--bg-pure); border-radius: var(--radius-lg); padding: 48px; border: 1px solid var(--border-card); box-shadow: var(--shadow-sm);">
-            <span class="eyebrow">THERAPEUTIC INSIGHTS</span>
-            <h2 style="margin-bottom: 24px;">Herbal Alchemy & <em>Dosage Ritual.</em></h2>
+        <!-- SECTION 4: CONTACT US & DOCTOR CONSULTATION -->
+        <div class="side-nav-section">
+            <div class="side-nav-section-title">
+                <i class="fa-solid fa-headset"></i> Contact & Support
+            </div>
+            <div class="side-nav-contact-card">
+                <div class="side-nav-consult-box">
+                    <div class="side-nav-consult-title">
+                        <i class="fa-solid fa-user-doctor" style="color: var(--forest-deep);"></i> Vaidya Consultation
+                    </div>
+                    <p class="side-nav-consult-text">
+                        Free personalized Dosha assessment & custom Ayurvedic herbal regimen guidance.
+                    </p>
+                    <a href="contact.html" class="btn-side-consult">
+                        Book Doctor Consult →
+                    </a>
+                </div>
+                
+                <div class="side-nav-contact-channels">
+                    <a href="tel:+919259760176" class="side-nav-contact-link">
+                        <i class="fa-solid fa-phone"></i> +91 9259760176 (Helpline)
+                    </a>
+                    <a href="https://wa.me/919259760176?text=Namaste%20Paarthvi%20Ayurveda" target="_blank" rel="noopener" class="side-nav-contact-link whatsapp-link">
+                        <i class="fa-brands fa-whatsapp"></i> Chat on WhatsApp
+                    </a>
+                    <a href="mailto:care@parthviayurvedic.com" class="side-nav-contact-link">
+                        <i class="fa-solid fa-envelope"></i> care@parthviayurvedic.com
+                    </a>
+                </div>
+                <div class="side-nav-hours-note">
+                    🕒 Available Mon – Sat: 9:00 AM – 8:00 PM IST
+                </div>
+            </div>
+        </div>
+
+        <!-- SECTION 5: FOOTER QUICK LINKS -->
+        <div class="side-nav-footer-wrap mobile-drawer-footer">
+            <a href="index.html">Home</a>
+            <a href="about.html">Our Story</a>
+            <a href="contact.html">Doctor Consultation</a>
+            <a href="admin.html">Admin Portal</a>
+        </div>
+
+    </div>
+</aside>
+
+<!-- Search Overlay -->
+<div class="search-overlay" id="searchOverlay">
+    <div class="search-box">
+        <button id="closeSearch" class="close-btn" style="position: absolute; top: 20px; right: 20px;">&times;</button>
+        <span class="eyebrow">PAARTHVI APOTHECARY SEARCH</span>
+        <div class="search-input-wrap">
+            <i class="fa-solid fa-magnifying-glass" style="color: var(--sage);"></i>
+            <input type="text" id="searchInput" placeholder="Search Health Care, Weight Loss, Shilajit, Kumkumadi...">
+        </div>
+        <div id="searchResults"></div>
+    </div>
+</div>
+
+<main class="product-detail-section">
+    <div class="container">
+        
+        <!-- Breadcrumbs -->
+        <div class="product-breadcrumbs">
+            <a href="index.html">Home</a>
+            <span>›</span>
+            <a href="category-healthcare.html">Health Care</a>
+            <span>›</span>
+            <strong style="color: var(--forest-deep);">Paarthvi Weight Loss Rasayana</strong>
+        </div>
+
+        <!-- 2-Column Product Showcase -->
+        <div class="product-detail-grid">
             
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 32px; line-height: 1.7; color: var(--text-secondary);">
-                <div>
-                    <h3 style="color: var(--forest-deep); font-size: 1.25rem; margin-bottom: 12px; display: flex; align-items: center; gap: 8px;">
-                        <i class="fa-solid fa-seedling" style="color: var(--forest-emerald);"></i> Key Ingredients
-                    </h3>
-                    <p>• <strong>Vrikshamla (Garcinia Cambogia):</strong> Standardized to 60% HCA to inhibit citrate lyase and prevent fat accumulation.</p>
-                    <p>• <strong>Shuddha Guggulu:</strong> Pure Commiphora mukul resin to balance Kapha and lower systemic inflammation.</p>
-                    <p>• <strong>Giloy (Tinospora cordifolia):</strong> Classical Rasayana for building Ojas (vital immune glow).</p>
-                </div>
-
-                <div>
-                    <h3 style="color: var(--forest-deep); font-size: 1.25rem; margin-bottom: 12px; display: flex; align-items: center; gap: 8px;">
-                        <i class="fa-solid fa-mortar-pestle" style="color: var(--forest-emerald);"></i> How to Take
-                    </h3>
-                    <p>Take 1-2 spoons / tablets twice daily with lukewarm water 30 minutes before breakfast and dinner, or as directed by your Ayurvedic physician.</p>
-                    <p style="margin-top: 10px; font-weight: 600; color: var(--emerald-vibrant);">Recommended course: 60 to 90 days for sustainable metabolic resetting.</p>
-                </div>
-
-                <div>
-                    <h3 style="color: var(--forest-deep); font-size: 1.25rem; margin-bottom: 12px; display: flex; align-items: center; gap: 8px;">
-                        <i class="fa-solid fa-shield-halved" style="color: var(--forest-emerald);"></i> Safety & Quality
-                    </h3>
-                    <p>• Heavy metal tested (Lead, Mercury, Arsenic < 0.01 ppm)</p>
-                    <p>• 100% vegetarian & gelatin-free</p>
-                    <p>• Zero side effects or dependency</p>
+            <!-- Left: Large Product Gallery -->
+            <div class="product-gallery-wrap">
+                <div class="product-gallery-main">
+                    <span class="product-gallery-badge">AYUSH CERTIFIED</span>
+                    <img src="assets/products/slim-shift.jpg" alt="Paarthvi Veda Slim Shift (100g Powder + 60 Capsules Combo)" id="mainProductImg">
                 </div>
             </div>
+
+            <!-- Right: Product Info & Actions -->
+            <div class="product-info-wrap">
+                <span class="eyebrow">DUAL-ACTION METABOLIC RESET & WEIGHT MANAGEMENT</span>
+                
+                <h1 class="product-info-title">Paarthvi Veda Slim Shift (100g Powder + 60 Capsules Combo)</h1>
+                
+                <div class="product-rating" style="margin-bottom: 8px;">
+                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    <span class="product-rating-count"><strong>4.9</strong> (428 Verified Patron Reviews)</span>
+                </div>
+
+                <div class="product-info-price-bar">
+                    <span class="product-current-price">₹1,500</span>
+                    <span class="product-orig-price">₹2,200</span>
+                    <span class="product-save-pill">Save 32% Off</span>
+                </div>
+
+                <p class="product-info-desc">
+                    Authentic Paarthvi Veda complete dual-action weight management system. Combines <strong>100g Slim Shift botanical metabolic powder</strong> and <strong>60 herbal 500mg capsules</strong> powered by Garcinia, Shuddha Guggulu, Triphala, and Giloy to systematically enhance fat breakdown, cleanse digestive Ama, and restore metabolic energy.
+                </p>
+
+                <!-- Key Highlights -->
+                <div class="product-highlights-grid">
+                    <div class="product-highlight-item">
+                        <i class="fa-solid fa-circle-check"></i>
+                        <span>100g Botanical Powder + 60 Herbal Capsules</span>
+                    </div>
+                    <div class="product-highlight-item">
+                        <i class="fa-solid fa-circle-check"></i>
+                        <span>Balances Kapha & Stimulates Digestive Agni</span>
+                    </div>
+                    <div class="product-highlight-item">
+                        <i class="fa-solid fa-circle-check"></i>
+                        <span>Dissolves Stubborn Belly Ama (Toxins)</span>
+                    </div>
+                    <div class="product-highlight-item">
+                        <i class="fa-solid fa-circle-check"></i>
+                        <span>100% Vegetarian & Ayush Certified</span>
+                    </div>
+                </div>
+
+                <!-- Quantity & Actions -->
+                <div class="product-actions-bar">
+                    <div class="product-qty-stepper">
+                        <button type="button" class="product-qty-btn" onclick="let input = document.getElementById('prodQty'); if (parseInt(input.value) > 1) input.value = parseInt(input.value) - 1;">-</button>
+                        <input type="text" id="prodQty" class="product-qty-input" value="1" readonly>
+                        <button type="button" class="product-qty-btn" onclick="let input = document.getElementById('prodQty'); if (parseInt(input.value) < 10) input.value = parseInt(input.value) + 1;">+</button>
+                    </div>
+
+                    <button onclick="addToCart('Paarthvi Veda Slim Shift (100g Powder + 60 Capsules Combo)', 1500, 'assets/products/slim-shift.jpg')" class="btn-primary" style="flex: 1;">
+                        <i class="fa-solid fa-bag-shopping"></i> Add to Bag
+                    </button>
+                    
+                    <button onclick="instantBuyProduct(1)" class="btn-secondary" style="flex: 1;">
+                        Buy Now (₹1,500) →
+                    </button>
+                </div>
+
+                <div style="background: var(--sage-soft); border-radius: var(--radius-sm); padding: 14px 18px; border: 1px solid var(--border-subtle); font-size: 0.85rem; color: var(--forest-deep); display: flex; align-items: center; gap: 10px;">
+                    <i class="fa-solid fa-truck-fast" style="color: var(--sage); font-size: 1.1rem;"></i>
+                    <span><strong>Free Express Air Shipping</strong> included. Dispatches within 24 hours across India.</span>
+                </div>
+            </div>
+
         </div>
+
+        <!-- Rich Accordion Sections -->
+        <div class="product-accordion-wrap">
+            
+            <!-- 1. Description -->
+            <div class="accordion-item active">
+                <button type="button" class="accordion-header">
+                    <span>Herbal Wisdom & Description</span>
+                    <i class="fa-solid fa-chevron-down accordion-icon"></i>
+                </button>
+                <div class="accordion-body">
+                    <p>
+                        In Ayurvedic physiology, weight imbalances and metabolic resistance are rooted in an aggravation of Kapha dosha and accumulated <em>Ama</em> (undigested metabolic endotoxins) clogging the cellular srotas (micro-channels).
+                    </p>
+                    <p style="margin-top: 12px;">
+                        Paarthvi Weight Loss Rasayana acts as a classical <em>Deepana</em> (appetite normalizer) and <em>Pachana</em> (toxin burner), gently reigniting the internal digestive fire (Jatharagni) without disturbing Pitta heat.
+                    </p>
+                </div>
+            </div>
+
+            <!-- 2. Benefits -->
+            <div class="accordion-item">
+                <button type="button" class="accordion-header">
+                    <span>Therapeutic Benefits</span>
+                    <i class="fa-solid fa-chevron-down accordion-icon"></i>
+                </button>
+                <div class="accordion-body">
+                    <ul style="list-style-type: square; padding-left: 20px; line-height: 1.8;">
+                        <li><strong>Metabolic Acceleration:</strong> Naturally supports lipolysis and prevents fat storage through standardized hydroxycitric acid.</li>
+                        <li><strong>Digestive Detoxification:</strong> Cleanses the colon microvilli to optimize nutrient absorption.</li>
+                        <li><strong>Craving Regulation:</strong> Stabilizes blood glucose fluctuations to eliminate sudden sweet and carbohydrate cravings.</li>
+                        <li><strong>Ojas & Vitality:</strong> Infused with Giloy to safeguard stamina, avoiding the fatigue common in modern crash diets.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- 3. Key Ingredients -->
+            <div class="accordion-item">
+                <button type="button" class="accordion-header">
+                    <span>Key Botanical Ingredients</span>
+                    <i class="fa-solid fa-chevron-down accordion-icon"></i>
+                </button>
+                <div class="accordion-body">
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 16px; margin-top: 8px;">
+                        <div>
+                            <strong style="color: var(--forest-deep);">Vrikshamla (Garcinia):</strong>
+                            <p style="font-size: 0.85rem; color: var(--text-secondary);">Standardized to 60% HCA to inhibit citrate lyase enzyme.</p>
+                        </div>
+                        <div>
+                            <strong style="color: var(--forest-deep);">Shuddha Guggulu:</strong>
+                            <p style="font-size: 0.85rem; color: var(--text-secondary);">Purified resin that breaks down deep visceral lipids.</p>
+                        </div>
+                        <div>
+                            <strong style="color: var(--forest-deep);">Giloy (Guduchi):</strong>
+                            <p style="font-size: 0.85rem; color: var(--text-secondary);">Cellular immune Rasayana that protects vital tissues.</p>
+                        </div>
+                        <div>
+                            <strong style="color: var(--forest-deep);">Triphala Kwath:</strong>
+                            <p style="font-size: 0.85rem; color: var(--text-secondary);">Harmonious trio of Haritaki, Bibhitaki, and Amalaki.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 4. How to Use -->
+            <div class="accordion-item">
+                <button type="button" class="accordion-header">
+                    <span>How to Use (Dosage Ritual)</span>
+                    <i class="fa-solid fa-chevron-down accordion-icon"></i>
+                </button>
+                <div class="accordion-body">
+                    <p><strong>Daily Ritual:</strong> Take 1 spoonful / 1-2 capsules twice daily with lukewarm water 30 minutes before breakfast and dinner, or as directed by your Ayurvedic physician.</p>
+                    <p style="margin-top: 10px; font-weight: 600; color: var(--forest-deep);">Recommended Course: 60 to 90 continuous days for lasting cellular metabolic resetting.</p>
+                </div>
+            </div>
+
+            <!-- 5. Safety & Quality -->
+            <div class="accordion-item">
+                <button type="button" class="accordion-header">
+                    <span>Safety & Laboratory Assurance</span>
+                    <i class="fa-solid fa-chevron-down accordion-icon"></i>
+                </button>
+                <div class="accordion-body">
+                    <p>• Heavy metal tested (Lead, Mercury, Cadmium, Arsenic < 0.01 ppm)</p>
+                    <p>• 100% vegetarian & gelatin-free cellulose capsules</p>
+                    <p>• Free from maltodextrin, artificial colorants, synthetic preservatives, or steroids</p>
+                </div>
+            </div>
+
+            <!-- 6. Reviews -->
+            <div class="accordion-item">
+                <button type="button" class="accordion-header">
+                    <span>Patron Experiences (384)</span>
+                    <i class="fa-solid fa-chevron-down accordion-icon"></i>
+                </button>
+                <div class="accordion-body">
+                    <div style="padding: 12px 0;">
+                        <div class="review-stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                        <strong style="color: var(--forest-deep);">"Noticeable fat loss around waist in 6 weeks."</strong>
+                        <p style="font-size: 0.88rem; color: var(--text-secondary); margin-top: 4px;">"This has transformed my sluggish morning digestion. I feel lighter and much more active through the day." — Sunita P. (Verified Buyer)</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
     </div>
 </main>
-
-<footer class="footer">
-    <div class="container">
-        <div class="footer-bottom" style="text-align: center; justify-content: center; flex-direction: column; gap: 6px;">
-            <span>© 2026 Paarthvi Ayurvedic. All rights reserved. • 100% Ayush Certified Herbal Formulations <i class="fa-solid fa-leaf" style="color: #2FA368;"></i></span>
-            <span style="font-size: 0.85rem; color: var(--text-muted);">Email: <a href="mailto:contact@paarthviayurveda.com" style="color: var(--forest-emerald); font-weight: 600;">contact@paarthviayurveda.com</a> | Helpline: <a href="tel:+919259760176" style="color: var(--forest-emerald); font-weight: 600;">+91 9259760176</a> / <a href="tel:+919354419950" style="color: var(--forest-emerald); font-weight: 600;">+91 9354419950</a></span>
-        </div>
-    </div>
-</footer>
 
 <!-- Cart Drawer -->
 <div class="cart-overlay" id="cartOverlay">
     <div class="cart-panel">
         <div class="cart-header">
-            <div>
-                <span class="eyebrow" style="font-size: 0.7rem; margin-bottom: 2px;">YOUR SELECTION</span>
-                <h2>Shopping Bag</h2>
+            <div class="cart-title-wrap">
+                <i class="fa-solid fa-bag-shopping" style="color: var(--forest-deep); font-size: 1.25rem;"></i>
+                <h3 class="cart-title">Your Ritual Bag</h3>
             </div>
             <button id="closeCart" class="close-btn">&times;</button>
         </div>
-        <div class="cart-delivery-progress">
-            <span><i class="fa-solid fa-truck-fast"></i> <strong>Free Express Shipping</strong> applied on your order!</span>
-            <div class="progress-bar-wrap">
-                <div class="progress-bar-fill"></div>
-            </div>
+        <div class="cart-free-shipping-bar">
+            <i class="fa-solid fa-truck-fast"></i>
+            <span><strong>Free Express Shipping</strong> applied on all orders</span>
         </div>
-        <div id="cartItems" class="cart-items"></div>
+        <div class="cart-body" id="cartItems"></div>
         <div class="cart-footer">
-            <div class="cart-subtotal-row">
-                <span>Total Amount:</span>
-                <span id="cartTotal">₹0</span>
+            <div class="cart-summary-row">
+                <span>Subtotal:</span>
+                <span id="cartSubtotal">₹2,200</span>
             </div>
-            <a href="checkout.html" class="checkout-btn" style="text-align: center; text-decoration: none; display: block;">
-                Proceed to Checkout (₹2,200) →
+            <div class="cart-summary-row total">
+                <span>Total Amount:</span>
+                <span id="cartTotal">₹2,200</span>
+            </div>
+            <a href="checkout.html" class="btn-primary" style="width: 100%; justify-content: center; padding: 16px;">
+                PROCEED TO CHECKOUT →
             </a>
         </div>
     </div>
 </div>
+
+<!-- Footer -->
+<footer class="main-footer">
+    <div class="container">
+        <div class="footer-grid">
+            <div>
+                <div class="footer-brand">
+                    <img src="assets/logo.png" alt="Paarthvi Ayurveda" style="width: 40px; height: 40px;">
+                    <span class="footer-brand-title">PAARTHVI AYURVEDA</span>
+                </div>
+                <p class="footer-about">
+                    Ancient Ayurveda. Crafted for Modern Living.<br>
+                    Authentic Himalayan botanical formulations rooted in sacred classical Shastriya principles.
+                </p>
+                <div class="footer-helpline-box">
+                    <div>Helpline: <a href="tel:+919259760176">+91 9259760176</a> / <a href="tel:+919354419950">+91 9354419950</a></div>
+                    <div>Email: <a href="mailto:contact@paarthviayurveda.com">contact@paarthviayurveda.com</a></div>
+                </div>
+            </div>
+            <div>
+                <h4 class="footer-column-title">SHOP</h4>
+                <ul class="footer-links">
+                    <li><a href="category-healthcare.html">Health Care</a></li>
+                    <li><a href="category-personalcare.html">Personal Care</a></li>
+                    <li><a href="category-medicine.html">Medicine</a></li>
+                    <li><a href="category-nutraceuticals.html">Nutraceuticals</a></li>
+                    <li><a href="category-hawan.html">Hawan Samagri</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="footer-column-title">COMPANY</h4>
+                <ul class="footer-links">
+                    <li><a href="about.html">Our Story</a></li>
+                    <li><a href="contact.html">Doctor Consultation</a></li>
+                    <li><a href="admin.html">Apothecary Portal</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="footer-column-title">ASSURANCE</h4>
+                <p style="font-size: 0.85rem; color: var(--sand-light); line-height: 1.6;">
+                    100% Ayush Certified Botanical Formulations with Free Express Air Shipping Across India.
+                </p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <span>© 2026 PAARTHVI AYURVEDA. All rights reserved.</span>
+            <div class="footer-bottom-links">
+                <a href="about.html">Privacy Policy</a>
+                <span>•</span>
+                <a href="about.html">Terms of Service</a>
+            </div>
+        </div>
+    </div>
+</footer>
 
 <script src="script.js"></script>
 </body>
