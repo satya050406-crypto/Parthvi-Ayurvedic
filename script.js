@@ -1250,14 +1250,8 @@ function closeAccountModal() {
 }
 
 function handleGoogleSignInDemo() {
-    const user = {
-        name: "Satya Prakash",
-        email: "satya.ayurveda@gmail.com",
-        avatar: "S"
-    };
-    localStorage.setItem("paarthvi_user", JSON.stringify(user));
     closeAccountModal();
-    showToast(`Welcome back, ${user.name}!`);
+    window.location.href = "checkout.html?step=1";
 }
 
 /* =========================================================

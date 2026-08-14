@@ -58,7 +58,7 @@ function renderAuthenticatedUser(user) {
     if (authWrap) authWrap.style.display = "flex";
     if (userAvatar) userAvatar.textContent = (user.name ? user.name.charAt(0) : "G").toUpperCase();
     if (userName) userName.textContent = user.name || "Google User";
-    if (userEmail) userEmail.textContent = user.email || "user@gmail.com";
+    if (userEmail) userEmail.textContent = user.email || "Google Account Connected";
 
     // Pre-fill Step 2
     const cName = document.getElementById("cName");
@@ -74,39 +74,30 @@ function renderUnauthenticatedState() {
     if (authWrap) authWrap.style.display = "none";
 }
 
-function openGoogleModal() {
-    const modal = document.getElementById("googleAuthModal");
-    if (modal) {
-        modal.style.display = "flex";
-    }
-}
+function submitGoogleSignIn() {
+    const nameInput = document.getElementById("googleInputName");
+    const emailInput = document.getElementById("googleInputEmail");
 
-function closeGoogleModal() {
-    const modal = document.getElementById("googleAuthModal");
-    if (modal) {
-        modal.style.display = "none";
-    }
-}
+    const name = nameInput ? nameInput.value.trim() : "";
+    const email = emailInput ? emailInput.value.trim() : "";
 
-function submitCustomGoogleLogin() {
-    const nameInput = document.getElementById("customGoogleName");
-    const emailInput = document.getElementById("customGoogleEmail");
-
-    const name = (nameInput && nameInput.value.trim()) ? nameInput.value.trim() : "Paarthvi Customer";
-    const email = (emailInput && emailInput.value.trim()) ? emailInput.value.trim() : "customer@gmail.com";
-
-    if (!email.includes("@")) {
-        showToast("Please enter a valid Gmail address.");
+    if (!name) {
+        showToast("Please enter your full name.");
+        nameInput?.focus();
         return;
     }
 
-    closeGoogleModal();
+    if (!email || !email.includes("@") || !email.includes(".")) {
+        showToast("Please enter a valid Google / Gmail address.");
+        emailInput?.focus();
+        return;
+    }
+
     handleGoogleLogin(email, name);
 }
 
-function handleGoogleLogin(customEmail = null, customName = null) {
-    const name = customName || "Satya Prakash";
-    const email = customEmail || "satya.ayurveda@gmail.com";
+function handleGoogleLogin(email, name) {
+    if (!email || !name) return;
 
     const userObj = {
         name: name,
@@ -121,11 +112,11 @@ function handleGoogleLogin(customEmail = null, customName = null) {
     sessionStorage.setItem("paarthvi_user", JSON.stringify(userObj));
 
     renderAuthenticatedUser(userObj);
-    showToast(`✓ Signed in with Google as ${userObj.name}`);
+    showToast(`✓ Signed in with Google: ${userObj.name}`);
 
     setTimeout(() => {
         goToStep(2);
-    }, 400);
+    }, 350);
 }
 
 function logoutGoogle() {
